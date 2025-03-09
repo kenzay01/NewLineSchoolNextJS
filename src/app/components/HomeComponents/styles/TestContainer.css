@@ -1,0 +1,120 @@
+.home-test-container-with-footer{
+    background-image: url('/assets/background/backForTest2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.home-test-container{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 120px 220px 100px 180px;
+}
+.home-test-container-left{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0 60px 0;
+}
+.home-test-container-left-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 45px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.home-test-container-left-p{
+    font-family: Steppe;
+    font-weight: 500;
+    font-size: 20px;
+    width: 80%;
+    color: #FFFFFF;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.home-test-container-left-btn{
+    width: 300px;
+    height: 55px;
+    font-family: Unbounded;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    border: none;
+    color: #FFFFFF;
+    background-color: #AE88AD;
+    cursor: pointer;
+}
+.home-test-container-right{
+    flex: 2;
+    width: 100%;
+    height: auto;
+    background-color: #AE88AD;
+    border-radius: 16px;
+    padding: 20px 15px 10px 15px;
+    /* margin: ; */
+}
+.home-test-container-right-title{
+    font-family: Unbounded;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.home-test-container-right-diagram-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .home-test-container-with-footer{
+        background-color: #FFFFFF;
+        height: auto;
+        padding: 0 10px;
+    }
+    .home-test-container{
+        height: auto;
+        flex-direction: column;
+        border-radius: 11px;
+        padding: 40px 15px 20px 15px;
+        gap: 15px;
+    }
+    .home-test-container-left{
+        gap: 15px;
+        padding-bottom: 0;
+    }
+    .home-test-container-left-title{
+        color: #484848;
+        font-size: 30px;
+    }
+    .home-test-container-left-p{
+        font-size: 16px;
+        line-height: 25px;
+        color: #484848;
+        font-weight: 600;
+        width: 100%;
+        margin: 0;
+    }
+    .home-test-container-left-btn{
+        width: 200px;
+        height: 45px;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .home-test-container-right-title{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .home-test-container-right-diagram-container{
+        padding: 0 10px;
+    }
+}

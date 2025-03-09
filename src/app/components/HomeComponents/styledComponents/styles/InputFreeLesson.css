@@ -1,0 +1,37 @@
+.home-free-lessons-form-input{
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #484848;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #484848;
+    outline: none;
+    padding: 4px 2px;
+    background: transparent;
+    border-radius: 0;
+}
+.home-free-lessons-form-input.mobile{
+    font-weight: 500;
+    padding-left: 15px;
+    padding-bottom: 0;
+}
+.home-free-lessons-form-input.mobile::placeholder{
+    text-transform: uppercase;
+    color: #484848;
+}
+.home-free-lessons-form-input::placeholder{
+    color: #AE88AD;
+}
+.home-free-lessons-form-input.error, .home-free-lessons-form-input.error::placeholder {
+    color: red;
+}
+.home-free-lessons-form-input.blocked {
+    background-color: #f0f0f0;
+    cursor: not-allowed; 
+    opacity: 0.5; 
+    border-radius: 5px 5px 0 0;
+  }
+  

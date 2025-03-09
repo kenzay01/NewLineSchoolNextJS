@@ -1,0 +1,47 @@
+.home-learning-benefits-container{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; */
+    padding: 80px 20px;
+    
+}
+.home-learning-benefits-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0%;
+    color: #484848;
+    text-transform: uppercase;
+    width: 65%;
+    margin-bottom: 30px;
+    margin-left: 140px;
+    line-height: 70px;
+}
+.home-learning-benefits-boxes-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+@media (max-width: 768px) {
+    .home-learning-benefits-container{
+        padding: 80px 20px;
+        height: auto;
+    }
+    .home-learning-benefits-title{
+        font-size: 30px;
+        line-height: normal;
+        width: 100%;
+        margin-left: 0;
+    }
+    .home-learning-benefits-boxes-container{
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 20px;
+    }
+}

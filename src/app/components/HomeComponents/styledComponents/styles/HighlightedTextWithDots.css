@@ -1,0 +1,12 @@
+.highlightedText-with-dots{
+    /* border-width: 1px; */
+    border-style: solid;
+    border-top: none;
+    border-bottom: none;
+    padding: 6px 0 3px 0;
+    position: relative;
+}
+.highlighted-dot{
+    position: absolute;
+    border-radius: 50%;
+}

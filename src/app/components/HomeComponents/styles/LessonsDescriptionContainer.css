@@ -1,0 +1,111 @@
+.home-lessons-description-container{
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 100px 160px 0 160px;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+.home-lessons-description-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 82.8px;
+    text-transform: uppercase;
+    color: #AE88AD;
+}
+.home-lessons-description-content{
+    display: flex;
+    /* gap: 30px; */
+    height: 500px;
+}
+.home-lessons-description-img{
+    width: 500px;
+    height: 275px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.home-lessons-description-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-lessons-description-text-container{
+    flex: 1;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    gap: 5px;
+}
+.home-lessons-description-text-item{
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+}
+.home-lessons-description-number{
+    width: 40px;
+    margin-right: 10px;
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48.3px;
+    letter-spacing: 0%;
+    color: #ffffff;
+    text-shadow:
+    -2px -2px 0 #AE88AD,
+    2px -2px 0 #AE88AD,
+    -2px 2px 0 #AE88AD,
+    2px 2px 0 #AE88AD,
+    0 -2px 0 #AE88AD,
+    0 2px 0 #AE88AD,
+    -2px 0 0 #AE88AD,
+    2px 0 0 #AE88AD;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+}
+.home-lessons-description-text{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #484848;
+    width: 275px;
+}
+@media (max-width: 768px) {
+    .home-lessons-description-container{
+        padding: 40px 20px 0 20px;
+        height: auto;
+        gap: 40px;
+    }
+    .home-lessons-description-title{
+        font-size: 28px;
+        line-height: normal;
+    }
+    .home-lessons-description-content{
+        flex-direction: column;
+        height: auto;
+    }
+    .home-lessons-description-img{
+        width: 100%;
+        height: 225px;
+    }
+    .home-lessons-description-text-container{
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+    .home-lessons-description-number{
+        font-size: 34px;
+        /* line-height: 30px; */
+    }
+    .home-lessons-description-text{
+        width: 100%;
+        flex: 1;
+    }
+}

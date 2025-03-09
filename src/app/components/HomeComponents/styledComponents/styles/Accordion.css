@@ -1,0 +1,53 @@
+.accordion {
+    position: relative;
+    background: linear-gradient(135deg, #E7D7CE, #D9C6D1);
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.accordion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #EBDDD2, #CBA0BB);
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 14px;
+    color: #484848;
+    letter-spacing: 0%;
+}
+.accordion-btn{
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out;
+    user-select: none;
+}
+.accordion-btn.open{
+    transform: rotate(0deg);
+}
+.accordion-content {
+    font-family: Steppe;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #484848;
+    line-height: 1.5;
+    user-select: none;  
+}

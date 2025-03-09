@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Steppe';
+  src: url('/assets/fonts/Steppe-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SteppeBold';
+  src: url('/assets/fonts/Steppe-Black.ttf');
+}
+
