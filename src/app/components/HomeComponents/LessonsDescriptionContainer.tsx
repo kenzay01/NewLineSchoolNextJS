@@ -12,7 +12,7 @@ export default function LessonsDescriptionContainer() {
         <><HighlightedText colorBack="#AE88AD80">Відстежуємо прогрес</HighlightedText> за допомогою конструктивного фідбеку та тестів</>,
         <><HighlightedText colorBack="#A0BFBD80">Офлайн</HighlightedText> та <HighlightedText colorBack="#A0BFBD80">онлайн</HighlightedText> формати</>,
         <><HighlightedText colorBack="#FDECB0">Креативні домашки,</HighlightedText> які мають сенс</>,
-        <><HighlightedText colorBack="#A0BFBD80">Використовуємо ШI</HighlightedText> (штучного інтелекту) для персоналізованого навчання та швидкого прогресу!</>,
+        <><HighlightedText colorBack="#A0BFBD80">Використовуємо ШI</HighlightedText> (штучний інтелект) для персоналізованого навчання та швидкого прогресу!</>,
         <>Використовуємо <HighlightedText colorBack="#AE88AD80">унікальні техніки запам’ятовування</HighlightedText></>,
     ];
 
