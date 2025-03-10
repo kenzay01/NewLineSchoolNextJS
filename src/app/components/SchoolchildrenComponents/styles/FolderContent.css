@@ -1,0 +1,336 @@
+.expanded-folder-content-container {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+.expanded-folder-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 105px;
+}
+.expanded-folder-content-title{
+    text-align: start;
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+.expanded-folder-content-title span{
+    color: #AE88AD;
+}
+.expanded-folder-content-body{
+    height: 550px;
+    width: 1300px;
+    display: flex;
+    gap: 25px;
+}
+.expanded-folder-content-body-left{
+    flex: 9;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.expanded-folder-content-body-left-upper-part-container{
+    /* background-color: black; */
+    flex: 6;
+    display: flex;
+    gap: 10px;
+}
+.expanded-folder-content-body-left-upper-part1{
+    flex: 1;
+    height: 300px;
+    width: 535px;
+    background-image: url("/assets/elements/containerLeftUpCorener.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.expanded-folder-content-body-left-upper-part2{
+    flex: 1;
+    border-radius: 45px;
+    border: 2px solid #AE88AD;
+}
+.expanded-folder-content-body-left-upper-part1, .expanded-folder-content-body-left-upper-part2{
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.body-left-upper-part1-title, .body-left-upper-part2-title{
+    font-family: Unbounded;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #AE88AD;
+    text-transform: uppercase;
+
+}
+.body-left-upper-part1-text, .body-left-upper-part2-text{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #484848;
+    text-align: start;
+}
+.body-left-upper-part2-text span{
+    font-family: SteppeBold;
+}
+.expanded-folder-content-body-left-lower-part-container{
+    flex: 5;
+    display: flex;
+    border: 2px solid #AE88AD;
+    border-radius: 25px;
+    padding: 15px 15px 2px 15px;
+}
+
+
+.body-left-lower-part-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30.36px;
+    color: #AE88AD;
+    text-transform: uppercase;
+}
+.lower-part-text-item{
+    display: flex;
+    gap: 6px;
+    padding: 2px 0;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20.9px;
+    color: #484848;
+}
+
+.lower-part-text-item-text{
+    flex: 1;
+}
+.lower-part-text-item-img{
+    width: 25px;
+    height: auto;
+}
+.lower-part-text-item-img img{
+    width: 100%;
+}
+.expanded-folder-content-extra-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 12%;
+    width: 500px;
+    height: 100px;
+    border-radius: 37px;
+    padding: 0 30px;
+    background-color: #FCE696;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color:#484848
+}
+.folder-content-body{
+    height: 530px;
+    width: 1300px;
+    /* padding-bottom: 100px; */
+    display: flex;
+    gap: 15px;
+}
+.folder-content-body-info-container{
+    background-image: url("/assets/elements/containerLeftUpCorenerLarger.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 0 30px 20px;
+}
+.folder-content-body-info-container-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    color: #AE88AD;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.folder-content-body-img{
+    flex: 9;
+    border-radius: 23.58px;
+    overflow: hidden;
+}
+.folder-content-body-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.folder-content-body-info-container-text{
+    width: 73%;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #484848;
+    
+}
+.folder-content-body-info-container-text.p1{
+    font-family: SteppeBold;
+}
+.folder-content-body-info-studying{
+    flex: 11;
+    margin-left: 10px;
+}
+
+.expanded-folder-content-body-right{
+    flex: 6;
+    /* background-color: black; */
+} 
+@media (max-width: 768px) {
+    .expanded-folder-content-container{
+        width: 350px;
+        max-width: 350px;
+        min-width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .expanded-folder-content{
+        height: auto;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .expanded-folder-content-title{
+        font-size: 18px;
+        line-height: normal;
+        width: 200px;
+        /* text-align: start; */
+        align-content: flex-start;
+        margin: 10px 100px 20px 0;
+    }
+    .expanded-folder-content-body{
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .expanded-folder-content-body-left{
+        width: 100%;
+        gap: 15px;
+    }
+    .expanded-folder-content-body-left-upper-part-container{
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* align-content: center; */
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .expanded-folder-content-body-left-upper-part1{
+        background-image: url("/assets/elements/containerLeftUpCorenerMobile.png");
+        flex: none;
+        width: 310px;
+        height: 260px;
+        padding: 25px;
+    }
+    .body-left-upper-part1-title, .body-left-upper-part2-title{
+        font-size: 16px;
+    }
+    .body-left-upper-part1-text, .body-left-upper-part2-text{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .expanded-folder-content-body-left-upper-part2{
+        flex: none;
+        width: 300px;
+        height: 250px;
+        padding: 25px 20px;
+    }
+    .expanded-folder-content-body-left-lower-part-container{
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 295px;
+        margin-left: 8px;
+        padding-top: 5px;
+        height: auto;
+        flex-direction: column;
+    }
+    .body-left-lower-part-title{
+        font-size: 16px;
+    }
+    .lower-part-text-item{
+        gap: 10px;
+        font-size: 13px;
+        padding: 0;
+    }
+    .expanded-folder-content-extra-container{
+        width: 260px;
+        left: 10px;
+        padding: 10px;
+        line-height: normal;
+        border-radius: 20px;
+        height: auto;
+        font-size: 13px;
+    }
+    .expanded-folder-content-body-right{
+        flex: none;
+        width: 300px;
+        margin-left: 5px;
+    }
+    .folder-content-body{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .folder-content-body-info-container{
+        padding: 15px 0 10px 10px;
+        width: 300px;
+        gap: 5px;
+    }
+    .folder-content-body-info-container-title{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .folder-content-body-info-container-text{
+        width: 100%;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    .folder-content-body-info-container-text.p1{
+        font-size: 14px;
+        width: 250px;
+    }
+    .folder-content-body-img{
+        flex: none;
+        width: 300px;
+        height: 300px;
+
+    }
+    .folder-content-body-img img{
+        object-position: top;
+    }
+    .folder-content-body-info-studying{
+        margin: 0;
+    }
+}

@@ -1,0 +1,194 @@
+.container-about-lessons{
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/elements/container_info_lessons.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px 100px 15px;
+    position: relative;
+}
+.container-about-lessons-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.container-about-lessons-body{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+}
+.container-about-lessons-body-title{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    /* text-transform: uppercase; */
+}
+.container-about-lessons-body-center{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.container-about-lessons-body-elem-item{
+    font-family: Steppe;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+}
+.container-about-lessons-body-elem-item span{
+    color: #FCE696;
+    margin-left: 5px;
+}
+.container-about-lessons-body-bottom{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.container-about-lessons-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+}
+.container-about-lessons-bottom-title{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FCE696;
+}
+.container-about-lessons-bottom-subtitle{
+    font-family: Steppe;
+    font-weight: 400;
+    font-size: 13px;
+    color: #FCE696;
+}
+
+.container-about-lessons-bottom-img{
+    width: 200px;
+    height: auto;
+}
+.container-about-lessons-bottom-img img{
+    width: 100%;
+}
+.container-about-lessons-title-body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.container-about-lessons-bottom-footer{
+    text-align: center;
+    font-family: Steppe;
+    font-weight: 400;
+    font-size: 11px;
+    color: #ECE1D5;
+}
+.container-about-lessons-btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-47%);
+    background-color: #AE88AD;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Unbounded;
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+@media (max-width: 768px) {
+    .container-about-lessons{
+        background-image: url("/assets/elements/containerInfoMobile.png");
+        padding: 15px 15px 0 15px;
+        max-height: 535px;
+        max-width: 300px;
+        justify-content: flex-start;
+        align-items: center;
+        /* align-self: center; */
+    }
+    .container-about-lessons-title{
+        font-size: 16px;
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+    .container-about-lessons-title-body-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 450px;
+        width: 270px;
+    }
+    .container-about-lessons-body{
+        gap: 8px;
+        padding: 0 8px;
+        min-height: 275px;
+    }
+    .container-about-lessons-body-title{
+        width: 85%;
+        font-size: 14px;
+        line-height: normal;
+    }
+    .container-about-lessons-body-center{
+        gap: 5px;
+    }
+    .container-about-lessons-body-elem-item{
+        font-size: 13px;
+        line-height: normal;
+    }
+    .container-about-lessons-bottom{
+        margin-top: 0;
+        padding: 0 17px 0 15px;
+    }
+    .container-about-lessons-bottom-title{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .container-about-lessons-bottom-subtitle{
+        font-size: 12px;
+    }
+    .container-about-lessons-bottom-img{
+        width: 100%;
+        height: auto;
+    }
+    .container-about-lessons-bottom-footer{
+        font-size: 10px;
+    }
+    .container-about-lessons-btn-container{
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* align-content: center; */
+        margin-left: 102px;
+    }
+    .container-about-lessons-btn{
+        margin-top: 30px;
+        position: sticky;
+        width: 100px;
+        height: 45px;
+        border-radius: 25px;
+        font-size: 15px;
+        /* left: 90%; */
+        /* text-align: center; */
+        /* align-content: center; */
+        font-size: 12px;
+    }
+}

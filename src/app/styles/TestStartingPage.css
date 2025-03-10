@@ -1,0 +1,189 @@
+.test-starting-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    width: 100%; 
+    padding: 0px 80px 80px 80px;
+}
+.test-starting-page-btn-return-container{
+    width: 100%;
+    display: flex;
+    justify-content: start; 
+    align-items: end;
+    margin-bottom: 10px;
+    position: sticky;
+    height: 100px;
+}
+
+.test-starting-page-test-container{
+    width: 800px;
+    height: 100%;
+    min-height: 200px;
+    background-color: #AE88AD;
+    border-radius: 40px;
+    padding: 24px 30px;
+}
+.test-starting-page-test-container-header-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 38px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.test-starting-page-test-container-registation{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 20px;
+}
+.test-starting-page-test-container-form{
+    width: 250px;
+    padding: 0 10px;
+}
+.test-starting-page-test-container-form-inputs{
+    width: 250px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.test-starting-page-test-container-attention{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    color: #484848;
+}
+.test-starting-page-test-container-timer{
+    position: fixed;
+    top: 30%;
+    right: 100px;
+    padding: 10px;
+    background-color: #AE88AD;
+    font-family: Unbounded;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.test-starting-page-test-container-form-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.test-starting-page-test-container-form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    color: #484848;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.test-starting-page-test-container-header-description{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.test-starting-page-test-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+.test-page-finish-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; 
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    gap: 10px;
+    color: #484848;
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .test-starting-page {
+        padding: 20px 20px 20px 20px;
+        justify-content: start;
+        gap: 10px;
+        /* height: auto; */
+        min-height: auto;
+    }
+    .test-starting-page-btn-return-container{
+        height: auto;
+        align-items: flex-start;
+    }
+    .tests-page-btn-return{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    .test-starting-page-test-container{
+        width: 100%;
+        padding: 24px 20px;
+    }
+    .test-starting-page-test-container-header-title{
+        font-size: 30px;
+    }
+    .test-starting-page-test-container-registation{
+        padding: 15px;
+    }
+    .test-starting-page-test-container-form{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .test-starting-page-test-container-form-inputs{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .test-starting-page-test-container-attention{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .test-starting-page-test-container-timer{
+        right: 20px;
+        font-size: 16px;
+    }
+    .test-starting-page-test-container-form-btn-container{
+        width: 100%;
+    }
+    .test-starting-page-test-container-form-btn{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .test-starting-page-test-container-header-description{
+        font-size: 14px;
+        padding: 0 8px;
+    }
+    .test-starting-page-test-list{
+        gap: 10px;
+    }
+    .test-page-finish-container{
+        font-size: 14px;
+    }
+}

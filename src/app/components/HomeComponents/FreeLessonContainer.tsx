@@ -2,17 +2,17 @@
 import "./styles/FreeLessonContainer.css";
 import { useEffect, useState } from "react";
 import InputFreeLesson from "./styledComponents/InputFreeLesson";
-// import { emailSendFunc } from "../emailSend";
-// import Toast from "../Toast";
+import { emailSendFunc } from "../../funcs/emailSend";
+import Toast from "../Toast";
 
 export default function FreeLessonContainer({
   paddingTop = 75,
 }: {
   paddingTop?: number;
 }) {
-//   const serviceId = import.meta.env.VITE_DERYS_SERVICE_ID;
-//   const templateId = import.meta.env.VITE_DERYS_TEMPLATE_LESSONS_ID;
-//   const publicKey = import.meta.env.VITE_DERYS_PUBLIC_KEY;
+  const serviceId = process.env.NEXT_PUBLIC_DERYS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_DERYS_TEMPLATE_LESSONS_ID;
+  const publicKey = process.env.NEXT_PUBLIC_DERYS_PUBLIC_KEY;
   const [inputValueName, setInputValueName] = useState<string>("");
   const [inputValuePhoneNumber, setInputValuePhoneNumber] =
     useState<string>("");
@@ -56,22 +56,22 @@ export default function FreeLessonContainer({
       message: resultMessage,
     };
 
-    // const response = await emailSendFunc(
-    //   templateParams,
-    //   serviceId,
-    //   templateId,
-    //   publicKey
-    // );
+    const response = await emailSendFunc(
+      templateParams,
+      serviceId,
+      templateId,
+      publicKey
+    );
 
-    // if (response) {
-    //   setInputValueName("");
-    //   setInputValuePhoneNumber("");
-    //   setInputValueEmail("");
-    //   setIsToast("Форма успішно відправлена!");
-    // } else {
-    //   setIsToast("Помилка при відправці форми!");
-    //   return;
-    // }
+    if (response) {
+      setInputValueName("");
+      setInputValuePhoneNumber("");
+      setInputValueEmail("");
+      setIsToast("Форма успішно відправлена!");
+    } else {
+      setIsToast("Помилка при відправці форми!");
+      return;
+    }
   };
 
   useEffect(() => {
@@ -136,7 +136,7 @@ export default function FreeLessonContainer({
         </div>
       </div>
       <div style={{ height: 100, backgroundColor: "#ffffff" }}></div>
-      {/* {isToast && <Toast message={isToast} onClose={() => { setIsToast("") }} />} */}
+      {isToast && <Toast message={isToast} onClose={() => { setIsToast("") }} />}
     </>
   );
 }

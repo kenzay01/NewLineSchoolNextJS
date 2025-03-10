@@ -18,7 +18,7 @@ export default function ForUsImportant() {
       }
     };
 
-    updateLayout(); // Ініціалізація при першому рендерингу
+    updateLayout(); 
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
   }, []);
@@ -100,7 +100,7 @@ export default function ForUsImportant() {
         <div className="home-for-us-important-text-container-mobile-title">
           A також ми допоможемо{" "}
           <img
-            src="/assets/elements/arrow_up_right.png" // правильний шлях до зображення
+            src="/assets/elements/arrow_up_right.png" 
             className="home-for-us-important-text-container-mobile-img"
             alt=""
           />

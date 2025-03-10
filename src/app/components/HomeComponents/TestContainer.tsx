@@ -2,7 +2,7 @@
 
 // Import necessary libraries
 import { useState, useEffect, JSX } from 'react';
-import Link from 'next/link';  // Use Next.js Router
+import { useRouter } from 'next/navigation';
 import HighlightedTextWithDots from './styledComponents/HighlightedTextWithDots';
 import HighlightedText from './styledComponents/HighlightedText';
 import ColumnLevel from './styledComponents/ColumnLevel';
@@ -15,7 +15,7 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
     footer?: JSX.Element;
     backIsImg?: boolean;
   }) {
-//   const router = useRouter();  // Using Next.js router instead of `useNavigate`
+  const router = useRouter();  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [layoutForMainBanner, setLayoutForMainBanner] = useState('desktop');
 
@@ -230,11 +230,11 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
     </div>
   );
   const buttonWithfunc = (
-    <Link href="/tests">
-    <button className="home-test-container-left-btn">
+    <button className="home-test-container-left-btn" onClick={()=>{
+        router.push('/testPage');
+    }}>
       пройти тест
     </button>
-  </Link>
   );
 
   return (

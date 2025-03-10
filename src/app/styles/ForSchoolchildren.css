@@ -1,0 +1,12 @@
+.for-schoolchildren-container{
+    width: 100%;
+    position: relative;
+}
+.folders-content-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+}

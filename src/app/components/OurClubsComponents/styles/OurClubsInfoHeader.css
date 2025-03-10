@@ -1,0 +1,129 @@
+.clubs-info-header-container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 0 40px 150px;
+}
+.clubs-info-header-title{
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #484848;
+    padding-left: 30px;
+}
+.clubs-info-header-title span{
+    color: #AE88AD;
+}
+.clubs-info-header-body{
+    padding: 30px;
+    background-color: #AE88AD;
+    border-radius: 17px;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.clubs-info-header-body-title{
+    font-family: Unbounded;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+}
+.clubs-info-header-body-subtitle{
+    font-family: Steppe;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFFD9;
+    text-decoration: underline;
+    margin-top: 3px;
+    text-align: start;
+}
+.clubs-info-header-body-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+    width: 200px;
+}
+.clubs-info-header-body-info-item{
+    font-family: SteppeBold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+.clubs-info-header-body-info-item span{
+    color: #FCE696;
+    text-align: start;
+    width: 75px;
+}
+.clubs-info-header-body-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.clubs-info-header-body-text-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: Unbounded;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+
+}
+.clubs-info-header-body-text-item-img{
+    margin-top: 2px;
+    width: 20px;
+    height: auto;
+}
+.clubs-info-header-body-text-item-img img{
+    width: 100%;
+    height: 100%;
+}
+.clubs-info-header-body-text-item-text{
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .clubs-info-header-container{
+        padding: 20px 15px;
+        height: auto;
+        gap: 5px;
+    }
+    .clubs-info-header-title{
+        padding-left: 0;
+        padding: 10px 0;
+        font-size: 20px;
+
+    }
+    .clubs-info-header-body{
+        width: 100%;
+        padding: 15px;
+    }
+    .clubs-info-header-body-title{
+        font-size: 16px;
+        line-height: normal;
+    }
+    .clubs-info-header-body-subtitle{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .clubs-info-header-body-info-item{
+        font-size: 16px;
+        line-height: normal;
+    }
+    .clubs-info-header-body-text-item{
+        font-size: 16px;
+        line-height: normal;
+    }
+}

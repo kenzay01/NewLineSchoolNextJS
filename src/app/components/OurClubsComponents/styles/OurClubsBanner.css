@@ -1,0 +1,96 @@
+.our-clubs-banner{
+    width: 100%;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* padding: 30px 40px 100px 40px; */
+    padding: 70px 60px 60px 120px;
+}
+.our-clubs-banner-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.our-clubs-banner-left-title{
+    font-family: Unbounded;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 75px;
+    text-transform: uppercase;
+    color: #484848;
+    /* margin-top: 20px; */
+}
+.our-clubs-banner-left-p{
+    font-family: Steppe;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #484848;
+    width: 68%;
+}
+.our-clubs-banner-left-text{
+    font-family: SteppeBold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #484848;
+    width: 72%;
+}
+.our-clubs-banner-left-text span{
+    font-family: Unbounded;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #AE88AD;
+}
+.our-clubs-banner-right{
+    flex: 1;
+    width: 100%;
+    height: 450px;
+}
+.our-clubs-banner-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+@media (max-width: 768px) {
+    .our-clubs-banner{
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px 0 20px;
+        height: auto;
+    }
+    .our-clubs-banner-left{
+        gap: 10px;
+        width: 100%;
+    }
+    .our-clubs-banner-left-title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .our-clubs-banner-left-p{
+        font-size: 13px;
+        line-height: 16px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .our-clubs-banner-left-text{
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%;
+        text-indent: 10px;
+    }
+    .our-clubs-banner-left-text span{
+        font-size: 15px;
+    }
+    .our-clubs-banner-right{
+        width: 100%;
+        height: 200px;
+        flex: none;
+    }
+    .our-clubs-banner-right img{
+        border-radius: 15px;
+    }
+}

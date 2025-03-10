@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";  
 
@@ -10,16 +12,17 @@ interface AccordionProps {
 }
 
 export default function Accordion({ title, content }: AccordionProps) {
+    console.log("title", title);
+    console.log("content", content);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="accordion" onClick={() => setIsOpen(!isOpen)}>
       <div className="accordion-header">
         <span>{title}</span>
-        {/* Використовуємо Image компонент для зображення */}
         <Image
           loading="lazy"
-          src="/assets/elements/accordionBtn.png"  // Оновлений шлях
+          src="/assets/elements/accordionBtn.png" 
           className={`accordion-btn ${isOpen ? "open" : ""}`}
           alt="Accordion Button"
           width={16}
