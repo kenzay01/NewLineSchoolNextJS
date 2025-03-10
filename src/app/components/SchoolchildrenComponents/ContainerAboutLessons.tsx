@@ -1,5 +1,8 @@
+"use client";
+
 import "./styles/ContainerAboutLessons.css";
 import { ReactNode } from "react";
+import { useEffect, useState } from "react";
 export default function ContainerAboutLessons({
   bodyTitle = false,
   bodyCenterElements,
@@ -13,7 +16,16 @@ export default function ContainerAboutLessons({
   btnWidth?: number;
   btnHeight?: number;
 }) {
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+      const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
+      checkScreenSize();
+      window.addEventListener("resize", checkScreenSize);
+      return () => window.removeEventListener("resize", checkScreenSize);
+        }
+    }, []);
   return (
     <div className="container-about-lessons">
       <div className="container-about-lessons-title-body-container">

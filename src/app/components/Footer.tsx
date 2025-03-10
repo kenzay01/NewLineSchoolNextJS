@@ -8,13 +8,15 @@ export default function Footer({ background }: { background: boolean }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const updateLayout = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      if (typeof window !== "undefined") {
+      const updateLayout = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
 
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
+      updateLayout();
+      window.addEventListener("resize", updateLayout);
+      return () => window.removeEventListener("resize", updateLayout);
+    }
   }, []);
 
   return (

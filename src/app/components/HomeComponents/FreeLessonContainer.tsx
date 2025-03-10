@@ -75,6 +75,7 @@ export default function FreeLessonContainer({
   };
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -82,6 +83,7 @@ export default function FreeLessonContainer({
     updateLayout();
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+}
   }, []);
 
   return (

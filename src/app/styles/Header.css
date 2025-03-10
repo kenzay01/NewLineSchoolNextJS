@@ -95,7 +95,7 @@
         background: rgb(185, 153, 184);
         /* border: 5px solid #AE88AD; */
         flex-direction: column;
-        text-align: end;
+        text-align: flex-end;
         box-shadow: -100px 150px 150px rgba(60, 53, 60, 0.50);
         border-radius: 15px 0 0 15px;
     }

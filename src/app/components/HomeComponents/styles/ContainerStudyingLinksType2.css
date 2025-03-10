@@ -81,8 +81,8 @@
         flex-direction: column;
     }
     .home-links-to-studying-container2-layout{
-        align-items: start;
-        justify-content: start;
+        align-items: flex-start;
+        justify-content: flex-start;
         display: flex;
         height: auto;
         overflow-x: auto;
@@ -92,8 +92,8 @@
     }
     .home-links-to-studying-container2-pair{
         flex-direction: row;
-        align-items: start; 
-        justify-content: start;
+        align-items: flex-start; 
+        justify-content: flex-start;
     }
 }
 

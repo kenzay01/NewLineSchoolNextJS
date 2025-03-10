@@ -13,11 +13,13 @@ export default function ForSchoolchildren() {
   const [hash, setHash] = useState("");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateHash = () => setHash(window.location.hash.substring(1));
 
     updateHash(); 
     window.addEventListener("hashchange", updateHash);
     return () => window.removeEventListener("hashchange", updateHash);
+    }
   }, []);
 
   useEffect(() => {
@@ -35,6 +37,7 @@ export default function ForSchoolchildren() {
   const isMobile = layoutForFolder === "mobile";
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       setLayoutForFolder(window.innerWidth < 768 ? "mobile" : "desktop");
     };
@@ -42,6 +45,7 @@ export default function ForSchoolchildren() {
     updateLayout();
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+}
   }, []);
 
   const folderData = [

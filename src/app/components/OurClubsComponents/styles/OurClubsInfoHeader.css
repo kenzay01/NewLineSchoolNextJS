@@ -43,7 +43,7 @@
     color: #FFFFFFD9;
     text-decoration: underline;
     margin-top: 3px;
-    text-align: start;
+    text-align: flex-start;
 }
 .clubs-info-header-body-info{
     display: flex;
@@ -62,7 +62,7 @@
 }
 .clubs-info-header-body-info-item span{
     color: #FCE696;
-    text-align: start;
+    text-align: flex-start;
     width: 75px;
 }
 .clubs-info-header-body-text{

@@ -13,6 +13,7 @@ export default function PrepareForExamsBanner() {
   ];
   const [layoutForExamsBanner, setLayoutForExamsBanner] = useState("desktop");
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       if (window.innerWidth < 768) {
         setLayoutForExamsBanner("mobile");
@@ -22,6 +23,7 @@ export default function PrepareForExamsBanner() {
     };
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+  }
   }, []);
   const isMobile = layoutForExamsBanner === "mobile";
   return (

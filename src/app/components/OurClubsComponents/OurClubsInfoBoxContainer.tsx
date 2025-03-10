@@ -188,6 +188,7 @@ export default function OurClubsInfoBoxContainer({
 
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
       const updateLayout = () => {
         if (window.innerWidth < 768) {
           setLayoutForExams("mobile");
@@ -198,6 +199,7 @@ export default function OurClubsInfoBoxContainer({
   
       window.addEventListener("resize", updateLayout);
       return () => window.removeEventListener("resize", updateLayout);
+    }
     }, []);
   return (
     <div

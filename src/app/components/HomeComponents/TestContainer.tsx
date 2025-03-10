@@ -178,22 +178,25 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
 
   // Update windowWidth state when window is resized
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const handleResize = () => {
       setWindowWidth(window.innerWidth); // Update state with the new window width
     };
 
     window.addEventListener('resize', handleResize); // Add event listener on mount
     return () => window.removeEventListener('resize', handleResize); // Clean up on unmount
-  }, []); // This effect runs once on mount, and cleans up on unmount
+}
+  }, []); 
 
-  // Update layout based on the window width
   useEffect(() => {
+    if (typeof window !== "undefined") {
     if (windowWidth < 768) {
       setLayoutForMainBanner('mobile');
     } else {
       setLayoutForMainBanner('desktop');
     }
-  }, [windowWidth]); // Effect depends on windowWidth state
+}
+  }, [windowWidth]); 
 
   const textP = layoutForMainBanner === 'desktop' ? (
     <div className="home-test-container-left-p">

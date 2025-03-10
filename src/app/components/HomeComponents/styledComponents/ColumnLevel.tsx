@@ -40,6 +40,7 @@ const ColumnLevel = ({
   }, [active, onClick]);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       if (window.innerWidth < 768) {
         setLayoutForMainBanner("mobile");
@@ -50,6 +51,7 @@ const ColumnLevel = ({
 
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+}
   }, []);
 
   return (

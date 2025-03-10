@@ -4,8 +4,8 @@
     background-position: center;
     width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
 }
 .expanded-folder-content{
@@ -15,7 +15,7 @@
     padding: 30px 105px;
 }
 .expanded-folder-content-title{
-    text-align: start;
+    text-align: flex-start;
     font-family: Unbounded;
     font-weight: 600;
     font-size: 33px;
@@ -80,7 +80,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #484848;
-    text-align: start;
+    text-align: flex-start;
 }
 .body-left-upper-part2-text span{
     font-family: SteppeBold;
@@ -219,7 +219,7 @@
         font-size: 18px;
         line-height: normal;
         width: 200px;
-        /* text-align: start; */
+        /* text-align: flex-start; */
         align-content: flex-start;
         margin: 10px 100px 20px 0;
     }

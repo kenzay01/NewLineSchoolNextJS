@@ -8,6 +8,7 @@ export default function HomeMainBanner() {
   const [layoutForMainBanner, setLayoutForMainBanner] = useState("desktop");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       if (window.innerWidth < 768) {
         setLayoutForMainBanner("mobile");
@@ -19,6 +20,7 @@ export default function HomeMainBanner() {
     updateLayout(); // Ініціалізація при першому рендерингу
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+}
   }, []);
 
   return (

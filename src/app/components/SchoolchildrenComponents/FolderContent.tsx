@@ -137,6 +137,7 @@ export default function FolderContent({
     );
   }
   useEffect(() => {
+    if (typeof window !== "undefined") {
       const updateLayout = () => {
         if (window.innerWidth < 768) {
           setLayoutForFolder("mobile");
@@ -147,7 +148,8 @@ export default function FolderContent({
   
       window.addEventListener("resize", updateLayout);
       return () => window.removeEventListener("resize", updateLayout);
-    }, [window.innerWidth]);
+    }
+    }, []);
   return (
     <div
       className="expanded-folder-content-container"

@@ -2,10 +2,6 @@
     width: 100%;
     height: auto;
     background-color: #ffffff;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start; */
     padding: 80px 20px;
     
 }
@@ -24,7 +20,7 @@
 .home-learning-benefits-boxes-container{
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 15px;
 }

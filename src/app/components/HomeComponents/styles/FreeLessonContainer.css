@@ -90,7 +90,7 @@
     .home-free-lessons-title{
         left: 10px;
         font-size: 90px;
-        text-align: start;
+        text-align: flex-start;
         color: #ECE1D580;
         line-height: 100px;
         position: absolute;

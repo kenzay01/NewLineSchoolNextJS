@@ -90,11 +90,13 @@ export default function ContainerStudyingLinksType2() {
   };
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       setLayoutForLinks(window.innerWidth < 768 ? "mobile" : "desktop");
     };
     window.addEventListener("resize", updateLayout);
     return () => window.removeEventListener("resize", updateLayout);
+}
   }, []);
 
   return (

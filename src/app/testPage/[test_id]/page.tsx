@@ -195,6 +195,7 @@ export default function TestStartingPage() {
   };
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const updateLayout = () => {
       if (window.innerWidth < 768) {
         setIsMobile(true);
@@ -204,6 +205,7 @@ export default function TestStartingPage() {
     };
     window.addEventListener('resize', updateLayout);
     return () => window.removeEventListener('resize', updateLayout);
+}
   }, []);
 
   const testContent = TESTS[testId as TestKeys];

@@ -11,8 +11,8 @@
 .test-starting-page-btn-return-container{
     width: 100%;
     display: flex;
-    justify-content: start; 
-    align-items: end;
+    justify-content: flex-start; 
+    align-items: flex-end;
     margin-bottom: 10px;
     position: sticky;
     height: 100px;
@@ -38,7 +38,7 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     gap: 15px;
     padding: 15px;
@@ -113,7 +113,7 @@
 .test-page-finish-container{
     background-color: #ffffff;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     width: 100%; 
@@ -130,7 +130,7 @@
 @media (max-width: 768px) {
     .test-starting-page {
         padding: 20px 20px 20px 20px;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 10px;
         /* height: auto; */
         min-height: auto;

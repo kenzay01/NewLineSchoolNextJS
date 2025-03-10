@@ -12,11 +12,13 @@ export default function OurClubs() {
       const [hash, setHash] = useState("");
     
       useEffect(() => {
+        if (typeof window !== "undefined") {
         const updateHash = () => setHash(window.location.hash.substring(1));
     
         updateHash(); 
         window.addEventListener("hashchange", updateHash);
         return () => window.removeEventListener("hashchange", updateHash);
+        }
       }, []);
     
       useEffect(() => {
