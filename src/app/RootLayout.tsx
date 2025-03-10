@@ -8,14 +8,15 @@ import { TestProvider } from "./context/TestContext";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdults = pathname === "/forAdults";
-  const isTestPage = pathname === "/testPage" || pathname.includes("/testPage/");
+  const isTestPage = pathname.startsWith("/testPage");
+
   return (
     <html lang="en">
       <body>
         <TestProvider>
-            {!isTestPage && <Header />}
-            <main className="content-container">{children}</main>
-            {!isAdults || !isTestPage && <Footer background={true} />}
+          {!isTestPage && <Header />}
+          <main className="content-container">{children}</main>
+          {!isAdults && !isTestPage && <Footer background={true} />}
         </TestProvider>
       </body>
     </html>
