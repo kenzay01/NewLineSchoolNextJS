@@ -138,7 +138,15 @@ export default function ForUsImportant() {
       </div>
       <div className="home-for-us-important-container">
         <div className="home-for-us-important-title-container">
-          <div className="home-for-us-important-title">ДЛЯ НАС ВАЖЛИВО</div>
+          <div className="home-for-us-important-title">ДЛЯ НАС <HighlightedTextWithDots
+            colorBackground="#FCE69699"
+            colorDots="#FCE696"
+            colorText="#414040"
+            widthDots={8}
+            widthBorder={3}
+          >
+            ВАЖЛИВО
+          </HighlightedTextWithDots></div>
           <div className="home-for-us-important-title-subtitles-container">
             <div className="home-for-us-important-title-subtitle p1">
               надихати

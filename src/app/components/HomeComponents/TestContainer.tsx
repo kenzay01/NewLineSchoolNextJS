@@ -258,7 +258,15 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
       >
         <div className="home-test-container-left">
           <div className="home-test-container-left-title">
-            не знаєш який курс тобі потрібен?
+            не знаєш який <HighlightedTextWithDots
+                                    colorBackground="#FCE69699"
+            colorDots="#FCE696"
+                                    colorText="#414040"
+                                    widthDots={8}
+                                    widthBorder={3}
+                                  >
+                                     курс тобі
+                                  </HighlightedTextWithDots> потрібен?
           </div>
           {textP}
           {layoutForMainBanner === 'desktop' ? buttonWithfunc : null}

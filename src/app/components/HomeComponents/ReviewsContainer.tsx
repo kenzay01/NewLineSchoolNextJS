@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import ReviewBox from "./styledComponents/ReviewBox";
 import Image from "next/image";
 import "./styles/ReviewsContainer.css"; 
+import HighlightedTextWithDots from "./styledComponents/HighlightedTextWithDots";
 export default function ReviewsContainer() {
     const reviews = [
         {
@@ -57,7 +58,15 @@ export default function ReviewsContainer() {
   return (
     <div className="home-reviews-container">
       <div className="home-reviews-boxes-title-container">
-        <div className="home-reviews-boxes-title">ваші Коментарі</div>
+        <div className="home-reviews-boxes-title">Ваші {" "}<HighlightedTextWithDots
+                    colorBackground="#BFA0BEB2"
+            colorDots="#AE88AD"
+                    colorText="#ffffff"
+                    widthDots={8}
+                    widthBorder={3}
+                  >
+                     коментарі
+                  </HighlightedTextWithDots></div>
       </div>
       <div className="home-reviews-boxes-container" ref={containerRef}>
         {reviews.map((review, index) => (

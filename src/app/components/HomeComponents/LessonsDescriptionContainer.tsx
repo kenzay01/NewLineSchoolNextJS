@@ -1,7 +1,7 @@
 import './styles/LessonsDescriptionContainer.css'; // Використовуємо CSS Modules
 import HighlightedText from './styledComponents/HighlightedText';
 import Image from 'next/image'; // Імпортуємо Image з next/image для оптимізації зображень
-
+import HighlightedTextWithDots from './styledComponents/HighlightedTextWithDots';
 export default function LessonsDescriptionContainer() {
     const listOfDescriptionText = [
         <><HighlightedText colorBack="#FDECB0">Навчання проходить у процесі спілкування,</HighlightedText> тому говорити англійською ви точно навчитесь</>,
@@ -18,7 +18,15 @@ export default function LessonsDescriptionContainer() {
 
     return (
         <div className="home-lessons-description-container">
-            <div className="home-lessons-description-title">як проходять уроки</div>
+            <div className="home-lessons-description-title">як проходять {" "}<HighlightedTextWithDots
+                        colorBackground="#BFA0BEB2"
+            colorDots="#AE88AD"
+                        colorText="#ffffff"
+                        widthDots={8}
+                        widthBorder={3}
+                      >
+                         уроки
+                      </HighlightedTextWithDots></div>
             <div className="home-lessons-description-content">
                 <div className="home-lessons-description-text-container">
                     {listOfDescriptionText.map((text, index) => (

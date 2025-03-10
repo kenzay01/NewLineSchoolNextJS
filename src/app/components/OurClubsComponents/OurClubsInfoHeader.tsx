@@ -7,7 +7,7 @@ export default function OurClubsInfoHeader() {
         "Граматичний клуб для підлітків"
     ];
     return <div className="clubs-info-header-container">
-        <div className="clubs-info-header-title"><span>Ми пропонуємо розмовні клуби <br /> різних напрямків.</span> Обирайте <br /> найкращий для себе</div>
+        <div className="clubs-info-header-title"><span>Ми пропонуємо розмовні клуби <br /> різних напрямків.</span> Обирайте найкращий для себе</div>
         <div className="clubs-info-header-body">
             <div className="clubs-info-header-body-title">Долучитись можуть і наші студенти і інші <br /> охочі практикувати мову</div>
             <div className="clubs-info-header-body-subtitle">Для наших студентів розмовні клуби безкоштовні!</div>
