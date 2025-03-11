@@ -1,13 +1,14 @@
 .highlighted-text-border {
     font-family: Steppe;
     font-size: 16px;
-        font-weight: 800;
+    font-weight: 800;
     position: relative;
     font-weight: bold;
     display: inline-block;
     padding: 4px 10px;
     text-transform: uppercase;
     color: #414040;
+    max-width: 310px;
 }
 
 .highlighted-text-border::before,
