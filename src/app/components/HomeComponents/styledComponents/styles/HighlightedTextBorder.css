@@ -1,0 +1,38 @@
+.highlighted-text-border {
+    font-family: Steppe;
+    font-size: 16px;
+        font-weight: 800;
+    position: relative;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.highlighted-text-border::before,
+.highlighted-text-border::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-width: 2px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: var(--border-color);
+}
+
+.highlighted-text-border::before {
+    top: -4px;
+    left:-1px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 12px 0 0 0;
+}
+
+.highlighted-text-border::after {
+    bottom: var(--bottom-offset, -4px);
+    right: var(--right-offset, -1px);
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 12px 0;
+}

@@ -6,6 +6,7 @@ import Accordion from "./styledComponents/Accordion";
 import Image from "next/image";
 import "./styles/ForUsImportant.css"; // імпортуємо стилі
 import HighlightedText from "./styledComponents/HighlightedText";
+import HighlightedTextBorder from "./styledComponents/HighlightedTextBorder";
 
 export default function ForUsImportant() {
   const [layoutForMainBanner, setLayoutForMainBanner] = useState("desktop");
@@ -148,7 +149,10 @@ export default function ForUsImportant() {
             ВАЖЛИВО
           </HighlightedTextWithDots></div>
           <div className="home-for-us-important-title-subtitles-container">
-            <div className="home-for-us-important-title-subtitle p1">
+            {
+              !isMobile ?
+            <>
+              <div className="home-for-us-important-title-subtitle p1">
               надихати
             </div>
             <div className="home-for-us-important-title-subtitle p2">
@@ -157,6 +161,19 @@ export default function ForUsImportant() {
             <div className="home-for-us-important-title-subtitle p3">
               спонукати до ефективного вивчення мови
             </div>
+            </> :
+            <>
+              <HighlightedTextBorder colorBorder="#ebbb0d">
+                надихати
+              </HighlightedTextBorder>
+              <HighlightedTextBorder colorBorder="#a87ba6">
+                мотивувати
+              </HighlightedTextBorder>
+              <HighlightedTextBorder colorBorder="#669e99">
+                спонукати до ефективного вивчення мови
+              </HighlightedTextBorder>
+            </>
+            }
           </div>
         </div>
         <div className="home-for-us-important-content">
