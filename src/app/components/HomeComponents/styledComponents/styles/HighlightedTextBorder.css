@@ -7,6 +7,7 @@
     display: inline-block;
     padding: 4px 10px;
     text-transform: uppercase;
+    color: #414040;
 }
 
 .highlighted-text-border::before,
