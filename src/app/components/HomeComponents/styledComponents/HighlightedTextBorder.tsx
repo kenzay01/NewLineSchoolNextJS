@@ -2,7 +2,7 @@ import "./styles/HighlightedTextBorder.css";
 
 export default function HighlightedTextBorder({ children, colorBorder }: { children: string; colorBorder: string }) {
     // Динамічне значення для позиціонування
-    const dynamicBottom = children.length > 15 ? "8px" : "-4px";
+    const dynamicBottom = children.length > 15 ? "0px" : "-4px";
     const dynamicRight = children.length > 15 ? "6px" : "-1px";
 
     return (

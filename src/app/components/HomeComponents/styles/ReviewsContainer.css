@@ -72,7 +72,7 @@
         padding: 0 20px;
     }
     .home-reviews-boxes-title-container{
-        padding: 0 20px 20px;
+        padding: 0 10px 20px;
     }
     .home-reviews-boxes-title{
         font-size: 30px;
@@ -82,5 +82,8 @@
     }
     .scroll-btn{
         border: none;
+    }
+    .home-reviews-container {
+        padding-top: 160px;
     }
 }

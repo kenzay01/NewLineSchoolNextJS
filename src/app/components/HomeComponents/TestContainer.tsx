@@ -258,7 +258,7 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
       >
         <div className="home-test-container-left">
           <div className="home-test-container-left-title">
-            не знаєш який <HighlightedTextWithDots
+            не знаєш який {layoutForMainBanner === "mobile" ?<HighlightedText colorBack='#FCE69699'>курс тобі</HighlightedText> :<HighlightedTextWithDots
                                     colorBackground="#FCE69699"
             colorDots="#FCE696"
                                     colorText="#414040"
@@ -266,7 +266,7 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
                                     widthBorder={3}
                                   >
                                      курс тобі
-                                  </HighlightedTextWithDots> потрібен?
+                                  </HighlightedTextWithDots>} потрібен?
           </div>
           {textP}
           {layoutForMainBanner === 'desktop' ? buttonWithfunc : null}

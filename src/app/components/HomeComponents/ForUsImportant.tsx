@@ -13,47 +13,56 @@ export default function ForUsImportant() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const updateLayout = () => {
-      if (window.innerWidth < 768) {
-        setLayoutForMainBanner("mobile");
-      } else {
-        setLayoutForMainBanner("desktop");
-      }
-    };
+      const updateLayout = () => {
+        if (window.innerWidth < 768) {
+          setLayoutForMainBanner("mobile");
+        } else {
+          setLayoutForMainBanner("desktop");
+        }
+      };
 
-    updateLayout(); 
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-}
+      updateLayout();
+      window.addEventListener("resize", updateLayout);
+      return () => window.removeEventListener("resize", updateLayout);
+    }
   }, []);
 
   const accordionContent = [
     {
       title: "Впевнено спілкуватись",
-      content: "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+      content:
+        "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     },
     {
       title: "Сласти міжнародні іспити",
-      content: "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+      content:
+        "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     },
     {
       title: "Досягти академічних успіхів",
-      content: "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-    }
+      content:
+        "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    },
   ];
   const isMobile = layoutForMainBanner === "mobile";
   let content;
-//   if (layoutForMainBanner === "desktop") {
-    content = (
-      <div className="home-for-us-important-text-container">
-        <div className="home-for-us-important-text-title">
-          А також ми допоможемо всім нашим студентам підняти свій рівень англійської мови
-        </div>
-        <div className="home-for-us-important-text">
-          {isMobile ? <> · <HighlightedText colorBack="#FCE69699">
-            для вільного спілкування
-          </HighlightedText></>
-          :
+  //   if (layoutForMainBanner === "desktop") {
+  content = (
+    <div className="home-for-us-important-text-container">
+      <div className="home-for-us-important-text-title">
+        А також ми допоможемо всім нашим студентам підняти свій рівень
+        англійської мови
+      </div>
+      <div className="home-for-us-important-text">
+        {isMobile ? (
+          <>
+            {" "}
+            ·{" "}
+            <HighlightedText colorBack="#FCE69699">
+              для вільного спілкування
+            </HighlightedText>
+          </>
+        ) : (
           <HighlightedTextWithDots
             colorBackground="#FCE69699"
             colorDots="#FCE696"
@@ -62,14 +71,21 @@ export default function ForUsImportant() {
             widthBorder={1}
           >
             для вільного спілкування
-          </HighlightedTextWithDots>}{" "}
-          у повсякденному житті, подорожах, карʼєрі та еміграції в іншу країну.
-        </div>
-        <div className="home-for-us-important-text">
-          {isMobile ? <> · <HighlightedText colorBack="#A0BFBD66">
-            для досягнення академічних успіхів
-          </HighlightedText></>
-          :<HighlightedTextWithDots
+          </HighlightedTextWithDots>
+        )}{" "}
+        у повсякденному житті, подорожах, карʼєрі та еміграції в іншу країну.
+      </div>
+      <div className="home-for-us-important-text">
+        {isMobile ? (
+          <>
+            {" "}
+            ·{" "}
+            <HighlightedText colorBack="#A0BFBD66">
+              для досягнення академічних успіхів
+            </HighlightedText>
+          </>
+        ) : (
+          <HighlightedTextWithDots
             colorBackground="#A0BFBD66"
             colorDots="#A0BFBD"
             colorText="#414040"
@@ -77,14 +93,21 @@ export default function ForUsImportant() {
             widthBorder={1}
           >
             для досягнення академічних успіхів
-          </HighlightedTextWithDots>}{" "}
-          у школі та вищих навчальних закладах.
-        </div>
-        <div className="home-for-us-important-text">
-          {isMobile ? <> · <HighlightedText colorBack="#FCE69699">
-            для успішного складання міжнародних іспитів
-          </HighlightedText></>
-          :<HighlightedTextWithDots
+          </HighlightedTextWithDots>
+        )}{" "}
+        у школі та вищих навчальних закладах.
+      </div>
+      <div className="home-for-us-important-text">
+        {isMobile ? (
+          <>
+            {" "}
+            ·{" "}
+            <HighlightedText colorBack="#FCE69699">
+              для успішного складання міжнародних іспитів
+            </HighlightedText>
+          </>
+        ) : (
+          <HighlightedTextWithDots
             colorBackground="#FCE69699"
             colorDots="#FCE696"
             colorText="#414040"
@@ -92,14 +115,22 @@ export default function ForUsImportant() {
             widthBorder={1}
           >
             для успішного складання міжнародних іспитів
-          </HighlightedTextWithDots>}{" "}
-          IELTS, A2 KEY (KET), B1 Preliminary (PET), B2 First (FCE), C1 Advanced (CAE)
-        </div>
-        <div className="home-for-us-important-text">
-          {isMobile ? <> · <HighlightedText colorBack="#BFA0BEB2">
-            та для успішного складання НМТ, ЄВІ
-          </HighlightedText></>
-          :<HighlightedTextWithDots
+          </HighlightedTextWithDots>
+        )}{" "}
+        IELTS, A2 KEY (KET), B1 Preliminary (PET), B2 First (FCE), C1 Advanced
+        (CAE)
+      </div>
+      <div className="home-for-us-important-text">
+        {isMobile ? (
+          <>
+            {" "}
+            ·{" "}
+            <HighlightedText colorBack="#BFA0BEB2">
+              та для успішного складання НМТ, ЄВІ
+            </HighlightedText>
+          </>
+        ) : (
+          <HighlightedTextWithDots
             colorBackground="#BFA0BEB2"
             colorDots="#AE88AD"
             colorText="#414040"
@@ -107,80 +138,113 @@ export default function ForUsImportant() {
             widthBorder={1}
           >
             та для успішного складання НМТ, ЄВІ
-          </HighlightedTextWithDots>}
-        </div>
+          </HighlightedTextWithDots>
+        )}
       </div>
-    );
-//   } else {
-//     content = (
-//       <div className="home-for-us-important-text-container-mobile">
-//         <div className="home-for-us-important-text-container-mobile-title">
-//           A також ми допоможемо{" "}
-//           <img
-//             src="/assets/elements/arrow_up_right.png" 
-//             className="home-for-us-important-text-container-mobile-img"
-//             alt=""
-//           />
-//         </div>
-//         <div className="home-for-us-important-text-container-mobile-body">
-//           {accordionContent.map((item, index) => (
-//             <Accordion key={index} title={item.title} content={item.content} />
-//           ))}
-//         </div>
-//       </div>
-//     );
-//   }
+    </div>
+  );
+  //   } else {
+  //     content = (
+  //       <div className="home-for-us-important-text-container-mobile">
+  //         <div className="home-for-us-important-text-container-mobile-title">
+  //           A також ми допоможемо{" "}
+  //           <img
+  //             src="/assets/elements/arrow_up_right.png"
+  //             className="home-for-us-important-text-container-mobile-img"
+  //             alt=""
+  //           />
+  //         </div>
+  //         <div className="home-for-us-important-text-container-mobile-body">
+  //           {accordionContent.map((item, index) => (
+  //             <Accordion key={index} title={item.title} content={item.content} />
+  //           ))}
+  //         </div>
+  //       </div>
+  //     );
+  //   }
 
   return (
     <div className="home-for-us-important-main-container">
       <div className="scroll-to-see-more">
         SCROLL TO SEE MORE
-        <img loading="lazy" src="/assets/elements/arrow_bottom.png" alt="" /> {/* Оновлений шлях */}
+        <img
+          loading="lazy"
+          src="/assets/elements/arrow_bottom.png"
+          alt=""
+        />{" "}
+        {/* Оновлений шлях */}
       </div>
       <div className="home-for-us-important-container">
         <div className="home-for-us-important-title-container">
-          <div className="home-for-us-important-title">ДЛЯ НАС <HighlightedTextWithDots
-            colorBackground="#FCE69699"
-            colorDots="#FCE696"
-            colorText="#414040"
-            widthDots={8}
-            widthBorder={3}
-          >
-            ВАЖЛИВО
-          </HighlightedTextWithDots></div>
+          <div className="home-for-us-important-title">
+            {" "}
+            <HighlightedTextWithDots
+              colorBackground="#BFA0BEB2"
+              colorDots="#AE88AD"
+              colorText="#ffffff"
+              widthDots={8}
+              widthBorder={3}
+            >
+              ДЛЯ НАС ВАЖЛИВО
+            </HighlightedTextWithDots>
+          </div>
           <div className="home-for-us-important-title-subtitles-container">
-            {
-              !isMobile ?
-            <>
-              <div className="home-for-us-important-title-subtitle p1">
-              надихати
-            </div>
-            <div className="home-for-us-important-title-subtitle p2">
-              мотивувати
-            </div>
-            <div className="home-for-us-important-title-subtitle p3">
-              спонукати до ефективного вивчення мови
-            </div>
-            </> :
-            <>
-              <HighlightedTextBorder colorBorder="#ebbb0d">
-                надихати
-              </HighlightedTextBorder>
-              <HighlightedTextBorder colorBorder="#a87ba6">
-                мотивувати
-              </HighlightedTextBorder>
-              <HighlightedTextBorder colorBorder="#669e99">
-                спонукати до ефективного вивчення мови
-              </HighlightedTextBorder>
-            </>
-            }
+            {!isMobile ? (
+              <>
+                <div className="home-for-us-important-title-subtitle p1">
+                  надихати
+                </div>
+                <div className="home-for-us-important-title-subtitle p2">
+                  мотивувати
+                </div>
+                <div className="home-for-us-important-title-subtitle p3">
+                  спонукати до ефективного навчання
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="home-for-us-important-title-subtitle-mobile">
+                <Image
+                    src="/assets/elements/arrow_right.png"
+                    alt="arrow right"
+                    width={20}
+                    height={12}
+                  />
+                  <HighlightedTextBorder colorBorder="#ebbb0d">
+                    надихати
+                  </HighlightedTextBorder>
+                </div>
+                <div className="home-for-us-important-title-subtitle-mobile">
+                <Image
+                    src="/assets/elements/arrow_right.png"
+                    alt="arrow right"
+                    width={20}
+                    height={12}
+                  />
+                  <HighlightedTextBorder colorBorder="#a87ba6">
+                    мотивувати
+                  </HighlightedTextBorder>
+                </div>
+                <div className="home-for-us-important-title-subtitle-mobile">
+                  <Image
+                    src="/assets/elements/arrow_right.png"
+                    alt="arrow right"
+                    width={20}
+                    height={12}
+                  />
+                  <HighlightedTextBorder colorBorder="#669e99">
+                    спонукати до ефективного навчання
+                  </HighlightedTextBorder>
+                </div>
+              </>
+            )}
           </div>
         </div>
         <div className="home-for-us-important-content">
           <div className="home-for-us-important-img">
             <img
               loading="lazy"
-              src="/assets/images/forUsImportant.png" 
+              src="/assets/images/forUsImportant.png"
               alt="For Us Important"
             />
           </div>

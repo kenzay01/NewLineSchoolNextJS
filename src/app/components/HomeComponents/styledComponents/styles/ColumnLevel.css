@@ -94,15 +94,15 @@
   }
   @media (max-width: 768px) {
     .column-level-container-active-box {
-      right: -35px;
-      bottom: -280px;
+      right: -30px;
+      bottom: -250px;
     }
     .active-box-text {
       width: 93%;
     }
     .column-level-container-active-box.mobile {
-      right: -195px;
-      bottom: -280px;
+      right: -190px;
+      bottom: -250px;
     }
     .column-level-container-active-box.mobile img.active-box-bg{
 

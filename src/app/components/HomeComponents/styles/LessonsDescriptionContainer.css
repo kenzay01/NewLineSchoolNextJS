@@ -85,7 +85,7 @@
     }
     .home-lessons-description-title{
         font-size: 28px;
-        line-height: normal;
+        line-height: 40px;
     }
     .home-lessons-description-content{
         flex-direction: column;

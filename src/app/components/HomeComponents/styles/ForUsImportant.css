@@ -44,17 +44,17 @@
     font-size: 48px;
     line-height: 45px;
     text-align: center;
-    color: #AE88AD;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 .home-for-us-important-title-subtitles-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 5px;
 }
 .home-for-us-important-title-subtitle{
     padding: 4px 10px;
-    font-family: Steppe;
     font-family: Steppe;
     font-weight: 600;
     font-size: 20px;
@@ -104,7 +104,6 @@
     flex: 1;
     font-family: Steppe;
     font-weight: 600;
-    font-size: 18px;
     color:#414040;
     display: flex;
     flex-direction: column;
@@ -120,6 +119,7 @@
     font-size: 18px;
     padding-left: 5px;
     line-height: 25px;
+    
 }
 .home-for-us-important-text-container-mobile{
     display: flex;
@@ -143,6 +143,15 @@
     bottom: 5px;
     width: 40px;
 }
+.home-for-us-important-title-subtitle-mobile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px;
+}
+.home-for-us-important-title-subtitle-mobile img{
+    margin-bottom: 5px;
+}
 @media (max-width: 768px) {
     .scroll-to-see-more{
         display: none;
@@ -164,10 +173,11 @@
         gap: 10px;
     }
     .home-for-us-important-title{
-        font-size: 22px;
+        font-size: 24px;
         color: #414040;
         line-height:normal;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
     .home-for-us-important-title-subtitle{
         font-size: 16px;
@@ -207,7 +217,10 @@
     }
     .home-for-us-important-text-title{
         margin-bottom: 0;
-        font-size: 16px;
+        font-size: 14px;
+        font-family: Unbounded;
+    font-weight: 400;
+    /* font-size: 17px; */
     }
     .home-for-us-important-text{
         font-size: 14px;
