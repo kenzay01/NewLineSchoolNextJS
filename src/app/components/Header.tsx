@@ -17,7 +17,7 @@ export default function Header() {
     { name: "Для дорослих", path: "/forAdults" },
     { name: "Підготовка до Cambridge Exams", path: "/prepareForExams" },
     { name: "Розмовні клуби", path: "/ourClubs" },
-    { name: "Контакти", path: "/contacts" },
+    { name: "Блог", path: "/blog" },
   ];
 
   useEffect(() => {
