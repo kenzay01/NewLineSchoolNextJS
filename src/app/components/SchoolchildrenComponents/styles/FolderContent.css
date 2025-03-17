@@ -370,7 +370,8 @@
         height: auto;
         border-radius: 25px;
         box-sizing: border-box; 
-        align-items: flex-start;
+        align-items: center;
+        /* justify-content: center; */
         padding: 10px;
       }
       .lower-part-text-item{
