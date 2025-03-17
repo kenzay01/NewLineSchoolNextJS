@@ -1,7 +1,12 @@
 .home-container {
     background-image: url('/assets/background/backBanner.png');
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     position: relative;
     padding-top: 80px;
+}
+@media (max-width: 768px) {
+    .home-container {
+        background-size: cover;
+    }
 }
