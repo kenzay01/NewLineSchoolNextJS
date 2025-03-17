@@ -6,7 +6,7 @@ import "./styles/HomeBanner.css";
 
 export default function HomeMainBanner() {
   const [layoutForMainBanner, setLayoutForMainBanner] = useState("desktop");
-
+  const isMobile = layoutForMainBanner === "mobile";
   useEffect(() => {
     if (typeof window !== "undefined") {
     const updateLayout = () => {
@@ -27,20 +27,20 @@ export default function HomeMainBanner() {
     <div className="home-main-banner-container">
       <div className="home-main-banner-title">
         <div className="home-main-banner-title-text-p1">
-          ITS <div></div> YOUR
+          ITS {isMobile ? null : <div></div>} YOUR
         </div>
         <div className="home-main-banner-title-text-p2">
-          NEW <span>LINE</span>
+          NEW {isMobile ? null :<span>LINE</span>}
         </div>
-        <div className="home-main-banner-title-text-p3">SCHOOL</div>
+        <div className="home-main-banner-title-text-p3">{isMobile ? <div><span className="span-online">ONLINE</span><span className="span-offline">OFFLINE</span></div> :null} SCHOOL</div>
       </div>
 
       <div className="home-main-banner-img">
         <Image
           loading="lazy"
-          src="/assets/images/homeMainBanner.png" // Вказуємо правильний шлях для зображення
+          src="/assets/images/homeMainBanner.png" 
           alt="Main Banner"
-          width={1200} // Вказуємо розміри
+          width={1200} 
           height={600}
         />
       </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import "../styles/Header.css";
+import { img } from "framer-motion/client";
 
 export default function Header() {
   const router = useRouter();
@@ -45,17 +46,39 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMenuOpen]);
-
+  const [layoutForHeader, setLayoutForHeader] = useState("desktop");
+    
+      useEffect(() => {
+        if (typeof window !== "undefined") {
+          const updateLayout = () => {
+            if (window.innerWidth < 768) {
+              setLayoutForHeader("mobile");
+            } else {
+              setLayoutForHeader("desktop");
+            }
+          };
+    
+          updateLayout();
+          window.addEventListener("resize", updateLayout);
+          return () => window.removeEventListener("resize", updateLayout);
+        }
+      }, []);
+  const isMobile = layoutForHeader === "mobile";
   return (
-    <div className={`header-container ${pathname === "/" ? "header-transparent" : ""}`}>
+    <div className={`header-container ${pathname === "/" || pathname=== "/forSchoolchildren" ? "header-transparent" : ""}`}>
+      <div className="header-logo-container">
       <Image
         src="/assets/logo.png"
         alt="Logo"
-        width={120}
-        height={50}
+        width={74}
+        height={74}
         className="header-logo"
         onClick={() => router.push("/")}
       />
+      {isMobile ? (
+        <img src="/assets/logo_title.png" alt="" className="header-logo-title"/>
+      ): null}
+      </div>
 
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <img src="/assets/elements/menu.png" alt="Меню" />

@@ -58,3 +58,8 @@
     line-height: 20px;
     color:#484848;
 }
+@media (max-width: 768px) {
+    .home-learning-benefits-box{
+        width: 100%;
+    }
+}

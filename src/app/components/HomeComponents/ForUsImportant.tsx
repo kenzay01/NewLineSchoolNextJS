@@ -7,6 +7,7 @@ import Image from "next/image";
 import "./styles/ForUsImportant.css"; // імпортуємо стилі
 import HighlightedText from "./styledComponents/HighlightedText";
 import HighlightedTextBorder from "./styledComponents/HighlightedTextBorder";
+import { motion } from "framer-motion";
 
 export default function ForUsImportant() {
   const [layoutForMainBanner, setLayoutForMainBanner] = useState("desktop");
@@ -44,124 +45,139 @@ export default function ForUsImportant() {
         "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     },
   ];
+  const mobileText = [
+    "Надихати вільно спілкуватися у повсякденному житті, подорожах, кар'єрі та еміграції в іншу країну.",
+    "Мотивувати дітей та підлітків досягати академічних успіхів у школі.",
+    "Допомагати успішно складати міжнародні іспити IELTS, A2 KEY (KET), B1 Preliminary (PET), B2 First (FCE), C1 Advanced (CAE). ТАКОЖ НМТ ТА ЄВІ.",
+  ];
   const isMobile = layoutForMainBanner === "mobile";
   let content;
-  //   if (layoutForMainBanner === "desktop") {
-  content = (
-    <div className="home-for-us-important-text-container">
-      <div className="home-for-us-important-text-title">
-        А також ми допоможемо всім нашим студентам підняти свій рівень
-        англійської мови
-      </div>
-      <div className="home-for-us-important-text">
-        {isMobile ? (
-          <>
-            {" "}
-            ·{" "}
-            <HighlightedText colorBack="#FCE69699">
+  if (layoutForMainBanner === "desktop") {
+    content = (
+      <div className="home-for-us-important-text-container">
+        <div className="home-for-us-important-text-title">
+          А також ми допоможемо всім нашим студентам підняти свій рівень
+          англійської мови
+        </div>
+        <div className="home-for-us-important-text">
+          {isMobile ? (
+            <>
+              {" "}
+              ·{" "}
+              <HighlightedText colorBack="#FCE69699">
+                для вільного спілкування
+              </HighlightedText>
+            </>
+          ) : (
+            <HighlightedTextWithDots
+              colorBackground="#FCE69699"
+              colorDots="#FCE696"
+              colorText="#414040"
+              widthDots={5}
+              widthBorder={1}
+            >
               для вільного спілкування
-            </HighlightedText>
-          </>
-        ) : (
-          <HighlightedTextWithDots
-            colorBackground="#FCE69699"
-            colorDots="#FCE696"
-            colorText="#414040"
-            widthDots={5}
-            widthBorder={1}
-          >
-            для вільного спілкування
-          </HighlightedTextWithDots>
-        )}{" "}
-        у повсякденному житті, подорожах, карʼєрі та еміграції в іншу країну.
-      </div>
-      <div className="home-for-us-important-text">
-        {isMobile ? (
-          <>
-            {" "}
-            ·{" "}
-            <HighlightedText colorBack="#A0BFBD66">
+            </HighlightedTextWithDots>
+          )}{" "}
+          у повсякденному житті, подорожах, карʼєрі та еміграції в іншу країну.
+        </div>
+        <div className="home-for-us-important-text">
+          {isMobile ? (
+            <>
+              {" "}
+              ·{" "}
+              <HighlightedText colorBack="#A0BFBD66">
+                для досягнення академічних успіхів
+              </HighlightedText>
+            </>
+          ) : (
+            <HighlightedTextWithDots
+              colorBackground="#A0BFBD66"
+              colorDots="#A0BFBD"
+              colorText="#414040"
+              widthDots={5}
+              widthBorder={1}
+            >
               для досягнення академічних успіхів
-            </HighlightedText>
-          </>
-        ) : (
-          <HighlightedTextWithDots
-            colorBackground="#A0BFBD66"
-            colorDots="#A0BFBD"
-            colorText="#414040"
-            widthDots={5}
-            widthBorder={1}
-          >
-            для досягнення академічних успіхів
-          </HighlightedTextWithDots>
-        )}{" "}
-        у школі та вищих навчальних закладах.
-      </div>
-      <div className="home-for-us-important-text">
-        {isMobile ? (
-          <>
-            {" "}
-            ·{" "}
-            <HighlightedText colorBack="#FCE69699">
+            </HighlightedTextWithDots>
+          )}{" "}
+          у школі та вищих навчальних закладах.
+        </div>
+        <div className="home-for-us-important-text">
+          {isMobile ? (
+            <>
+              {" "}
+              ·{" "}
+              <HighlightedText colorBack="#FCE69699">
+                для успішного складання міжнародних іспитів
+              </HighlightedText>
+            </>
+          ) : (
+            <HighlightedTextWithDots
+              colorBackground="#FCE69699"
+              colorDots="#FCE696"
+              colorText="#414040"
+              widthDots={5}
+              widthBorder={1}
+            >
               для успішного складання міжнародних іспитів
-            </HighlightedText>
-          </>
-        ) : (
-          <HighlightedTextWithDots
-            colorBackground="#FCE69699"
-            colorDots="#FCE696"
-            colorText="#414040"
-            widthDots={5}
-            widthBorder={1}
-          >
-            для успішного складання міжнародних іспитів
-          </HighlightedTextWithDots>
-        )}{" "}
-        IELTS, A2 KEY (KET), B1 Preliminary (PET), B2 First (FCE), C1 Advanced
-        (CAE)
-      </div>
-      <div className="home-for-us-important-text">
-        {isMobile ? (
-          <>
-            {" "}
-            ·{" "}
-            <HighlightedText colorBack="#BFA0BEB2">
+            </HighlightedTextWithDots>
+          )}{" "}
+          IELTS, A2 KEY (KET), B1 Preliminary (PET), B2 First (FCE), C1 Advanced
+          (CAE)
+        </div>
+        <div className="home-for-us-important-text">
+          {isMobile ? (
+            <>
+              {" "}
+              ·{" "}
+              <HighlightedText colorBack="#BFA0BEB2">
+                та для успішного складання НМТ, ЄВІ
+              </HighlightedText>
+            </>
+          ) : (
+            <HighlightedTextWithDots
+              colorBackground="#BFA0BEB2"
+              colorDots="#AE88AD"
+              colorText="#414040"
+              widthDots={5}
+              widthBorder={1}
+            >
               та для успішного складання НМТ, ЄВІ
-            </HighlightedText>
-          </>
-        ) : (
-          <HighlightedTextWithDots
-            colorBackground="#BFA0BEB2"
-            colorDots="#AE88AD"
-            colorText="#414040"
-            widthDots={5}
-            widthBorder={1}
-          >
-            та для успішного складання НМТ, ЄВІ
-          </HighlightedTextWithDots>
-        )}
+            </HighlightedTextWithDots>
+          )}
+        </div>
       </div>
-    </div>
-  );
-  //   } else {
-  //     content = (
-  //       <div className="home-for-us-important-text-container-mobile">
-  //         <div className="home-for-us-important-text-container-mobile-title">
-  //           A також ми допоможемо{" "}
-  //           <img
-  //             src="/assets/elements/arrow_up_right.png"
-  //             className="home-for-us-important-text-container-mobile-img"
-  //             alt=""
-  //           />
-  //         </div>
-  //         <div className="home-for-us-important-text-container-mobile-body">
-  //           {accordionContent.map((item, index) => (
-  //             <Accordion key={index} title={item.title} content={item.content} />
-  //           ))}
-  //         </div>
-  //       </div>
-  //     );
-  //   }
+    );
+  } else {
+    content = (
+      <div className="home-for-us-important-text-container">
+        {mobileText.map((text, index) => {
+          return (
+            <motion.div
+              className="home-for-us-important-text-mobile-container"
+              key={index}
+              initial={{ opacity: 0, x: 75 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <div className="home-for-us-important-text-mobile-circle"></div>
+              <div className="home-for-us-important-text-mobile-text">
+                {text.split(" ").map((word, index) => {
+                  if (index === 0) {
+                    return (
+                      <span key={index} className="home-for-us-important-text-mobile-text-first-word">{word} {" "}</span>)
+                  }
+                  return word + " ";
+                })}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <div className="home-for-us-important-main-container">
@@ -172,7 +188,6 @@ export default function ForUsImportant() {
           src="/assets/elements/arrow_bottom.png"
           alt=""
         />{" "}
-        {/* Оновлений шлях */}
       </div>
       <div className="home-for-us-important-container">
         <div className="home-for-us-important-title-container">
@@ -201,43 +216,8 @@ export default function ForUsImportant() {
                   спонукати до ефективного навчання
                 </div>
               </>
-            ) : (
-              <>
-                <div className="home-for-us-important-title-subtitle-mobile">
-                <Image
-                    src="/assets/elements/arrow_right.png"
-                    alt="arrow right"
-                    width={20}
-                    height={12}
-                  />
-                  <HighlightedTextBorder colorBorder="#ebbb0d">
-                    надихати
-                  </HighlightedTextBorder>
-                </div>
-                <div className="home-for-us-important-title-subtitle-mobile">
-                <Image
-                    src="/assets/elements/arrow_right.png"
-                    alt="arrow right"
-                    width={20}
-                    height={12}
-                  />
-                  <HighlightedTextBorder colorBorder="#a87ba6">
-                    мотивувати
-                  </HighlightedTextBorder>
-                </div>
-                <div className="home-for-us-important-title-subtitle-mobile">
-                  <Image
-                    src="/assets/elements/arrow_right.png"
-                    alt="arrow right"
-                    width={20}
-                    height={12}
-                  />
-                  <HighlightedTextBorder colorBorder="#669e99">
-                    спонукати до ефективного навчання
-                  </HighlightedTextBorder>
-                </div>
-              </>
-            )}
+            ) : 
+            null}
           </div>
         </div>
         <div className="home-for-us-important-content">

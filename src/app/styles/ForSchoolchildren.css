@@ -1,6 +1,9 @@
 .for-schoolchildren-container{
     width: 100%;
     position: relative;
+    background-image: url('/assets/background/backBanner.png');
+    background-size: cover;
+    padding-top: 60px;
 }
 .folders-content-container{
     width: 100%;

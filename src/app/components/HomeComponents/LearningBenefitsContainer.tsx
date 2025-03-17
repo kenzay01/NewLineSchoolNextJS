@@ -1,7 +1,8 @@
+"use client";
 import "./styles/LearningBenefitsContainer.css";
 import BenefitBox from './styledComponents/BenefitBox';
 import HighlightedTextWithDots from './styledComponents/HighlightedTextWithDots';
-
+import { useEffect, useState } from 'react';
 export default function LearningBenefitsContainer() {
     const benefits = [
         {
@@ -38,14 +39,31 @@ export default function LearningBenefitsContainer() {
             image: "/assets/images/benefitsBoxImages/box4.png"
         }
     ];
-
+    const [layoutForBenefits, setLayoutForBenefits] = useState("desktop");
+        
+          useEffect(() => {
+            if (typeof window !== "undefined") {
+              const updateLayout = () => {
+                if (window.innerWidth < 768) {
+                    setLayoutForBenefits("mobile");
+                } else {
+                    setLayoutForBenefits("desktop");
+                }
+              };
+        
+              updateLayout();
+              window.addEventListener("resize", updateLayout);
+              return () => window.removeEventListener("resize", updateLayout);
+            }
+          }, []);
+    const isMobile = layoutForBenefits === "mobile";
     return (
         <div className="home-learning-benefits-container">
             <div className="home-learning-benefits-title">
                 <HighlightedTextWithDots colorText="#ffffff" colorBackground="#A0BFBDB2" colorDots="#A0BFBD" widthBorder={3} widthDots={10}>
                     переваги
                 </HighlightedTextWithDots>
-                навчання в нашій школі
+                {isMobile ? <br /> : null}навчання в нашій школі
             </div>
             <div className="home-learning-benefits-boxes-container">
                 {benefits.map((benefit, index) => {

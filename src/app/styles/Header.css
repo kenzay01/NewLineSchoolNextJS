@@ -17,14 +17,16 @@
     left: 0;
     z-index: 1000;
 }
-.header-logo{
-    width: 74px;
-    height: 74px;
+.header-logo-container{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
 }
-.header-logo img{
-    width: 100%;
-    height: 100%;
+.header-logo-title{
+    width: 120px;
+    height: 20px;
 }
 .header-btn{
     width: 151;
@@ -50,7 +52,6 @@
 .header-links a{
     font-weight: 500;
     font-size: 12px;
-    /* line-height: 18.6px; */
     letter-spacing: 1%;
     color: #000000;
     text-decoration: none;
@@ -129,5 +130,12 @@
     }
     .header-btn{
         display: none;
+    }
+    .header-logo{
+        width: 60px;
+        height: 60px;
+    }
+    .header-container{
+        padding: 15px 20px 0;
     }
 }
