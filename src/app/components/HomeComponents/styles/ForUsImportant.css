@@ -14,7 +14,7 @@
 .scroll-to-see-more{
     position: absolute;
     z-index: 1000;
-    top: 15px;
+    top: -20px;
     right: 150px;
     font-family: Unbounded;
     font-weight: 400;

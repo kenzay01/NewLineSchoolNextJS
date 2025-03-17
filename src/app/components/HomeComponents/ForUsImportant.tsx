@@ -159,7 +159,7 @@ export default function ForUsImportant() {
               key={index}
               initial={{ opacity: 0, x: 75 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.75 }}
               viewport={{ once: true, amount: 0.2 }}
             >
               <div className="home-for-us-important-text-mobile-circle"></div>

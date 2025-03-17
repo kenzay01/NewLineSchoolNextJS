@@ -4,6 +4,7 @@ import "./styles/FolderContent.css";
 import { ReactNode } from "react";
 import ContainerAboutLessons from "./ContainerAboutLessons";
 import { useEffect, useState } from "react";
+import { div } from "framer-motion/client";
 interface FolderContentProps {
   backgroundImg: string;
   title: ReactNode;
@@ -155,10 +156,10 @@ export default function FolderContent({
       className="expanded-folder-content-container"
       id={idHash}
       style={{
-        backgroundImage: `url(${backgroundImg})`,
-        minHeight: type === "expanded" ? (isMobile ? (subtype === "expanded-0" ? 1775: 1830) :830) : (isMobile ? 1500 :740),
-        marginTop: type === "expanded" ? 60 : isMobile ? 70:100,
-        marginBottom: type === "expanded" ? (isMobile ? 60: 140) : 50,
+        backgroundImage: isMobile? "none" : `url(${backgroundImg})`,
+        minHeight: type === "expanded" ?  (isMobile ? "auto" : 830) : 740,
+        marginTop: type === "expanded" ? 60 :(isMobile?60 :100),
+        marginBottom: type === "expanded" ? (isMobile? 0 :140) : (isMobile? 0 :50),
       }}
     >
       <div
@@ -174,7 +175,7 @@ export default function FolderContent({
       {type === "expanded" ? (
         <div
           className="expanded-folder-content-extra-container"
-          style={{ bottom: subtype === "expanded-1"? -80 :bottomExtraCon }}
+          style={{ bottom: subtype === "expanded-1"? -100 :bottomExtraCon }}
         >
           В кінці курсу наші студенти зможуть підтвердити свої знання на
           Міжнародних іспитах Cambridge Exams for Young Learners: Starters,

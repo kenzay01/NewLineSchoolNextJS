@@ -11,5 +11,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 20px; */
+    background-color: #FFFFFF;
+    clip-path: ellipse(195% 100% at center bottom);
+    padding-top: 60px;
+}
+@media (max-width: 768px) {
+    .folders-content-container{
+        padding-top: 0;
+        clip-path: ellipse(455% 100% at center bottom);
+    }
 }

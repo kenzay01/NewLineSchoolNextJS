@@ -27,12 +27,12 @@ export default function HomeMainBanner() {
     <div className="home-main-banner-container">
       <div className="home-main-banner-title">
         <div className="home-main-banner-title-text-p1">
-          ITS {isMobile ? null : <div></div>} YOUR
+          ITS YOUR
         </div>
         <div className="home-main-banner-title-text-p2">
-          NEW {isMobile ? null :<span>LINE</span>}
+          NEW {isMobile ? null :<div><span className="span-online">ONLINE</span></div>}
         </div>
-        <div className="home-main-banner-title-text-p3">{isMobile ? <div><span className="span-online">ONLINE</span><span className="span-offline">OFFLINE</span></div> :null} SCHOOL</div>
+        <div className="home-main-banner-title-text-p3">{isMobile ? <div><span className="span-online">ONLINE</span><span className="span-offline">OFFLINE</span></div> :<span className="span-offline">OFFLINE</span>} SCHOOL</div>
       </div>
 
       <div className="home-main-banner-img">
