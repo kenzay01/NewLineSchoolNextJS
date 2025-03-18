@@ -301,9 +301,9 @@ export default function ForSchoolchildren() {
         <FolderContent
           title={
             <>
-              навчання для <br />{" "}
+              навчання для {isMobile ? <br /> : ""}{" "}
               <HighlightedText colorBack="#BFA0BEB2">
-                10-11 класів {isMobile ? <br /> : ""} 
+                10-11 класів <br />
               </HighlightedText>
               Підготовка до НМТ
             </>
