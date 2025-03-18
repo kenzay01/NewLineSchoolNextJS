@@ -176,7 +176,8 @@ export default function ForSchoolchildren() {
       ),
       bodyLeftUpperPart1BodyMobile: (
         <>
-          треба текст
+          <span>Ми прагнемо закохати амбітних і активних підлітків в англійську мову, пропонуючи уроки, які точно відображають їхні інтереси та стиль життя.</span>
+          Наша мета – створити навчальне середовище, де кожен урок зосереджений на учнях, забезпечуючи 100% результативність на міжнародних іспитах, у школі та в реальному житті. Ми віримо, що навчання може бути не лише ефективним, але й захоплюючим! 
         </>
       ),
       bodyLeftUpperPart2Body: (
@@ -190,7 +191,7 @@ export default function ForSchoolchildren() {
         </>
       ),
       bodyLeftUpperPart2BodyMobile: (
-        <>Треба текст</>
+        <><span>Всі наші програми розроблені відповідно загальноєвропейським стандартам володінням іноземною мовою</span> Common European Framework of Reference and Cambridge Assessment English </>
       ),
       bodyLeftLowwerPartTitle: <>Атмосфера Навчання</>,
       lowerLeftPartText: [
@@ -210,7 +211,7 @@ export default function ForSchoolchildren() {
         "Розмовний клуб для підлітків “ Lets talk about it”",
       ],
       lowerPartTextMobile:(
-      <>Треба текст</>
+      <><span>Наші заняття занурюють у реальне життя, які підлітки зустрічають щодня. Прокачуємо всі мовні навички у форматі, який подобається кожному учню.</span> Інтерактивні онлайн вправи забезпечують практику будь-де та будь-коли, а рольові ігри допомагають удосконалити комунікативні навички в безпечному середовищі. Граматику та лексику вивчаємо через метод guided discovery або text-based. Розвиваємо візуальне мислення, створюючи mind-maps та презентації з інфографікою для кращого засвоєння матеріалу. </>
       ),
       bottomExtraCon: -80,
       bodyCenterElements: [
@@ -302,8 +303,9 @@ export default function ForSchoolchildren() {
             <>
               навчання для <br />{" "}
               <HighlightedText colorBack="#BFA0BEB2">
-                10-11 класів {isMobile ? <br /> : ""} Підготовка до НМТ
+                10-11 класів {isMobile ? <br /> : ""} 
               </HighlightedText>
+              Підготовка до НМТ
             </>
           }
           backgroundImg={

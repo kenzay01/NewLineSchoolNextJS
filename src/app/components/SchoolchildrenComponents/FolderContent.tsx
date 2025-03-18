@@ -48,9 +48,7 @@ export default function FolderContent({
 }: FolderContentProps) {
   const [layoutForFolder, setLayoutForFolder] = useState("desktop");
   const isMobile = layoutForFolder === "mobile";
-  console.log(bodyLeftUpperPart1BodyMobile);
   let body;
-  // const motionIfMobile={}
   if (type === "expanded") {
     body = (
       <div className="expanded-folder-content-body">
@@ -158,36 +156,86 @@ export default function FolderContent({
   } else {
     body = (
       <div className="folder-content-body">
-        <div className="folder-content-body-info-container">
-          <div className="folder-content-body-info-container-title">
-            Наш Фокус <br /> та Мета
-          </div>
-          <div className="folder-content-body-info-container-text p1">
-            Підготувати  до НМТ з англійської мови та допомогти набрати
-            максимальну кількість балів
-          </div>
-          <div className="folder-content-body-info-container-text p2">
-            Цей курс розрахований на два роки для дітей 10-11 класів. Під час
-            цього курсу наші студенти  дізнаються про всі стратегії та тонкощі
-            ефективного складання тесту. Також ретельно тренуються  над всіма
-            типами завдань з  кожної секції.
-          </div>
-          <div className="folder-content-body-info-container-text p3">
-            Кожний скіл такий як Listening, Speaking, Use of English, Reading,
-            Writing все одно прокачується ретельно, на випадок змін у формі
-            проведення вступного іспиту, так щоб нашим студентам було легко
-            перелаштуватись.
-          </div>
-        </div>
-        <div className="folder-content-body-img">
+        <motion.div className="folder-content-body-info-container"
+          initial={{ opacity: isMobile ? 1 : 0, x: isMobile ? 0 : -50}}
+          whileInView={{ opacity: 1, x: 0}}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {isMobile ? (
+            <>
+              <motion.div className="folder-content-body-info-container-text"
+                initial={{ opacity: 0, y: 75 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.2 }}
+              
+              >
+                <span>
+                  Підготувати до НМТ з англійської мови та допомогти набрати
+                  максимальну кількість балів
+                </span>
+              </motion.div>
+              <motion.div className="folder-content-body-info-container-text"
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.2 }}
+              >
+                <span>
+                  Під час цього курсу наші студенти дізнаються про всі стратегії
+                  та тонкощі ефективного складання тесту.
+                </span>{" "}
+                Також ретельно тренуються над всіма типами завдань з кожної
+                секції . Кожний скіл такий як Listening, Writing, Speaking все
+                одно прокачується ретельно, на випадок змін у формі проведення
+                вступного іспиту, так щоб нашим студентам було легко
+                перелаштуватись.
+              </motion.div>
+            </>
+          ) : (
+            <>
+              <div className="folder-content-body-info-container-title">
+                Наш Фокус <br /> та Мета
+              </div>
+              <div className="folder-content-body-info-container-text p1">
+                Підготувати  до НМТ з англійської мови та допомогти набрати
+                максимальну кількість балів
+              </div>
+              <div className="folder-content-body-info-container-text p2">
+                Цей курс розрахований на два роки для дітей 10-11 класів. Під
+                час цього курсу наші студенти  дізнаються про всі стратегії та
+                тонкощі ефективного складання тесту. Також ретельно тренуються 
+                над всіма типами завдань з  кожної секції.
+              </div>
+              <div className="folder-content-body-info-container-text p3">
+                Кожний скіл такий як Listening, Speaking, Use of English,
+                Reading, Writing все одно прокачується ретельно, на випадок змін
+                у формі проведення вступного іспиту, так щоб нашим студентам
+                було легко перелаштуватись.
+              </div>
+            </>
+          )}
+        </motion.div>
+        <motion.div className="folder-content-body-img"
+        initial={{ opacity: 0, x: isMobile ? -50 : 0, y: isMobile ? 0 : 50 }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.2 }}
+        >
           <img loading="lazy" src="/assets/images/folderImage.png" alt="" />
-        </div>
-        <div className="folder-content-body-info-studying">
+        </motion.div>
+        <motion.div className="folder-content-body-info-studying"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <ContainerAboutLessons
             bodyCenterElements={bodyCenterElements}
             bodyBottomElements={bodyBottomElements}
           />
-        </div>
+        </motion.div>
       </div>
     );
   }
