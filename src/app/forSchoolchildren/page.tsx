@@ -78,6 +78,11 @@ export default function ForSchoolchildren() {
            <span>навчанні у школі</span>, і <b>для реального спілкування</b>. 
         </>
       ),
+      bodyLeftUpperPart1BodyMobile: (
+        <>
+          <span>Наш фокус та мета - закохати наших найменших студентів у англійську мову і зробити навчання не тільки ігровим, активним та цікавим, але і</span> продуктивним для міжнародних іспитів for Young Learners (Starters, Movers, Flyers), навчанні у школі, і для реального спілкування.
+        </>
+      ),
       bodyLeftUpperPart2Body: (
         <>
           Всі наші програми розроблені {baryer} відповідно загальноєвропейським
@@ -86,6 +91,11 @@ export default function ForSchoolchildren() {
             Common European
             {baryer} Framework of Reference and Cambridge Assessment English
           </span>
+        </>
+      ),
+      bodyLeftUpperPart2BodyMobile: (
+        <>
+          <span>Всі наші програми розроблені відповідно загальноєвропейським стандартам володінням іноземною мовою</span> Common European Framework of Reference and Cambridge Assessment English
         </>
       ),
       bodyLeftLowwerPartTitle: <>Атмосфера Навчання</>,
@@ -102,6 +112,9 @@ export default function ForSchoolchildren() {
         "Постійний зворотній зв’язок з батьками",
         "“Домашки” є і завжди будуть😁",
       ],
+      lowerPartTextMobile:(
+        <><span>Ігрове та інтерактивне середовище, де учні вивчають англійську через активне спілкування.</span> Граматика та лексика подаються у формі комунікативних ігор, використовуємо ефективні методики запам'ятовування. Кожен урок завершується творчим проектом. Підтримуємо постійний зв'язок з батьками.</>
+      ),
       bottomExtraCon: -60,
       bodyCenterElements: [
         <>
@@ -161,6 +174,11 @@ export default function ForSchoolchildren() {
           міжнародних іспитах, у школі  та у реальному житті. 
         </>
       ),
+      bodyLeftUpperPart1BodyMobile: (
+        <>
+          треба текст
+        </>
+      ),
       bodyLeftUpperPart2Body: (
         <>
           Всі наші програми розроблені {baryer} відповідно загальноєвропейським
@@ -170,6 +188,9 @@ export default function ForSchoolchildren() {
             {baryer} Framework of Reference and Cambridge Assessment English
           </span>
         </>
+      ),
+      bodyLeftUpperPart2BodyMobile: (
+        <>Треба текст</>
       ),
       bodyLeftLowwerPartTitle: <>Атмосфера Навчання</>,
       lowerLeftPartText: [
@@ -188,6 +209,9 @@ export default function ForSchoolchildren() {
         "Доступ до онлайн навчальних матеріалів: вправ, тестів, вікторин тощо",
         "Розмовний клуб для підлітків “ Lets talk about it”",
       ],
+      lowerPartTextMobile:(
+      <>Треба текст</>
+      ),
       bottomExtraCon: -80,
       bodyCenterElements: [
         <>
@@ -264,6 +288,9 @@ export default function ForSchoolchildren() {
               bottomExtraCon={data.bottomExtraCon}
               bodyCenterElements={data.bodyCenterElements}
               bodyBottomElements={data.bodyBottomElements}
+              bodyLeftUpperPart1BodyMobile={data.bodyLeftUpperPart1BodyMobile}
+              bodyLeftUpperPart2BodyMobile={data.bodyLeftUpperPart2BodyMobile}
+              lowerPartTextMobile={data.lowerPartTextMobile}
               type="expanded"
               subtype={`expanded-${index}`}
               idHash={data.idHash}
