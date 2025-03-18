@@ -1,23 +1,27 @@
 "use client";
 
 // Import necessary libraries
-import { useState, useEffect, JSX } from 'react';
-import { useRouter } from 'next/navigation';
-import HighlightedTextWithDots from './styledComponents/HighlightedTextWithDots';
-import HighlightedText from './styledComponents/HighlightedText';
-import ColumnLevel from './styledComponents/ColumnLevel';
-
+import { useState, useEffect, JSX } from "react";
+import { useRouter } from "next/navigation";
+import HighlightedTextWithDots from "./styledComponents/HighlightedTextWithDots";
+import HighlightedText from "./styledComponents/HighlightedText";
+import ColumnLevel from "./styledComponents/ColumnLevel";
+import {motion} from "framer-motion";
 // CSS imports can stay as they are
-import './styles/TestContainer.css';
+import "./styles/TestContainer.css";
 
-export default function TestContainer({ backImg, footer, backIsImg = true }: {
-    backImg: string;
-    footer?: JSX.Element;
-    backIsImg?: boolean;
-  }) {
-  const router = useRouter();  
+export default function TestContainer({
+  backImg,
+  footer,
+  backIsImg = true,
+}: {
+  backImg: string;
+  footer?: JSX.Element;
+  backIsImg?: boolean;
+}) {
+  const router = useRouter();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [layoutForMainBanner, setLayoutForMainBanner] = useState('desktop');
+  const [layoutForMainBanner, setLayoutForMainBanner] = useState("desktop");
 
   const columnLevelData = [
     {
@@ -28,12 +32,12 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
             Це початковий рівень англійської, на якому учень:
           </div>
           <div className="column-level-container-active-box-text-p">
-          - коротко розповідає про себе; <br />
+            - коротко розповідає про себе; <br />
             - підтримує розмови про погоду, роботу, сім’ю; <br />
             - відповідає на елементарні питання про себе та світ навколо;
             <br />
-            - розуміє на слух прості речення; <br />
-            - використовує базову граматику.
+            - розуміє на слух прості речення; <br />- використовує базову
+            граматику.
           </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1">
@@ -59,9 +63,9 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
             Якщо у вас знання англійської на рівні A2, то ви можете:
           </div>
           <div className="column-level-container-active-box-text-p">
-          - читати та розуміти прості тексти; <br />
-            - використовувати основні часи та модальні дієслова; <br />
-            - говорити про здоров’я, їжу, хобі, свята, тварин.
+            - читати та розуміти прості тексти; <br />
+            - використовувати основні часи та модальні дієслова; <br />-
+            говорити про здоров’я, їжу, хобі, свята, тварин.
           </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1">
@@ -92,8 +96,8 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
             - читати новини, тексти про подорожі, культуру, основні офіційні
             документи; <br />
             - писати розповіді, особисті листи; <br />
-            - використовувати на практиці більш складну граматику; <br />
-            - поверхово обговорювати комплексні теми.
+            - використовувати на практиці більш складну граматику; <br />-
+            поверхово обговорювати комплексні теми.
           </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1">
@@ -120,11 +124,12 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
             Середній рівень володіння англійською мовою дає змогу:
           </div>
           <div className="column-level-container-active-box-text-p">
-            - швидко говорити й писати на різні теми, спрощуючи проблемні моменти;
+            - швидко говорити й писати на різні теми, спрощуючи проблемні
+            моменти;
             <br />
-            - практично без проблем сприймати стандартну англомовну мову на слух;
-            <br />
-            - використовувати всі часи дієслів.
+            - практично без проблем сприймати стандартну англомовну мову на
+            слух;
+            <br />- використовувати всі часи дієслів.
           </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1">
@@ -149,7 +154,9 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
       text: (
         <>
           <div className="column-level-container-active-box-text-title"></div>
-          <div className="column-level-container-active-box-text-p">Додати текст</div>
+          <div className="column-level-container-active-box-text-p">
+            Додати текст
+          </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1"></div>
             <div className="column-level-container-active-box-text-footer-elem"></div>
@@ -163,7 +170,9 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
       text: (
         <>
           <div className="column-level-container-active-box-text-title"></div>
-          <div className="column-level-container-active-box-text-p">Додати текст</div>
+          <div className="column-level-container-active-box-text-p">
+            Додати текст
+          </div>
           <div className="column-level-container-active-box-text-footer">
             <div className="column-level-container-active-box-text-footer-elem p1"></div>
             <div className="column-level-container-active-box-text-footer-elem"></div>
@@ -174,68 +183,78 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
     },
   ];
 
-  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 0);
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   // Update windowWidth state when window is resized
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth); // Update state with the new window width
-    };
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth); // Update state with the new window width
+      };
 
-    window.addEventListener('resize', handleResize); // Add event listener on mount
-    return () => window.removeEventListener('resize', handleResize); // Clean up on unmount
-}
-  }, []); 
+      window.addEventListener("resize", handleResize); // Add event listener on mount
+      return () => window.removeEventListener("resize", handleResize); // Clean up on unmount
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    if (windowWidth < 768) {
-      setLayoutForMainBanner('mobile');
-    } else {
-      setLayoutForMainBanner('desktop');
+      if (windowWidth < 768) {
+        setLayoutForMainBanner("mobile");
+      } else {
+        setLayoutForMainBanner("desktop");
+      }
     }
-}
-  }, [windowWidth]); 
+  }, [windowWidth]);
 
-  const textP = layoutForMainBanner === 'desktop' ? (
-    <div className="home-test-container-left-p">
-      Пройди наш{' '}
-      <HighlightedTextWithDots
-        colorText="#ffffff"
-        colorBackground="#767676B2"
-        colorDots="#484848"
-        widthDots={5}
-        widthBorder={2}
-        rightSide={false}
-      >
-        безкоштовний тест на рівень
-      </HighlightedTextWithDots>{' '}
-      <HighlightedTextWithDots
-        colorText="#ffffff"
-        colorBackground="#767676B2"
-        colorDots="#484848"
-        widthDots={5}
-        widthBorder={2}
-        leftSide={false}
-      >
-        англійської мови
-      </HighlightedTextWithDots>{' '}
-      та дізнайся <br />
-      який курс буде кращим рішенням для тебе
-    </div>
-  ) : (
-    <div className="home-test-container-left-p">
-      Пройди наш{' '}
-      <HighlightedText colorBack="#AE88AD">безкоштовний тест на</HighlightedText>{' '}
-      <HighlightedText colorBack="#AE88AD">рівень англійської мови</HighlightedText>{' '}
-      та дізнайся який курс буде кращим рішенням для тебе
-    </div>
-  );
+  const textP =
+    layoutForMainBanner === "desktop" ? (
+      <div className="home-test-container-left-p">
+        Пройди наш{" "}
+        <HighlightedTextWithDots
+          colorText="#ffffff"
+          colorBackground="#767676B2"
+          colorDots="#484848"
+          widthDots={5}
+          widthBorder={2}
+          rightSide={false}
+        >
+          безкоштовний тест на рівень
+        </HighlightedTextWithDots>{" "}
+        <HighlightedTextWithDots
+          colorText="#ffffff"
+          colorBackground="#767676B2"
+          colorDots="#484848"
+          widthDots={5}
+          widthBorder={2}
+          leftSide={false}
+        >
+          англійської мови
+        </HighlightedTextWithDots>{" "}
+        та дізнайся <br />
+        який курс буде кращим рішенням для тебе
+      </div>
+    ) : (
+      <div className="home-test-container-left-p">
+        Пройди наш{" "}
+        <HighlightedText colorBack="#AE88AD">
+          безкоштовний тест на
+        </HighlightedText>{" "}
+        <HighlightedText colorBack="#AE88AD">
+          рівень англійської мови
+        </HighlightedText>{" "}
+        та дізнайся який курс буде кращим рішенням для тебе
+      </div>
+    );
   const buttonWithfunc = (
-    <button className="home-test-container-left-btn" onClick={()=>{
-        router.push('/testPage');
-    }}>
+    <button
+      className="home-test-container-left-btn"
+      onClick={() => {
+        router.push("/testPage");
+      }}
+    >
       пройти тест
     </button>
   );
@@ -243,36 +262,52 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
   return (
     <div
       className="home-test-container-with-footer"
-      style={{ backgroundImage: footer ? `url(${backImg})` : 'none' }}
+      style={{ backgroundImage: footer ? `url(${backImg})` : "none" }}
     >
       <div
         className="home-test-container"
         style={{
           backgroundImage:
             backIsImg === false
-              ? 'none'
-              : layoutForMainBanner === 'desktop'
+              ? "none"
+              : layoutForMainBanner === "desktop"
               ? `url(${backImg})`
-              : `url('/assets/background/backForTestMobile.png')`,  // Updated path for Next.js static assets
+              : `url('/assets/background/backForTestMobile.png')`, // Updated path for Next.js static assets
         }}
       >
-        <div className="home-test-container-left">
+        <motion.div className="home-test-container-left"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="home-test-container-left-title">
-            не знаєш який {layoutForMainBanner === "mobile" ?<HighlightedText colorBack='#FCE69699'>курс тобі</HighlightedText> :<HighlightedTextWithDots
-                                    colorBackground="#FCE69699"
-            colorDots="#FCE696"
-                                    colorText="#414040"
-                                    widthDots={8}
-                                    widthBorder={3}
-                                  >
-                                     курс тобі
-                                  </HighlightedTextWithDots>} потрібен?
+            не знаєш який{" "}
+            {layoutForMainBanner === "mobile" ? (
+              <HighlightedText colorBack="#FCE69699">курс тобі</HighlightedText>
+            ) : (
+              <HighlightedTextWithDots
+                colorBackground="#FCE69699"
+                colorDots="#FCE696"
+                colorText="#414040"
+                widthDots={8}
+                widthBorder={3}
+              >
+                курс тобі
+              </HighlightedTextWithDots>
+            )}{" "}
+            потрібен?
           </div>
           {textP}
-          {layoutForMainBanner === 'desktop' ? buttonWithfunc : null}
-        </div>
+          {layoutForMainBanner === "desktop" ? buttonWithfunc : null}
+        </motion.div>
 
-        <div className="home-test-container-right">
+        <motion.div className="home-test-container-right"
+          initial={{ opacity: 0, x: 75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="home-test-container-right-title">
             натискай на свій рівень та дивись корисну інформацію про нього
           </div>
@@ -291,8 +326,8 @@ export default function TestContainer({ backImg, footer, backIsImg = true }: {
               />
             ))}
           </div>
-        </div>
-        {layoutForMainBanner === 'mobile' ? buttonWithfunc : null}
+        </motion.div>
+        {layoutForMainBanner === "mobile" ? buttonWithfunc : null}
       </div>
       {footer ? <div style={{ marginTop: 40 }}>{footer}</div> : null}
     </div>

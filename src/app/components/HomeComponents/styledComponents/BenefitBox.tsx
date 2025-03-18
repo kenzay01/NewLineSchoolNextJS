@@ -1,15 +1,9 @@
 
 import "./styles/BenefitBox.css";
 import Image from 'next/image';
-import {motion} from 'framer-motion';
 export default function BenefitBox({ title, content, image }: { title: string, content: string[], image: string }) {
     return (
-        <motion.div className="home-learning-benefits-box"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true, amount: 0.2 }}
-        
+        <div className="home-learning-benefits-box"
         >
             <div className="home-learning-benefits-box-title">{title}</div>
             <div className="home-learning-benefits-box-content">
@@ -32,6 +26,6 @@ export default function BenefitBox({ title, content, image }: { title: string, c
                     loading="lazy"
                 />
             </div>
-        </motion.div>
+        </div>
     );
 }

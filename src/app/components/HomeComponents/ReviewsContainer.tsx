@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ReviewBox from "./styledComponents/ReviewBox";
 import Image from "next/image";
 import "./styles/ReviewsContainer.css"; 
 import HighlightedTextWithDots from "./styledComponents/HighlightedTextWithDots";
+import {motion} from "framer-motion";
 export default function ReviewsContainer() {
     const reviews = [
         {
@@ -54,10 +55,33 @@ export default function ReviewsContainer() {
       setTimeout(() => setIsScrolling(false), 200);
     }
   };
+  const [layoutForBenefits, setLayoutForBenefits] = useState("desktop");
+          
+            useEffect(() => {
+              if (typeof window !== "undefined") {
+                const updateLayout = () => {
+                  if (window.innerWidth < 768) {
+                      setLayoutForBenefits("mobile");
+                  } else {
+                      setLayoutForBenefits("desktop");
+                  }
+                };
+          
+                updateLayout();
+                window.addEventListener("resize", updateLayout);
+                return () => window.removeEventListener("resize", updateLayout);
+              }
+            }, []);
+      const isMobile = layoutForBenefits === "mobile";
 
   return (
     <div className="home-reviews-container">
-      <div className="home-reviews-boxes-title-container">
+      <motion.div className="home-reviews-boxes-title-container"
+      initial={{ opacity: 0, x: -75 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="home-reviews-boxes-title">Ваші {" "}<HighlightedTextWithDots
                     colorBackground="#BFA0BEB2"
             colorDots="#AE88AD"
@@ -67,18 +91,35 @@ export default function ReviewsContainer() {
                   >
                      коментарі
                   </HighlightedTextWithDots></div>
-      </div>
-      <div className="home-reviews-boxes-container" ref={containerRef}>
+      </motion.div>
+      {isMobile? 
+       <>
+        <div className="home-reviews-boxes-container" ref={containerRef}
+      >
         {reviews.map((review, index) => (
           <ReviewBox key={index} name={review.user} rating={review.rating} text={review.text} />
         ))}
       </div>
+       </>
+      : 
+      <>
+        <motion.div className="home-reviews-boxes-container" ref={containerRef}
+        initial={{ opacity: 0,y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {reviews.map((review, index) => (
+          <ReviewBox key={index} name={review.user} rating={review.rating} text={review.text} />
+        ))}
+      </motion.div>
+      </>}
       <div className="home-reviews-boxes-btns">
         <button className="scroll-btn left" onClick={() => scroll("left")}>
           <Image
             src="/assets/elements/arrow_left.png"
             alt="Arrow Left"
-            width={24} // Customize the width and height as needed
+            width={24} 
             height={24}
           />
         </button>

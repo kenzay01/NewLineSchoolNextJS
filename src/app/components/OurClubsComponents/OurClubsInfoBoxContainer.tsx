@@ -5,6 +5,7 @@ import "./styles/OurClubsInfoBoxContainer.css";
 import HighlightedTextWithDots from "../HomeComponents/styledComponents/HighlightedTextWithDots";
 import { useEffect, useState } from "react";
 import HighlightedText from "../HomeComponents/styledComponents/HighlightedText";
+import {motion} from "framer-motion";
 export default function OurClubsInfoBoxContainer({
   title,
   subtitle,
@@ -26,14 +27,24 @@ export default function OurClubsInfoBoxContainer({
     ];
     body = (
       <>
-        <div className="club-info-box-body-type1-left">
+        <motion.div className="club-info-box-body-type1-left"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           Підлітковий вік - це саме той період коли хочеться виговоритись або
           слухати як говорять інші.
           {isMobile ? " " : <br />}
           <span>“Let’s talk about it”</span> чудовий розмовний клуб, де із
           задоволенням можна:
-        </div>
-        <div className="club-info-box-body-type1-right">
+        </motion.div>
+        <motion.div className="club-info-box-body-type1-right"
+          initial={{ opacity: 0, x: 75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {type1TextRight.map((text, index) => (
             <div key={index} className="club-info-box-body-type1-right-item">
               <div className="club-info-box-body-type1-right-item-img">
@@ -44,17 +55,27 @@ export default function OurClubsInfoBoxContainer({
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </>
     );
   } else if (type === "type2") {
     body = (
       <>
-        <div className="club-info-box-body-type2-left">
+        <motion.div className="club-info-box-body-type2-left"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           Розвиток креативності для молодших школярів є надзвичайно актуальним.
           Креативність стимулює розвиток мислення та усного мовлення дітей.
-        </div>
-        <div className="club-info-box-body-type2-right">
+        </motion.div>
+        <motion.div className="club-info-box-body-type2-right"
+           initial={{ opacity: 0, x: 75 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.75 }}
+           viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="club-info-box-body-type2-right-upper">
             Тому оригінальність нашого арт-крафт  клубу <br /> “Cut and Talk”
             полягає в тому, що вміння <br />
@@ -74,7 +95,7 @@ export default function OurClubsInfoBoxContainer({
             {isMobile? "" :<br />} відточувати майстерність говорити англійською
             {isMobile? "" :<br />} мовою одночасно.
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else if (type === "type3") {
@@ -86,7 +107,12 @@ export default function OurClubsInfoBoxContainer({
     ];
     body = (
       <>
-        <div className="club-info-box-body-type3-left">
+        <motion.div className="club-info-box-body-type3-left"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="club-info-box-body-type3-left-upper">
             Для успішного спілкування та взаємодії у бізнесі, кар’єрі, подорожі
             та на міжнародних іспитах, потрібно додатково практикуватись, а ще й
@@ -96,8 +122,13 @@ export default function OurClubsInfoBoxContainer({
             Ми запрошуємо у наш розмовний клуб “Inspiration Time”. Де натхнення
             є найголовнішим у практиці спілкування.
           </div>
-        </div>
-        <div className="club-info-box-body-type3-right">
+        </motion.div>
+        <motion.div className="club-info-box-body-type3-right"
+           initial={{ opacity: 0, x: 75 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.75 }}
+           viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="club-info-box-body-type3-right-title">
             Тут ми гарантуємо:
           </div>
@@ -122,7 +153,7 @@ export default function OurClubsInfoBoxContainer({
             <span>А також</span>, вдосконалення навичок
             {isMobile? "" :<br />} говоріння, вимови та сприйняття на слух
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else {
@@ -135,7 +166,12 @@ export default function OurClubsInfoBoxContainer({
     ];
     body = (
       <>
-        <div className="club-info-box-body-type4-left">
+        <motion.div className="club-info-box-body-type4-left"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="club-info-box-body-type4-left-arrow">
             <img loading="lazy"src="/assets/elements/arrow_up_down_diff.png" alt="" />
           </div>
@@ -148,8 +184,13 @@ export default function OurClubsInfoBoxContainer({
             основним та ключовим граматичним темам, які такі незрозумілі для
             наших підлітків.
           </div>
-        </div>
-        <div className="club-info-box-body-type4-right">
+        </motion.div>
+        <motion.div className="club-info-box-body-type4-right"
+           initial={{ opacity: 0, x: 75 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.75 }}
+           viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="club-info-box-body-type4-right-title">
             <div className="club-info-box-body-type4-right-title-upper">
               “Я нічого не розумію і у мене зовсім не вистачає часу для
@@ -181,7 +222,7 @@ export default function OurClubsInfoBoxContainer({
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   }
@@ -206,8 +247,18 @@ export default function OurClubsInfoBoxContainer({
       className="club-info-box-container"
       style={{ marginBottom: type === "type3" ? (isMobile? 0 :40) : type === "type4" ? (isMobile? 0 : 275) : 0 }}
     >
-      <div className="club-info-box-title">{title}</div>
-      <div className="club-info-box-subtitle">{subtitle}</div>
+      <motion.div className="club-info-box-title"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >{title}</motion.div>
+      <motion.div className="club-info-box-subtitle"
+        initial={{ opacity: 0, x: -75 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >{subtitle}</motion.div>
       <div className="club-info-box-body">{body}</div>
     </div>
   );

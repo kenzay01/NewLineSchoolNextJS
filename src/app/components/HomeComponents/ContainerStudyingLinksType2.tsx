@@ -1,7 +1,7 @@
 "use client"; 
 import { useEffect, useState, useRef } from "react";
 import StyledContainerLinkType2 from "./styledComponents/StyledContainerLinkType2";
-
+import {motion} from "framer-motion";
 // Імпорт стилів
 import "./styles/ContainerStudyingLinksType2.css";
 
@@ -99,11 +99,18 @@ export default function ContainerStudyingLinksType2() {
 }
   }, []);
 
+  const isMobile = layoutForLinks === "mobile";
+
   return (
     <div className="home-links-to-studying-container2">
       <div className="home-links-to-studying-container2-layout" ref={containerRef}>
         {studyingPairLinks.map((pair, index) => (
-          <div key={index} className="home-links-to-studying-container2-pair">
+          <motion.div key={index} className="home-links-to-studying-container2-pair"
+          initial={{ opacity: !isMobile ? 0 : 1, x: !isMobile ? (index%2 === 0 ? -50: 50): 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+          >
             {pair.map((link, index) => (
               <StyledContainerLinkType2
                 key={index}
@@ -113,7 +120,7 @@ export default function ContainerStudyingLinksType2() {
                 {link.text}
               </StyledContainerLinkType2>
             ))}
-          </div>
+          </motion.div>
         ))}
       </div>
       {layoutForLinks === "mobile" && (

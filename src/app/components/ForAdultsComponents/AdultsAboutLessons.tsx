@@ -1,6 +1,6 @@
 import "./styles/AdultsAboutLessons.css";
 import ContainerAboutLessons from "../SchoolchildrenComponents/ContainerAboutLessons";
-
+import {motion} from "framer-motion";
 export default function AdultsAboutLessons() {
   const bodyCenterElements = [
     <>Формат: <span>Онлайн. Офлайн.</span></>,
@@ -19,7 +19,12 @@ export default function AdultsAboutLessons() {
 
   return (
     <div className="for-adults-about-lessons-container">
-      <div className="for-adults-about-lessons-info-left">
+      <motion.div className="for-adults-about-lessons-info-left"
+        initial={{ opacity: 0,x: -75 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="for-adults-about-lessons-info-left-title-con">
           <div className="for-adults-about-lessons-info-left-title">
             Наш Фокус <br />та Мета
@@ -36,8 +41,13 @@ export default function AdultsAboutLessons() {
             Кожний наш курс має певну кількість годин. Але якщо наприкінці вибраного вами рівня ви відчули, що потребуєте більше практики, ми надалі будемо працювати з вами і розробляти особливо для вас курс.
           </div>
         </div>
-      </div>
-      <div className="for-adults-about-lessons-info-right">
+      </motion.div>
+      <motion.div className="for-adults-about-lessons-info-right"
+        initial={{ opacity: 0, x: 75 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <ContainerAboutLessons 
           bodyTitle={true} 
           bodyCenterElements={bodyCenterElements} 
@@ -45,7 +55,7 @@ export default function AdultsAboutLessons() {
           btnHeight={50} 
           btnWidth={200} 
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

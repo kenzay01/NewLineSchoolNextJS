@@ -3,6 +3,8 @@ import "./styles/LearningBenefitsContainer.css";
 import BenefitBox from './styledComponents/BenefitBox';
 import HighlightedTextWithDots from './styledComponents/HighlightedTextWithDots';
 import { useEffect, useState } from 'react';
+import {motion} from "framer-motion";
+import { div } from "framer-motion/m";
 export default function LearningBenefitsContainer() {
     const benefits = [
         {
@@ -59,15 +61,30 @@ export default function LearningBenefitsContainer() {
     const isMobile = layoutForBenefits === "mobile";
     return (
         <div className="home-learning-benefits-container">
-            <div className="home-learning-benefits-title">
+            <motion.div className="home-learning-benefits-title"
+                initial={{ opacity: 0, x: -75 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75 }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
                 <HighlightedTextWithDots colorText="#ffffff" colorBackground="#A0BFBDB2" colorDots="#A0BFBD" widthBorder={3} widthDots={10}>
                     переваги
                 </HighlightedTextWithDots>
                 {isMobile ? <br /> : null}навчання в нашій школі
-            </div>
+            </motion.div>
             <div className="home-learning-benefits-boxes-container">
                 {benefits.map((benefit, index) => {
-                    return <BenefitBox key={index} title={benefit.title} content={benefit.contentText} image={benefit.image} />
+                    return (
+                        <motion.div key={index}
+                        initial={{ opacity: 0, x: index < 2 ? index ===0 ? -125: -75 : index == 3 ? 125 : 75 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.75 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        
+                        >
+                            <BenefitBox title={benefit.title} content={benefit.contentText} image={benefit.image} />
+                        </motion.div>
+                    )
                 })}
             </div>
         </div>

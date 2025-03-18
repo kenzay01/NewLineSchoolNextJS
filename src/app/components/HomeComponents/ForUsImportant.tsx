@@ -54,7 +54,12 @@ export default function ForUsImportant() {
   let content;
   if (layoutForMainBanner === "desktop") {
     content = (
-      <div className="home-for-us-important-text-container">
+      <motion.div className="home-for-us-important-text-container"
+      initial={{ opacity: 0, x: 75 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="home-for-us-important-text-title">
           А також ми допоможемо всім нашим студентам підняти свій рівень
           англійської мови
@@ -147,7 +152,7 @@ export default function ForUsImportant() {
             </HighlightedTextWithDots>
           )}
         </div>
-      </div>
+      </motion.div>
     );
   } else {
     content = (
@@ -191,7 +196,12 @@ export default function ForUsImportant() {
       </div>
       <div className="home-for-us-important-container">
         <div className="home-for-us-important-title-container">
-          <div className="home-for-us-important-title">
+          <motion.div className="home-for-us-important-title"
+            initial={{ opacity: 0, y: -75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {" "}
             <HighlightedTextWithDots
               colorBackground="#BFA0BEB2"
@@ -202,7 +212,7 @@ export default function ForUsImportant() {
             >
               ДЛЯ НАС ВАЖЛИВО
             </HighlightedTextWithDots>
-          </div>
+          </motion.div>
           <div className="home-for-us-important-title-subtitles-container">
             {!isMobile ? (
               <>
@@ -221,13 +231,18 @@ export default function ForUsImportant() {
           </div>
         </div>
         <div className="home-for-us-important-content">
-          <div className="home-for-us-important-img">
+          <motion.div className="home-for-us-important-img"
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+          >
             <img
               loading="lazy"
               src="/assets/images/forUsImportant.png"
               alt="For Us Important"
             />
-          </div>
+          </motion.div>
           {content}
         </div>
       </div>

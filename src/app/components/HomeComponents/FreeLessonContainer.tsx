@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import InputFreeLesson from "./styledComponents/InputFreeLesson";
 import { emailSendFunc } from "../../funcs/emailSend";
 import Toast from "../Toast";
-
+import {motion} from "framer-motion";
 export default function FreeLessonContainer({
   paddingTop = 75,
 }: {
@@ -92,17 +92,31 @@ export default function FreeLessonContainer({
         className="home-free-lessons-container"
         style={{ paddingTop: paddingTop }}
       >
-        <div className="home-free-lessons-title">
+        <motion.div className="home-free-lessons-title"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           NEW LINE SCH{isMobile ? <br /> : ""}OOL
-        </div>
+        </motion.div>
         <div className="home-free-lessons-content">
           <div className="spin-arrow">
             <img loading="lazy" src="/assets/elements/spin_arrow.png" alt="" />
           </div>
-          <div className="home-free-lessons-text">отримай безкоштовний урок!</div>
-          <form
+          <motion.div className="home-free-lessons-text"
+            initial={{ opacity: 0, x: -75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >отримай безкоштовний урок!</motion.div>
+          <motion.form
             className="home-free-lessons-form"
             onSubmit={sendEmail}
+            initial={{ opacity: 0, x: 75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="home-free-lessons-form-inputs">
               <InputFreeLesson
@@ -134,7 +148,7 @@ export default function FreeLessonContainer({
               />
             </div>
             <button className="home-free-lessons-form-btn">ВІДПРАВИТИ</button>
-          </form>
+          </motion.form>
         </div>
       </div>
       <div style={{ height: 100, backgroundColor: "#ffffff" }}></div>

@@ -1,4 +1,5 @@
 import "./styles/OurClubsInfoHeader.css";
+import {motion} from "framer-motion";
 export default function OurClubsInfoHeader() {
     const clubsInfoBodyText=[
         'Розмовний клуб для підлітків  “Lets talk about it”',
@@ -7,8 +8,18 @@ export default function OurClubsInfoHeader() {
         "Граматичний клуб для підлітків"
     ];
     return <div className="clubs-info-header-container">
-        <div className="clubs-info-header-title"><span>Ми пропонуємо розмовні клуби <br /> різних напрямків.</span> Обирайте найкращий для себе</div>
-        <div className="clubs-info-header-body">
+        <motion.div className="clubs-info-header-title"
+            initial={{ opacity: 0, x: -75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
+        ><span>Ми пропонуємо розмовні клуби <br /> різних напрямків.</span> Обирайте найкращий для себе</motion.div>
+        <motion.div className="clubs-info-header-body"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
+        >
             <div className="clubs-info-header-body-title">Долучитись можуть і наші студенти і інші <br /> охочі практикувати мову</div>
             <div className="clubs-info-header-body-subtitle">Для наших студентів розмовні клуби безкоштовні!</div>
             <div className="clubs-info-header-body-info">
@@ -25,6 +36,6 @@ export default function OurClubsInfoHeader() {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     </div>
 }
