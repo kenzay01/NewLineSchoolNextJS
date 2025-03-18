@@ -26,8 +26,6 @@ export default function TestStartingPage() {
     const params = useParams();
     const testId = params.test_id as string;
     const testTitleStarting: string | undefined  = testTitles.find((item) => item.id === testId)?.title;
-    console.log("testId", testId)
-    console.log("testTitleStarting", testTitleStarting)
     const testDescription = test_descriptions[testId as TestKeys]; 
     const [toast, setToast] = useState('');
     const [errors, setErrors] = useState({

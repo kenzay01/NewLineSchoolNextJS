@@ -219,6 +219,7 @@
 } */
 @media (max-width: 768px) {
     .expanded-folder-content-container{
+        background-image: none;
         width: 100%;
         display: flex;
         justify-content: center;
