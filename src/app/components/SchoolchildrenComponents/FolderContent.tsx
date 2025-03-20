@@ -156,31 +156,33 @@ export default function FolderContent({
   } else {
     body = (
       <div className="folder-content-body">
-        <motion.div className="folder-content-body-info-container"
-          initial={{ opacity: isMobile ? 1 : 0, x: isMobile ? 0 : -50}}
-          whileInView={{ opacity: 1, x: 0}}
+        <motion.div
+          className="folder-content-body-info-container"
+          initial={{ opacity: isMobile ? 1 : 0, x: isMobile ? 0 : -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
           {isMobile ? (
             <>
-              <motion.div className="folder-content-body-info-container-text"
+              <motion.div
+                className="folder-content-body-info-container-text"
                 initial={{ opacity: 0, y: 75 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true, amount: 0.2 }}
-              
               >
                 <span>
                   Підготувати до НМТ з англійської мови та допомогти набрати
                   максимальну кількість балів
                 </span>
               </motion.div>
-              <motion.div className="folder-content-body-info-container-text"
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.2 }}
+              <motion.div
+                className="folder-content-body-info-container-text"
+                initial={{ opacity: 0, y: 75 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <span>
                   Під час цього курсу наші студенти дізнаються про всі стратегії
@@ -217,15 +219,17 @@ export default function FolderContent({
             </>
           )}
         </motion.div>
-        <motion.div className="folder-content-body-img"
-        initial={{ opacity: 0, x: isMobile ? -50 : 0, y: isMobile ? 0 : 50 }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true, amount: 0.2 }}
+        <motion.div
+          className="folder-content-body-img"
+          initial={{ opacity: 0, x: isMobile ? -50 : 0, y: isMobile ? 0 : 50 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <img loading="lazy" src="/assets/images/folderImage.png" alt="" />
         </motion.div>
-        <motion.div className="folder-content-body-info-studying"
+        <motion.div
+          className="folder-content-body-info-studying"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -278,7 +282,7 @@ export default function FolderContent({
       {type === "expanded" ? (
         <div
           className="expanded-folder-content-extra-container"
-          style={{ bottom: subtype === "expanded-1" ? -100 : bottomExtraCon }}
+          style={{ bottom: subtype === "expanded-1" ? -60 : bottomExtraCon }}
         >
           В кінці курсу наші студенти зможуть підтвердити свої знання на
           Міжнародних іспитах Cambridge Exams for Young Learners: Starters,

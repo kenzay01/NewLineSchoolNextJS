@@ -12,8 +12,6 @@ interface AccordionProps {
 }
 
 export default function Accordion({ title, content }: AccordionProps) {
-    console.log("title", title);
-    console.log("content", content);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
