@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import InputFreeLesson from "./styledComponents/InputFreeLesson";
 import { emailSendFunc } from "../../funcs/emailSend";
 import Toast from "../Toast";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 export default function FreeLessonContainer({
   paddingTop = 75,
 }: {
@@ -29,7 +29,6 @@ export default function FreeLessonContainer({
   });
   const [isToast, setIsToast] = useState<string>("");
 
-
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -41,7 +40,9 @@ export default function FreeLessonContainer({
     ) {
       setErrors({
         name: inputValueName.trim() === "",
-        phone: inputValuePhoneNumber.trim() === "" || inputValuePhoneNumber.length < 17,
+        phone:
+          inputValuePhoneNumber.trim() === "" ||
+          inputValuePhoneNumber.length < 17,
         email: inputValueEmail.trim() === "",
       });
       return;
@@ -76,14 +77,14 @@ export default function FreeLessonContainer({
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const updateLayout = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      const updateLayout = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
 
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-}
+      updateLayout();
+      window.addEventListener("resize", updateLayout);
+      return () => window.removeEventListener("resize", updateLayout);
+    }
   }, []);
 
   return (
@@ -92,7 +93,8 @@ export default function FreeLessonContainer({
         className="home-free-lessons-container"
         style={{ paddingTop: paddingTop }}
       >
-        <motion.div className="home-free-lessons-title"
+        <motion.div
+          className="home-free-lessons-title"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75 }}
@@ -104,17 +106,20 @@ export default function FreeLessonContainer({
           <div className="spin-arrow">
             <img loading="lazy" src="/assets/elements/spin_arrow.png" alt="" />
           </div>
-          <motion.div className="home-free-lessons-text"
+          <motion.div
+            className="home-free-lessons-text"
             initial={{ opacity: 0, x: -75 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.75 }}
             viewport={{ once: true, amount: 0.2 }}
-          >отримай безкоштовний урок!</motion.div>
+          >
+            отримай безкоштовний урок!
+          </motion.div>
           <motion.form
             className="home-free-lessons-form"
             onSubmit={sendEmail}
-            initial={{ opacity: 0, x: 75 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75 }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -152,7 +157,14 @@ export default function FreeLessonContainer({
         </div>
       </div>
       <div style={{ height: 100, backgroundColor: "#ffffff" }}></div>
-      {isToast && <Toast message={isToast} onClose={() => { setIsToast("") }} />}
+      {isToast && (
+        <Toast
+          message={isToast}
+          onClose={() => {
+            setIsToast("");
+          }}
+        />
+      )}
     </>
   );
 }

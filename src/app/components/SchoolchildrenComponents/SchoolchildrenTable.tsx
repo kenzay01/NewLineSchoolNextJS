@@ -1,6 +1,7 @@
 import "./styles/SchoolchildrenTable.css";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdCheckmark } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const withOut = <IoCloseSharp className="withOutMark" />;
 const withCheck = <IoMdCheckmark className="withCheckMark" />;
@@ -64,7 +65,13 @@ const features = [
 
 export default function SchoolchildrenTable() {
   return (
-    <div className="table-container-tb">
+    <motion.div
+      className="table-container-tb"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <table className="pricing-table">
         <thead>
           <tr>
@@ -85,6 +92,6 @@ export default function SchoolchildrenTable() {
           ))}
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 }

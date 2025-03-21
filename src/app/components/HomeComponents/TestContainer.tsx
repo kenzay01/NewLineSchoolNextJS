@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import HighlightedTextWithDots from "./styledComponents/HighlightedTextWithDots";
 import HighlightedText from "./styledComponents/HighlightedText";
 import ColumnLevel from "./styledComponents/ColumnLevel";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 // CSS imports can stay as they are
 import "./styles/TestContainer.css";
 
@@ -275,7 +275,8 @@ export default function TestContainer({
               : `url('/assets/background/backForTestMobile.png')`, // Updated path for Next.js static assets
         }}
       >
-        <motion.div className="home-test-container-left"
+        <motion.div
+          className="home-test-container-left"
           initial={{ opacity: 0, x: -75 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75 }}
@@ -302,9 +303,10 @@ export default function TestContainer({
           {layoutForMainBanner === "desktop" ? buttonWithfunc : null}
         </motion.div>
 
-        <motion.div className="home-test-container-right"
-          initial={{ opacity: 0, x: 75 }}
-          whileInView={{ opacity: 1, x: 0 }}
+        <motion.div
+          className="home-test-container-right"
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75 }}
           viewport={{ once: true, amount: 0.2 }}
         >

@@ -4,7 +4,7 @@
   gap: 40px;
   width: 100%;
   height: auto;
-  padding: 60px 140px 40px 140px;
+  padding: 60px 140px;
 }
 .table-container-title {
   font-family: Unbounded;
@@ -13,17 +13,19 @@
   align-content: flex-start;
   text-transform: uppercase;
   color: #484848;
+  padding-left: 70px;
 }
 .table-container-title span {
   color: #ffffff;
 }
 @media (max-width: 768px) {
   .table-container {
-    padding: 80px 0px 20px;
+    padding: 40px 0px 20px;
   }
   .table-container-title {
     font-size: 18px;
     line-height: 24px;
     text-align: center;
+    padding-left: 0;
   }
 }

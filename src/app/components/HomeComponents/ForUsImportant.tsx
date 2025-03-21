@@ -54,11 +54,12 @@ export default function ForUsImportant() {
   let content;
   if (layoutForMainBanner === "desktop") {
     content = (
-      <motion.div className="home-for-us-important-text-container"
-      initial={{ opacity: 0, x: 75 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.75 }}
-      viewport={{ once: true, amount: 0.2 }}
+      <motion.div
+        className="home-for-us-important-text-container"
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="home-for-us-important-text-title">
           А також ми допоможемо всім нашим студентам підняти свій рівень
@@ -162,8 +163,8 @@ export default function ForUsImportant() {
             <motion.div
               className="home-for-us-important-text-mobile-container"
               key={index}
-              initial={{ opacity: 0, x: 75 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75 }}
               viewport={{ once: true, amount: 0.2 }}
             >
@@ -172,7 +173,13 @@ export default function ForUsImportant() {
                 {text.split(" ").map((word, index) => {
                   if (index === 0) {
                     return (
-                      <span key={index} className="home-for-us-important-text-mobile-text-first-word">{word} {" "}</span>)
+                      <span
+                        key={index}
+                        className="home-for-us-important-text-mobile-text-first-word"
+                      >
+                        {word}{" "}
+                      </span>
+                    );
                   }
                   return word + " ";
                 })}
@@ -196,7 +203,8 @@ export default function ForUsImportant() {
       </div>
       <div className="home-for-us-important-container">
         <div className="home-for-us-important-title-container">
-          <motion.div className="home-for-us-important-title"
+          <motion.div
+            className="home-for-us-important-title"
             initial={{ opacity: 0, y: -75 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75 }}
@@ -226,16 +234,16 @@ export default function ForUsImportant() {
                   спонукати до ефективного навчання
                 </div>
               </>
-            ) : 
-            null}
+            ) : null}
           </div>
         </div>
         <div className="home-for-us-important-content">
-          <motion.div className="home-for-us-important-img"
-          initial={{ opacity: 0, x: -75 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.75 }}
-          viewport={{ once: true, amount: 0.2 }}
+          <motion.div
+            className="home-for-us-important-img"
+            initial={{ opacity: 0, x: -75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <img
               loading="lazy"

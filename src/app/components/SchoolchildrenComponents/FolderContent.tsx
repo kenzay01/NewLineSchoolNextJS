@@ -5,244 +5,26 @@ import { ReactNode } from "react";
 import ContainerAboutLessons from "./ContainerAboutLessons";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { TbArrowBigRightFilled } from "react-icons/tb";
+import { useRouter } from "next/navigation";
 interface FolderContentProps {
-  backgroundImg: string;
   title: ReactNode;
-  bodyLeftUpperPart1Title?: ReactNode;
-  bodyLeftUpperPart2Title?: ReactNode;
-  bodyLeftUpperPart1Body?: ReactNode;
-  bodyLeftUpperPart2Body?: ReactNode;
-  bodyLeftLowwerPartTitle?: ReactNode;
-  lowerLeftPartText?: string[] | undefined;
-  lowerRightPartText?: string[] | undefined;
-  bottomExtraCon?: number;
-  type: string;
-  bodyCenterElements: ReactNode[];
-  bodyBottomElements: ReactNode[];
-  subtype?: string;
   idHash: string;
-  bodyLeftUpperPart1BodyMobile?: ReactNode;
-  bodyLeftUpperPart2BodyMobile?: ReactNode;
-  lowerPartTextMobile?: ReactNode;
+  bodyTextTop?: ReactNode;
+  bodyTextMid?: ReactNode;
+  bodyTextLast?: ReactNode;
 }
 
 export default function FolderContent({
-  backgroundImg,
   title,
-  bodyLeftUpperPart1Title,
-  bodyLeftUpperPart2Title,
-  bodyLeftUpperPart1Body,
-  bodyLeftUpperPart2Body,
-  bodyLeftLowwerPartTitle,
-  lowerLeftPartText,
-  lowerRightPartText,
-  bottomExtraCon,
-  type,
-  bodyCenterElements,
-  bodyBottomElements,
-  subtype,
   idHash,
-  bodyLeftUpperPart1BodyMobile,
-  bodyLeftUpperPart2BodyMobile,
-  lowerPartTextMobile,
+  bodyTextTop,
+  bodyTextMid,
+  bodyTextLast,
 }: FolderContentProps) {
   const [layoutForFolder, setLayoutForFolder] = useState("desktop");
   const isMobile = layoutForFolder === "mobile";
-  let body;
-  if (type === "expanded") {
-    body = (
-      <div className="expanded-folder-content-body">
-        <div className="expanded-folder-content-body-left">
-          <div className="expanded-folder-content-body-left-upper-part-container">
-            <motion.div
-              className="expanded-folder-content-body-left-upper-part1"
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {isMobile ? null : (
-                <div className="body-left-upper-part1-title">
-                  {bodyLeftUpperPart1Title}
-                </div>
-              )}
-              <div className="body-left-upper-part1-text">
-                {isMobile
-                  ? bodyLeftUpperPart1BodyMobile
-                  : bodyLeftUpperPart1Body}
-              </div>
-            </motion.div>
-            <motion.div
-              className="expanded-folder-content-body-left-upper-part2"
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {isMobile ? null : (
-                <div className="body-left-upper-part2-title">
-                  {bodyLeftUpperPart2Title}
-                </div>
-              )}
-              <div className="body-left-upper-part2-text">
-                {isMobile
-                  ? bodyLeftUpperPart2BodyMobile
-                  : bodyLeftUpperPart2Body}
-              </div>
-            </motion.div>
-          </div>
-          <motion.div
-            className="expanded-folder-content-body-left-lower-part-container"
-            initial={{ opacity: 0, y: 75 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {isMobile ? (
-              lowerPartTextMobile
-            ) : (
-              <>
-                <div className="body-left-lower-part-body-left">
-                  <div className="body-left-lower-part-title">
-                    {bodyLeftLowwerPartTitle}
-                  </div>
-                  <div className="body-left-lower-part-left-text">
-                    {lowerLeftPartText?.map((text, index) => (
-                      <div key={index} className="lower-part-text-item">
-                        <div className="lower-part-text-item-img">
-                          <img
-                            src="/assets/elements/wierd_arrow_right.png"
-                            alt=""
-                          />
-                        </div>
-                        <div className="lower-part-text-item-text">{text}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="body-left-lower-part-body-right-text">
-                  {lowerRightPartText?.map((text, index) => (
-                    <div key={index} className="lower-part-text-item">
-                      <div className="lower-part-text-item-img">
-                        <img
-                          src="/assets/elements/wierd_arrow_right.png"
-                          alt=""
-                        />
-                      </div>
-                      <div className="lower-part-text-item-text">{text}</div>
-                    </div>
-                  ))}
-                </div>
-              </>
-            )}
-          </motion.div>
-        </div>
-        <motion.div
-          className="expanded-folder-content-body-right"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <ContainerAboutLessons
-            bodyCenterElements={bodyCenterElements}
-            bodyBottomElements={bodyBottomElements}
-            btnHeight={50}
-            btnWidth={210}
-          />
-        </motion.div>
-      </div>
-    );
-  } else {
-    body = (
-      <div className="folder-content-body">
-        <motion.div
-          className="folder-content-body-info-container"
-          initial={{ opacity: isMobile ? 1 : 0, x: isMobile ? 0 : -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {isMobile ? (
-            <>
-              <motion.div
-                className="folder-content-body-info-container-text"
-                initial={{ opacity: 0, y: 75 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                <span>
-                  Підготувати до НМТ з англійської мови та допомогти набрати
-                  максимальну кількість балів
-                </span>
-              </motion.div>
-              <motion.div
-                className="folder-content-body-info-container-text"
-                initial={{ opacity: 0, y: 75 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                <span>
-                  Під час цього курсу наші студенти дізнаються про всі стратегії
-                  та тонкощі ефективного складання тесту.
-                </span>{" "}
-                Також ретельно тренуються над всіма типами завдань з кожної
-                секції . Кожний скіл такий як Listening, Writing, Speaking все
-                одно прокачується ретельно, на випадок змін у формі проведення
-                вступного іспиту, так щоб нашим студентам було легко
-                перелаштуватись.
-              </motion.div>
-            </>
-          ) : (
-            <>
-              <div className="folder-content-body-info-container-title">
-                Наш Фокус <br /> та Мета
-              </div>
-              <div className="folder-content-body-info-container-text p1">
-                Підготувати  до НМТ з англійської мови та допомогти набрати
-                максимальну кількість балів
-              </div>
-              <div className="folder-content-body-info-container-text p2">
-                Цей курс розрахований на два роки для дітей 10-11 класів. Під
-                час цього курсу наші студенти  дізнаються про всі стратегії та
-                тонкощі ефективного складання тесту. Також ретельно тренуються 
-                над всіма типами завдань з  кожної секції.
-              </div>
-              <div className="folder-content-body-info-container-text p3">
-                Кожний скіл такий як Listening, Speaking, Use of English,
-                Reading, Writing все одно прокачується ретельно, на випадок змін
-                у формі проведення вступного іспиту, так щоб нашим студентам
-                було легко перелаштуватись.
-              </div>
-            </>
-          )}
-        </motion.div>
-        <motion.div
-          className="folder-content-body-img"
-          initial={{ opacity: 0, x: isMobile ? -50 : 0, y: isMobile ? 0 : 50 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <img loading="lazy" src="/assets/images/folderImage.png" alt="" />
-        </motion.div>
-        <motion.div
-          className="folder-content-body-info-studying"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <ContainerAboutLessons
-            bodyCenterElements={bodyCenterElements}
-            bodyBottomElements={bodyBottomElements}
-          />
-        </motion.div>
-      </div>
-    );
-  }
+  const router = useRouter();
   useEffect(() => {
     if (typeof window !== "undefined") {
       const updateLayout = () => {
@@ -258,37 +40,108 @@ export default function FolderContent({
     }
   }, []);
   return (
-    <div
-      className="expanded-folder-content-container"
-      id={idHash}
-      style={{
-        backgroundImage: isMobile ? "none" : `url(${backgroundImg})`,
-        minHeight: type === "expanded" ? (isMobile ? "auto" : 830) : 740,
-        marginTop: type === "expanded" ? 60 : isMobile ? 60 : 100,
-        marginBottom:
-          type === "expanded" ? (isMobile ? 0 : 140) : isMobile ? 0 : 50,
-      }}
-    >
-      <div
-        className="expanded-folder-content"
-        style={{
-          paddingLeft: isMobile ? 0 : 110,
-          paddingRight: isMobile ? 0 : type === "expanded" ? 105 : 80,
-        }}
-      >
+    <div className="expanded-folder-content-container" id={idHash}>
+      <div className="expanded-folder-content">
         <div className="expanded-folder-content-title">{title}</div>
-        {body}
-      </div>
-      {type === "expanded" ? (
-        <div
-          className="expanded-folder-content-extra-container"
-          style={{ bottom: subtype === "expanded-1" ? -60 : bottomExtraCon }}
-        >
-          В кінці курсу наші студенти зможуть підтвердити свої знання на
-          Міжнародних іспитах Cambridge Exams for Young Learners: Starters,
-          Movers, Flyers
+        <div className="expanded-folder-content-body">
+          <div className="expanded-folder-content-body-list-items">
+            <motion.div
+              className="expanded-folder-content-body-item"
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              {bodyTextTop}
+            </motion.div>
+            {idHash === "folder3" ? (
+              <>
+                <motion.div
+                  className="expanded-folder-content-body-img"
+                  initial={{ opacity: 0, y: 75 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  <img src="/assets/images/folderImage.png" alt="" />
+                </motion.div>
+              </>
+            ) : (
+              <>
+                <motion.div
+                  className="expanded-folder-content-body-item"
+                  initial={{ opacity: 0, y: 75 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  {bodyTextMid}
+                </motion.div>
+              </>
+            )}
+            <motion.div
+              className="expanded-folder-content-body-item"
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              {bodyTextLast}
+            </motion.div>
+          </div>
+          <div className="expanded-folder-content-body-info-container">
+            <motion.div
+              className="expanded-folder-content-extra-container"
+              initial={{ opacity: 0, x: -75 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.75 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              В кінці курсу наші студенти зможуть підтвердити свої знання на
+              Міжнародних іспитах Cambridge Exams for Young Learners: Starters,
+              Movers, Flyers
+            </motion.div>
+            <motion.div
+              className="expanded-folder-content-body-info"
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <div className="expanded-folder-content-body-info-text">
+                <div className="expanded-folder-content-body-info-text-item">
+                  Тривалість заняття 60хв
+                </div>
+                <div className="expanded-folder-content-body-info-text-item">
+                  Курс 9 місяців
+                </div>
+                <div className="expanded-folder-content-body-info-text-item">
+                  Вартість заняття
+                </div>
+              </div>
+              <div className="expanded-folder-content-body-info-btn-container">
+                <button
+                  className="expanded-folder-content-body-info-btn"
+                  onClick={() => {
+                    const target = document.getElementById("price-table");
+                    if (target) {
+                      setTimeout(() => {
+                        target.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }, 100);
+                    }
+                  }}
+                >
+                  Деталі та пропозиції
+                  <TbArrowBigRightFilled className="expanded-folder-btn-arrow" />
+                </button>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }
