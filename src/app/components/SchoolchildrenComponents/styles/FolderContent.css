@@ -169,7 +169,7 @@
 }
 .expanded-folder-content-body-info {
   flex: 1;
-  background-color: #ae88ad;
+  background: linear-gradient(203.69deg, #f1e5d6 -1.72%, #bfa2c1 102.31%);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -182,16 +182,16 @@
   border-radius: 20px;
 }
 .expanded-folder-content-body-info-btn-container {
-  width: 200px;
+  width: 220px;
 }
 .expanded-folder-content-body-info-btn {
   width: 100%;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
-  font-family: Steppe;
+  font-family: Unbounded;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: normal;
   color: #484848;
   display: flex;
@@ -201,6 +201,9 @@
   transition: all 0.3s ease;
   outline: none;
   border: none;
+  color: #484848cf;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .expanded-folder-content-body-info-btn:hover {
   background-color: #f2f2f2;
