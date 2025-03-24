@@ -124,6 +124,7 @@
   max-width: 380px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   font-family: Steppe;
   font-weight: 600;
   color: #484848;
@@ -132,7 +133,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 25px;
-  text-align: center;
+  text-align: start;
   white-space: pre-wrap;
 }
 .expanded-folder-content-body-item::before {
@@ -141,7 +142,7 @@
   width: 40px;
   height: 5px;
   background-color: #ae88ad;
-  margin: 0 auto 20px;
+  margin-bottom: 10px;
 }
 .expanded-folder-content-body-item span {
   font-family: SteppeBold;
@@ -154,9 +155,9 @@
 }
 .expanded-folder-content-extra-container {
   flex: 1;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 100%;
   border-radius: 20px;
   padding: 10px 30px;
@@ -166,6 +167,9 @@
   font-size: 16px;
   line-height: 20px;
   color: #484848;
+}
+.expanded-folder-content-extra-container span {
+  font-family: SteppeBold;
 }
 .expanded-folder-content-body-info {
   flex: 1;
@@ -228,6 +232,11 @@
   object-position: top;
   border-radius: 25px;
 }
+.expanded-folder-content-body-info-text {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
 @media (max-width: 768px) {
   .expanded-folder-content {
     height: auto;
@@ -256,6 +265,7 @@
     font-size: 14px;
     max-width: auto;
     width: 100%;
+    text-align: center;
     /* padding: 10px 20px; */
   }
   .expanded-folder-content-body-item::before {

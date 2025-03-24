@@ -23,7 +23,7 @@ const features = [
         <h2>5 місяців</h2>
       </>,
       <>
-        <h1>72 занять</h1>
+        <h1>72 заняття</h1>
         <h2>9 місяців</h2>
       </>,
     ],
@@ -41,8 +41,12 @@ const features = [
     values: [withCheck, withCheck, withCheck, withCheck],
   },
   {
-    name: "Персоналізовані додаткові матеріали",
+    name: "Відеоматеріали для пропущених занять",
     values: [withOut, withCheck, withCheck, withCheck],
+  },
+  {
+    name: "Персоналізовані додаткові матеріали",
+    values: [withOut, withOut, withCheck, withCheck],
   },
   {
     name: "Розмовні клуби",

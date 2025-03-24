@@ -12,9 +12,9 @@ export default function SchoolchildrenTableContainer() {
         transition={{ duration: 0.75 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        Структура{" "}
-        <HighlightedText colorBack="#BFA0BEB2">навчання</HighlightedText> та
-        пропозиції
+        <HighlightedText colorBack="#BFA0BEB2">Структура</HighlightedText>{" "}
+        навчання та{" "}
+        <HighlightedText colorBack="#BFA0BEB2">пропозиції</HighlightedText>
       </motion.div>
       <SchoolchildrenTable />
     </div>

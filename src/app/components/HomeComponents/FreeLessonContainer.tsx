@@ -92,6 +92,7 @@ export default function FreeLessonContainer({
       <div
         className="home-free-lessons-container"
         style={{ paddingTop: paddingTop }}
+        id="free-lessons"
       >
         <motion.div
           className="home-free-lessons-title"

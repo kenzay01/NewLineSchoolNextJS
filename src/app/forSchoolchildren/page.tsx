@@ -93,15 +93,18 @@ export default function ForSchoolchildren() {
           батьками.
         </>
       ),
+      yellowBox: (
+        <>
+          В кінці кожного курсу наші студенти зможуть підтвердити свої знання на
+          міжнародних іспитах, таких як <span>Starters, Movers, Flyers</span>
+        </>
+      ),
       idHash: "folder1",
     },
     {
-      // backgroundImg: isMobile
-      //   ? "/assets/elements/folderElement2Mobile.png"
-      //   : "/assets/elements/folderElement2.png",
       title: (
         <>
-          навчання для
+          англійська для
           {isMobile ? <br /> : null}{" "}
           <HighlightedText colorBack="#BFA0BEB2">5-9 класів</HighlightedText>
         </>
@@ -144,22 +147,30 @@ export default function ForSchoolchildren() {
           засвоєння матеріалу.{" "}
         </>
       ),
+      yellowBox: (
+        <>
+          В кінці кожного курсу наші студенти зможуть підтвердити свої знання на
+          міжнародних іспитах, таких як{" "}
+          <span>Movers, Flyers, A2 KEY (KET), Preliminary (PET)</span>
+        </>
+      ),
       idHash: "folder2",
     },
     {
       title: (
         <>
-          навчання для {isMobile ? <br /> : ""}{" "}
+          англійська для {isMobile ? <br /> : ""}{" "}
           <HighlightedText colorBack="#BFA0BEB2">
             10-11 класів <br />
           </HighlightedText>
-          Підготовка до НМТ
+          <HighlightedText colorBack="#BFA0BEB2">Підготовка</HighlightedText> до
+          НМТ
         </>
       ),
       bodyTextTop: (
         <>
           <span>
-            Підготувати до НМТ з англійської мови та допомогти набрати
+            Наша мета підготувати до НМТ з англійської мови та допомогти набрати
             максимальну кількість балів
           </span>
         </>
@@ -174,6 +185,13 @@ export default function ForSchoolchildren() {
           Кожний скіл такий як Listening, Writing, Speaking все одно
           прокачується ретельно, на випадок змін у формі проведення вступного
           іспиту, так щоб нашим студентам було легко перелаштуватись.
+        </>
+      ),
+      yellowBox: (
+        <>
+          В кінці кожного курсу наші студенти також зможуть підтвердити свої
+          знання на міжнародних іспитах, таких як{" "}
+          <span>A2 KEY (KET), Preliminary (PET)</span>
         </>
       ),
       idHash: "folder3",
@@ -193,6 +211,7 @@ export default function ForSchoolchildren() {
               bodyTextMid={data.bodyTextMid}
               bodyTextLast={data.bodyTextLast}
               idHash={data.idHash}
+              yellowBox={data.yellowBox}
             />
           );
         })}

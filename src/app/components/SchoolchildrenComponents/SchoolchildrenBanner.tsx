@@ -8,17 +8,17 @@ import { div } from "framer-motion/client";
 export default function SchoolchildrenBanner() {
   const links = [
     {
-      text: "Англійська для дітей (1-4 класи)",
+      text: "Англійська для 1-4 класи",
       textMobile: "1-4 класи",
       href: "#folder1",
     },
     {
-      text: "навчання для підлітків (5-9 класи)",
+      text: "Англійська для 5-9 класи)",
       textMobile: "5-9 класи",
       href: "#folder2",
     },
     {
-      text: "Англійська для підлітків (10-11 клас) Підготовка до НМТ",
+      text: "Англійська для 10-11 клас",
       textMobile: "10-11 клас",
       href: "#folder3",
     },
@@ -56,7 +56,7 @@ export default function SchoolchildrenBanner() {
     <div className="schoolchildren-banner-right-text-container">
       <div className="schoolchildren-banner-right-text">
         <div className="schoolchildren-banner-right-text-item">
-          Курс <span>10</span> місяців
+          Курс <span>9</span> місяців
         </div>
         <div className="schoolchildren-banner-right-text-item">
           Онлайн/Офлайн заняття
@@ -84,7 +84,7 @@ export default function SchoolchildrenBanner() {
     </div>
   ) : (
     <div className="schoolchildren-banner-right-text">
-      school · exams · speak club
+      school · exams · speaking club
     </div>
   );
   return (
@@ -92,19 +92,15 @@ export default function SchoolchildrenBanner() {
       <div className="schoolchildren-banner-content">
         <div className="schoolchildren-banner-content-text-header">
           англійська для {isMobile ? null : <br />}
-          {isMobile ? (
-            <HighlightedText colorBack="#fce696">школярів</HighlightedText>
-          ) : (
-            <HighlightedTextWithDots
-              colorText="#ffffff"
-              colorBackground="#BFA0BEB2"
-              colorDots="#AE88AD"
-              widthDots={isMobile ? 8 : 10}
-              widthBorder={isMobile ? 3 : 4}
-            >
-              школярів
-            </HighlightedTextWithDots>
-          )}
+          <HighlightedTextWithDots
+            colorText="#ffffff"
+            colorBackground="#BFA0BEB2"
+            colorDots="#AE88AD"
+            widthDots={isMobile ? 8 : 10}
+            widthBorder={isMobile ? 3 : 4}
+          >
+            школярів
+          </HighlightedTextWithDots>
         </div>
         {isMobile ? null : linksContainer}
       </div>

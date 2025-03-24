@@ -13,6 +13,7 @@ interface FolderContentProps {
   bodyTextTop?: ReactNode;
   bodyTextMid?: ReactNode;
   bodyTextLast?: ReactNode;
+  yellowBox?: ReactNode;
 }
 
 export default function FolderContent({
@@ -21,6 +22,7 @@ export default function FolderContent({
   bodyTextTop,
   bodyTextMid,
   bodyTextLast,
+  yellowBox,
 }: FolderContentProps) {
   const [layoutForFolder, setLayoutForFolder] = useState("desktop");
   const isMobile = layoutForFolder === "mobile";
@@ -97,9 +99,7 @@ export default function FolderContent({
               transition={{ duration: 0.75 }}
               viewport={{ once: true, amount: 0.2 }}
             >
-              В кінці курсу наші студенти зможуть підтвердити свої знання на
-              Міжнародних іспитах Cambridge Exams for Young Learners: Starters,
-              Movers, Flyers
+              {yellowBox}
             </motion.div>
             <motion.div
               className="expanded-folder-content-body-info"
@@ -110,13 +110,16 @@ export default function FolderContent({
             >
               <div className="expanded-folder-content-body-info-text">
                 <div className="expanded-folder-content-body-info-text-item">
-                  Тривалість заняття 60хв
+                  Курс - 9 місяців
                 </div>
                 <div className="expanded-folder-content-body-info-text-item">
-                  Курс 9 місяців
+                  Дітей у групі- до 10
                 </div>
                 <div className="expanded-folder-content-body-info-text-item">
-                  Вартість заняття
+                  Формат- онлайн/офлайн
+                </div>
+                <div className="expanded-folder-content-body-info-text-item">
+                  Вартість- від 230 грн 60 хв
                 </div>
               </div>
               <div className="expanded-folder-content-body-info-btn-container">
