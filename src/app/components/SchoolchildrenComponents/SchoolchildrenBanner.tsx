@@ -8,17 +8,17 @@ import { div } from "framer-motion/client";
 export default function SchoolchildrenBanner() {
   const links = [
     {
-      text: "Англійська для 1-4 класи",
+      text: "Англійська для 1-4 класів",
       textMobile: "1-4 класи",
       href: "#folder1",
     },
     {
-      text: "Англійська для 5-9 класи)",
+      text: "Англійська для 5-9 класів",
       textMobile: "5-9 класи",
       href: "#folder2",
     },
     {
-      text: "Англійська для 10-11 клас",
+      text: "Англійська для 10-11 класів",
       textMobile: "10-11 клас",
       href: "#folder3",
     },
