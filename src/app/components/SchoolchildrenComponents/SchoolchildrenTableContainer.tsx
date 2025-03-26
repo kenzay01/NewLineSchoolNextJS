@@ -2,6 +2,7 @@ import "./styles/SchoolchildrenTableContainer.css";
 import HighlightedText from "../HomeComponents/styledComponents/HighlightedText";
 import SchoolchildrenTable from "./SchoolchildrenTable";
 import { motion } from "framer-motion";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 export default function SchoolchildrenTableContainer() {
   return (
     <div className="table-container" id="price-table">
@@ -17,6 +18,26 @@ export default function SchoolchildrenTableContainer() {
         <HighlightedText colorBack="#BFA0BEB2">пропозиції</HighlightedText>
       </motion.div>
       <SchoolchildrenTable />
+      <div className="table-container-button-container">
+        <p>Запишіться на пробне заняття</p>
+        <MdOutlineKeyboardDoubleArrowRight className="table-container-button-container-icon" />
+        <button
+          className="table-container-button"
+          onClick={() => {
+            const target = document.getElementById("free-lessons");
+            if (target) {
+              setTimeout(() => {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 100);
+            }
+          }}
+        >
+          Записатися
+        </button>
+      </div>
     </div>
   );
 }

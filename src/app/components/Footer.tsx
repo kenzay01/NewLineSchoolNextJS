@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 import "../styles/Footer.css";
 
 export default function Footer({ background }: { background: boolean }) {
@@ -41,7 +42,7 @@ export default function Footer({ background }: { background: boolean }) {
         <div className="footer-info-adress-container">
           <div className="footer-info-adress">
             <h1>АДРЕСА</h1>
-            <h2>вул. Степана Бандери</h2>
+            <h2>Киівська область, Бориспіль, вул. Білодідівка 19</h2>
           </div>
           <a
             href="https://maps.app.goo.gl/UPMrS4pAHhR2GVoJ9"
@@ -54,24 +55,27 @@ export default function Footer({ background }: { background: boolean }) {
           <div className="footer-info-contacts">
             <h1>КОНТАКТИ</h1>
             <h2>+38 (067) 71 49 862</h2>
-            <h2>пошта@gmail.com</h2>
+            <h2>newlineschool2018@gmail.com</h2>
           </div>
           <div className="footer-info-socials">
             <a href="https://www.instagram.com/new_line_school_boryspil/">
               <FaInstagram className="footer-info-socials-icon" />
+            </a>
+            <a href="https://www.tiktok.com/@new_line_school">
+              <FaTiktok className="footer-info-socials-icon" />
             </a>
             <a href="https://t.me/new_line_school_boryspil">
               <FaTelegram className="footer-info-socials-icon" />
             </a>
           </div>
         </div>
-        <div className="footer-info-work-schedule-container">
+        {/* <div className="footer-info-work-schedule-container">
           <h1>ГРАФІК РОБОТИ</h1>
           <div>
             <h2>ПН-ПТ:</h2>
             <h2>СБ-НД:</h2>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="footer-logo">
         <img src="/assets/logo.png" alt="Logo" />

@@ -42,11 +42,11 @@
 }
 
 .pricing-table th:nth-child(4) {
-  background-color: rgb(161, 209, 140);
+  background-color: #669e99;
 }
 
 .pricing-table th:nth-child(5) {
-  background-color: rgb(56, 118, 29);
+  background-color: #4f7a77;
 }
 
 .pricing-table td {
@@ -74,9 +74,38 @@
 .withOutMark {
   color: #686868;
 }
-.withCheckMark {
-  color: #ae88ad;
+.pricing-table td .withCheckMark {
+  margin-top: 2px;
+  color: white;
+  padding: 1px;
 }
+.pricing-table td:nth-child(2) .withCheckMark {
+  border-radius: 50%;
+  background-color: rgb(194, 123, 160);
+  box-shadow: 0 0 0 4px rgb(194, 123, 160, 0.3);
+}
+.pricing-table td:nth-child(3) .withCheckMark {
+  border-radius: 50%;
+  background-color: rgb(255, 229, 153);
+  box-shadow: 0 0 0 4px rgb(255, 229, 153, 0.3);
+}
+.pricing-table td:nth-child(4) .withCheckMark {
+  border-radius: 50%;
+  background-color: rgb(102, 158, 153);
+  box-shadow: 0 0 0 4px rgb(102, 158, 153, 0.3);
+}
+.pricing-table td:nth-child(5) .withCheckMark {
+  border-radius: 50%;
+  background-color: rgb(79, 122, 119);
+  box-shadow: 0 0 0 4px rgb(79, 122, 119, 0.3);
+}
+/* .withCheckMark {
+  color: #ae88ad;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0 0 0 3px rgb(174, 136, 173, 0.5);
+} */
 
 @media (max-width: 768px) {
   .table-container-tb {

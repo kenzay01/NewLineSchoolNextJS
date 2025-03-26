@@ -65,22 +65,40 @@ export default function HomeMainBanner() {
         <span>Cambridge Assessment English</span>
       </div>
 
-      <button
-        className="home-main-banner-btn"
-        onClick={() => {
-          const target = document.getElementById("free-lessons");
-          if (target) {
-            setTimeout(() => {
-              target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }, 100);
-          }
-        }}
-      >
-        ЗАПИСАТИСЯ
-      </button>
+      <div className="home-main-banner-btn-container">
+        <button
+          className="home-main-banner-btn"
+          onClick={() => {
+            const target = document.getElementById("free-lessons");
+            if (target) {
+              setTimeout(() => {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 100);
+            }
+          }}
+        >
+          ЗАПИСАТИСЯ
+        </button>
+        <button
+          className="home-main-banner-btn-test"
+          onClick={() => {
+            const target = document.getElementById("test-container");
+            if (target) {
+              setTimeout(() => {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 100);
+            }
+          }}
+        >
+          ПРОЙТИ ТЕСТ
+        </button>
+      </div>
     </div>
   );
 }

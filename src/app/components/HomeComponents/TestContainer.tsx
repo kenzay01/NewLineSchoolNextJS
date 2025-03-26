@@ -272,8 +272,9 @@ export default function TestContainer({
               ? "none"
               : layoutForMainBanner === "desktop"
               ? `url(${backImg})`
-              : `url('/assets/background/backForTestMobile.png')`, // Updated path for Next.js static assets
+              : `url('/assets/background/backForTestMobile.png')`,
         }}
+        id="test-container"
       >
         <motion.div
           className="home-test-container-left"

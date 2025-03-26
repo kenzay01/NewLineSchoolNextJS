@@ -11,9 +11,9 @@
 .footer-info {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  padding-left: 100px;
+  padding-left: 125px;
 }
 .footer-logo {
   width: 70px;
@@ -67,6 +67,11 @@
   width: 100%;
   height: 100%;
   transform: scale(1.5);
+  transition: all 0.2s;
+}
+.footer-info-socials a:hover {
+  color: #ae88ad;
+  transform: scale(1.6);
 }
 .footer-info-contacts-container {
   flex: 4;
@@ -85,7 +90,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 3px;
 }
 
@@ -125,5 +130,6 @@
   }
   .footer-info-contacts-container {
     padding: 0;
+    gap: 30px;
   }
 }

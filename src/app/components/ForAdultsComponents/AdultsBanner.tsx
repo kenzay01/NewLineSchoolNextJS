@@ -9,10 +9,10 @@ export default function AdultsBanner() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
@@ -38,13 +38,14 @@ export default function AdultsBanner() {
           )}
         </div>
         <div className="for-adults-banner-title-underline">
-          General English A0-B2. {isMobile ? <></> : <br />}Вивчення рівня +
-          <span> Підготовка до ЄВІ</span>
+          General English A0-B2. {isMobile ? <></> : <br />}
+          {/* Вивчення рівня +
+          <span> Підготовка до ЄВІ</span> */}
         </div>
       </div>
       <div className="for-adults-banner-text">
         <div className="for-adults-banner-text-title">
-          Підвищити свій рівень <br />
+          Підвищення рівня <br />
           англійської мови{" "}
           <HighlightedTextWithDots
             colorText="#ffffff"
@@ -53,17 +54,21 @@ export default function AdultsBanner() {
             widthDots={5}
             widthBorder={2}
           >
-            - це гарна ідея!
+            — це чудове рішення!
           </HighlightedTextWithDots>
         </div>
         <div className="for-adults-banner-text-description">
-          Ми пропонуємо навчатись у сфері живої мови, адже наша програма
-          базується на комунікативній методиці Cambridge English і спирається
-          на міжнародну шкалу CEFR (Common European Framework of Reference).
+          Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
+          базується на комунікативній методиці Cambridge English та відповідає
+          міжнародній шкалі CEFR (Common European Framework of Reference).
         </div>
       </div>
       <div className="for-adults-banner-img">
-        <img loading="lazy" src="/assets/images/forAdults.png" alt="Adults Banner" />
+        <img
+          loading="lazy"
+          src="/assets/images/forAdults.png"
+          alt="Adults Banner"
+        />
       </div>
     </div>
   );
