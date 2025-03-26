@@ -151,7 +151,7 @@ export default function ForSchoolchildren() {
         <>
           В кінці кожного курсу наші студенти зможуть підтвердити свої знання на
           міжнародних іспитах, таких як{" "}
-          <span>Movers, Flyers, A2 KEY (KET), Preliminary (PET)</span>
+          <span>Movers, Flyers, A2 KEY (KET), B1 Preliminary (PET)</span>
         </>
       ),
       idHash: "folder2",
@@ -191,7 +191,7 @@ export default function ForSchoolchildren() {
         <>
           В кінці кожного курсу наші студенти також зможуть підтвердити свої
           знання на міжнародних іспитах, таких як{" "}
-          <span>A2 KEY (KET), Preliminary (PET)</span>
+          <span>A2 KEY (KET), B1 Preliminary (PET)</span>
         </>
       ),
       idHash: "folder3",
