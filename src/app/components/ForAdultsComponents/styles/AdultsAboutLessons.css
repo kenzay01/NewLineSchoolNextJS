@@ -1,115 +1,282 @@
-.for-adults-about-lessons-container{
-    width: 100%;
-    height: 650px;
-    padding: 0px 220px 100px 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+.for-adults-about-lessons-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 20px;
 }
-.for-adults-about-lessons-info-right{
-    flex: 1;
-    height: 545px;
-    min-height: 545px;
-    margin-right: 40px;
-    padding-left: 10px;
-}
-.for-adults-about-lessons-info-left{
-    width: 500px;
-    padding: 0 10px;
-    height: 100%;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-.for-adults-about-lessons-info-left-title-con{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-.for-adults-about-lessons-info-left-img{
-    padding: 12px;
-    width: 45px;
-    /* height: 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #AE88AD;
-}
-.for-adults-about-lessons-info-left-img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.for-adults-about-lessons-info-left-title{
-    font-family: Unbounded;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    color: #AE88AD;
-    text-transform: uppercase;
-}
-.for-adults-about-lessons-info-left-body{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: flex-start;
-    padding-right: 100px;
-}
-.for-adults-about-lessons-info-left-body-p{
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    /* margin-bottom: 20px; */
-        font-family: Steppe;
-    font-weight: 600;
-    color: #AE88AD;
 
+.folder-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); */
+  /* overflow: hidden; */
+  background-color: #ffffff;
 }
+
+.folder-tabs {
+  position: absolute;
+  display: flex;
+  gap: -5px;
+  /* background-color: #f7f7f7; */
+  /* border-bottom: 1px solid #e0e0e0; */
+  width: 50%;
+  top: -35px;
+  right: -100px;
+}
+
+.tab {
+  clip-path: polygon(
+    45.165% 0.806%,
+    8.787% 0.806%,
+    8.787% 0.806%,
+    7.343% 1.081%,
+    5.987% 1.87%,
+    4.738% 3.126%,
+    3.617% 4.799%,
+    2.642% 6.84%,
+    1.835% 9.199%,
+    1.215% 11.828%,
+    0.802% 14.676%,
+    0.616% 17.696%,
+    0.677% 20.837%,
+    4.424% 83.337%,
+    4.424% 83.337%,
+    4.669% 85.918%,
+    5.077% 88.339%,
+    5.633% 90.573%,
+    6.325% 92.595%,
+    7.137% 94.379%,
+    8.057% 95.897%,
+    9.071% 97.123%,
+    10.164% 98.032%,
+    11.323% 98.596%,
+    12.534% 98.79%,
+    91.176% 98.79%,
+    91.176% 98.79%,
+    92.502% 98.558%,
+    93.761% 97.886%,
+    94.934% 96.81%,
+    96.006% 95.367%,
+    96.959% 93.594%,
+    97.776% 91.526%,
+    98.441% 89.202%,
+    98.937% 86.656%,
+    99.247% 83.926%,
+    99.354% 81.048%,
+    99.354% 71.774%,
+    99.354% 71.774%,
+    99.247% 68.896%,
+    98.937% 66.166%,
+    98.441% 63.621%,
+    97.776% 61.296%,
+    96.959% 59.229%,
+    96.006% 57.455%,
+    94.934% 56.013%,
+    93.761% 54.937%,
+    92.502% 54.264%,
+    91.176% 54.032%,
+    68.983% 54.032%,
+    68.983% 54.032%,
+    68.122% 53.934%,
+    67.28% 53.644%,
+    66.463% 53.17%,
+    65.677% 52.518%,
+    64.928% 51.697%,
+    64.221% 50.714%,
+    63.563% 49.576%,
+    62.959% 48.291%,
+    62.416% 46.865%,
+    61.939% 45.307%,
+    52.208% 9.532%,
+    52.208% 9.532%,
+    51.732% 7.974%,
+    51.189% 6.548%,
+    50.585% 5.263%,
+    49.927% 4.125%,
+    49.22% 3.141%,
+    48.471% 2.321%,
+    47.684% 1.669%,
+    46.867% 1.195%,
+    46.025% 0.905%,
+    45.165% 0.806%
+  );
+  position: absolute;
+  width: 120px;
+  height: 55px;
+  padding: 8px 15px 10px 15px;
+  font-family: Unbounded;
+  cursor: pointer;
+  font-weight: 600;
+  color: #484848;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #ae88ad;
+  color: white;
+}
+
+/* .tab:hover {
+  background-color: rgb(174, 136, 173, 0.4);
+} */
+
+.tab.active {
+  background-color: #916f90;
+  /* filter: drop-shadow(0 0 20px rgba(174, 136, 173, 1)); */
+  transform: translateY(-3px);
+  position: relative;
+  z-index: 99;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.folder-content {
+  z-index: 100;
+  display: flex;
+  padding: 40px 30px;
+  gap: 40px;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+}
+
+.text-section {
+  flex: 3;
+  animation: fadeIn 0.5s ease;
+  font-family: Steppe;
+  padding-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.text-section h2 {
+  font-family: Unbounded;
+  color: #484848;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #ae88ad;
+  padding-bottom: 10px;
+}
+
+.text-section p {
+  color: #484848;
+  line-height: normal;
+  text-align: justify;
+}
+
+.details-section {
+  flex: 2;
+  background-color: #ae88ad;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: Steppe;
+}
+
+.details-section h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: SteppeBold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.details-section p {
+  font-family: Steppe;
+  margin-bottom: 12px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-section p strong {
+  font-family: Steppe;
+  color: #ebebeb;
+}
+
+.details-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #484848;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.details-button:hover {
+  background-color: #ebebeb;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
-    .for-adults-about-lessons-container{
-        height: auto;
-        padding: 0;
-        flex-direction: column;
-        width: 100%;
-        padding: 0 20px 40px 20px;
-    }
-    .for-adults-about-lessons-info-left{
-        width: 100%;
-        margin-right: 0;
-        padding: 0;
-    }
-    .for-adults-about-lessons-info-right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        min-width: 100%;
-        margin-right: 0;
-        flex: none;
-        margin: 0;
-        padding: 0;
-    }
-    .for-adults-about-lessons-info-left-title-con{
-        margin-bottom: 15px;
-        padding: 0 10px;
-    }
-    .for-adults-about-lessons-info-left-body{
-        border: 2px solid #AE88AD;
-        padding-right: 0;
-        padding: 12px;
-        border-radius: 15px;
-        gap: 5px;
-    }
-    .for-adults-about-lessons-info-left-body-p{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: normal;
-    }
+  .folder-container {
+    width: 100%;
+  }
+
+  .folder-tabs {
+    /* flex-wrap: wrap; */
+    right: -145px;
+    width: 150%;
+  }
+
+  .tab {
+    flex-basis: 40%;
+    padding: 12px;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    padding: 8px 15px 10px 15px;
+    top: 2px;
+    background-size: contain;
+  }
+
+  .folder-content {
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .details-section {
+    width: 100%;
+  }
+  .details-section h3 {
+    font-size: 16px;
+  }
+  .details-section p {
+    font-size: 13px;
+  }
+  .details-section p strong {
+    font-size: 13px;
+  }
+  .details-button {
+    padding: 10px;
+  }
 }

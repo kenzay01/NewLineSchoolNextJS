@@ -39,28 +39,47 @@ export default function AdultsBanner() {
         </div>
         <div className="for-adults-banner-title-underline">
           General English A0-B2. {isMobile ? <></> : <br />}
-          {/* Вивчення рівня +
-          <span> Підготовка до ЄВІ</span> */}
+          Вивчення рівня +<span>Підготовка до ЄВІ</span>
         </div>
       </div>
-      <div className="for-adults-banner-text">
-        <div className="for-adults-banner-text-title">
-          Підвищення рівня <br />
-          англійської мови{" "}
-          <HighlightedTextWithDots
-            colorText="#ffffff"
-            colorBackground="#BFA0BEB2"
-            colorDots="#AE88AD"
-            widthDots={5}
-            widthBorder={2}
-          >
-            — це чудове рішення!
-          </HighlightedTextWithDots>
+      <div className="for-adults-banner-text-container">
+        <div className="for-adults-banner-text">
+          <div className="for-adults-banner-text-title">
+            Підвищення рівня англійської <br /> мови{" "}
+            <HighlightedTextWithDots
+              colorText="#ffffff"
+              colorBackground="#BFA0BEB2"
+              colorDots="#AE88AD"
+              widthDots={5}
+              widthBorder={2}
+            >
+              — це чудове рішення!
+            </HighlightedTextWithDots>
+          </div>
+          <div className="for-adults-banner-text-description">
+            Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
+            базується на комунікативній методиці Cambridge English та відповідає
+            міжнародній шкалі CEFR (Common European Framework of Reference).
+          </div>
         </div>
-        <div className="for-adults-banner-text-description">
-          Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
-          базується на комунікативній методиці Cambridge English та відповідає
-          міжнародній шкалі CEFR (Common European Framework of Reference).
+        <div className="for-adults-banner-text">
+          <div className="for-adults-banner-text-title">
+            <HighlightedTextWithDots
+              colorText="#ffffff"
+              colorBackground="#BFA0BEB2"
+              colorDots="#AE88AD"
+              widthDots={5}
+              widthBorder={2}
+            >
+              Наш фокус —
+            </HighlightedTextWithDots>{" "}
+            допомогти вам почуватися впевнено та вільно у спілкуванні.
+          </div>
+          <div className="for-adults-banner-text-description">
+            Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
+            базується на комунікативній методиці Cambridge English та відповідає
+            міжнародній шкалі CEFR (Common European Framework of Reference).
+          </div>
         </div>
       </div>
       <div className="for-adults-banner-img">
