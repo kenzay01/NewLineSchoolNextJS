@@ -3,6 +3,7 @@ import "./styles/AdultsBanner.css";
 import HighlightedTextWithDots from "../HomeComponents/styledComponents/HighlightedTextWithDots";
 import HighlightedText from "../HomeComponents/styledComponents/HighlightedText";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function AdultsBanner() {
   const [isMobile, setIsMobile] = useState(false);
@@ -39,7 +40,7 @@ export default function AdultsBanner() {
         </div>
         <div className="for-adults-banner-title-underline">
           General English A0-B2. {isMobile ? <></> : <br />}
-          Вивчення рівня +<span>Підготовка до ЄВІ</span>
+          <span>Вивчення Рівнів A1-C1</span>
         </div>
       </div>
       <div className="for-adults-banner-text-container">
@@ -59,7 +60,8 @@ export default function AdultsBanner() {
           <div className="for-adults-banner-text-description">
             Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
             базується на комунікативній методиці Cambridge English та відповідає
-            міжнародній шкалі CEFR (Common European Framework of Reference).
+            міжнародній шкалі CEFR{" "}
+            <span>(Common European Framework of Reference).</span>
           </div>
         </div>
         <div className="for-adults-banner-text">
@@ -76,9 +78,10 @@ export default function AdultsBanner() {
             допомогти вам почуватися впевнено та вільно у спілкуванні.
           </div>
           <div className="for-adults-banner-text-description">
-            Ми пропонуємо навчання у сфері живої комунікації, адже наша програма
-            базується на комунікативній методиці Cambridge English та відповідає
-            міжнародній шкалі CEFR (Common European Framework of Reference).
+            Кожен курс має чітко визначену кількість навчальних годин. Проте,
+            якщо наприкінці обраного рівня ви відчуєте, що потребуєте більше
+            практики, ми підготуємо для вас додатковий індивідуальний курс,
+            адаптований під ваші потреби.
           </div>
         </div>
       </div>

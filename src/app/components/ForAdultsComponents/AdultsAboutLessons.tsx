@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/AdultsAboutLessons.css";
+import { motion } from "framer-motion";
 type CourseLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 
 interface CourseDetails {
@@ -99,7 +100,13 @@ const AdultsAboutLessons = () => {
   };
 
   return (
-    <div className="for-adults-about-lessons-container">
+    <motion.div
+      className="for-adults-about-lessons-container"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="folder-container">
         <div className="folder-tabs">
           {Object.keys(courseData).map((tab) => (
@@ -127,7 +134,7 @@ const AdultsAboutLessons = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
