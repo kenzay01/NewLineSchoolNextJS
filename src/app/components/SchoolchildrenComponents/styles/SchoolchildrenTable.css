@@ -42,11 +42,11 @@
 }
 
 .pricing-table th:nth-child(4) {
-  background-color: #669e99;
+  background-color: rgba(160, 191, 189, 0.75);
 }
 
 .pricing-table th:nth-child(5) {
-  background-color: #4f7a77;
+  background-color: rgb(121, 171, 169);
 }
 
 .pricing-table td {
@@ -91,13 +91,13 @@
 }
 .pricing-table td:nth-child(4) .withCheckMark {
   border-radius: 50%;
-  background-color: rgb(102, 158, 153);
-  box-shadow: 0 0 0 4px rgb(102, 158, 153, 0.3);
+  background-color: rgba(160, 191, 189, 0.75);
+  box-shadow: 0 0 0 4px rgba(160, 191, 189, 0.3);
 }
 .pricing-table td:nth-child(5) .withCheckMark {
   border-radius: 50%;
-  background-color: rgb(79, 122, 119);
-  box-shadow: 0 0 0 4px rgb(79, 122, 119, 0.3);
+  background-color: rgb(121, 171, 169);
+  box-shadow: 0 0 0 4px rgb(121, 171, 169, 0.3);
 }
 /* .withCheckMark {
   color: #ae88ad;

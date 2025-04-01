@@ -3,6 +3,7 @@ import "./styles/FreeLessonContainer.css";
 import { useEffect, useState } from "react";
 import InputFreeLesson from "./styledComponents/InputFreeLesson";
 import { emailSendFunc } from "../../funcs/emailSend";
+import { FaTelegram } from "react-icons/fa";
 import Toast from "../Toast";
 import { motion } from "framer-motion";
 export default function FreeLessonContainer({
@@ -153,7 +154,22 @@ export default function FreeLessonContainer({
                 setError={(value) => setErrors({ ...errors, email: value })}
               />
             </div>
-            <button className="home-free-lessons-form-btn">ВІДПРАВИТИ</button>
+            <div className="home-free-lessons-form-btn-container">
+              <button className="home-free-lessons-form-btn">ВІДПРАВИТИ</button>
+              <div className="home-free-lessons-form-btn-text">
+                <p>Або</p>
+                <div className="home-free-lessons-form-btn-text-telegram-container">
+                  <p>Написати нам у</p>
+                  <a
+                    href="https://t.me/new_line_school_boryspil"
+                    className="home-free-lessons-form-btn-text-telegram"
+                  >
+                    <FaTelegram className="telegram-icon" />
+                    Telegram
+                  </a>
+                </div>
+              </div>
+            </div>
           </motion.form>
         </div>
       </div>

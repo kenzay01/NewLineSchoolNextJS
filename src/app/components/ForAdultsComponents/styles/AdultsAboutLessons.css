@@ -11,6 +11,8 @@
   flex-direction: column;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
+
+  padding: 5px 20px 15px 20px;
   /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); */
   /* overflow: hidden; */
   background-color: #ffffff;
@@ -144,7 +146,7 @@
 .folder-content {
   z-index: 100;
   display: flex;
-  padding: 40px 30px;
+  padding: 20px 30px;
   gap: 40px;
   background-color: #fcfcfc;
   border-radius: 12px;
@@ -177,9 +179,12 @@
 }
 
 .text-section p {
+  font-family: Steppe;
   color: #484848;
   line-height: normal;
-  text-align: justify;
+}
+.text-section p span {
+  font-family: SteppeBold;
 }
 
 .details-section {
@@ -189,6 +194,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   font-family: Steppe;
+  max-height: 220px;
 }
 
 .details-section h3 {
@@ -218,20 +224,26 @@
 .details-button {
   width: 100%;
   padding: 15px;
-  background-color: #ffffff;
-  color: #484848;
+  /* margin: 0 20px; */
+
+  /* background-color: #ffffff;
+  color: #484848; */
+  background-color: #ae88ad;
+  color: #ffffff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  z-index: 100;
 }
 
 .details-button:hover {
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
+  background-color: #916f90;
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -239,6 +251,7 @@
 @media (max-width: 768px) {
   .folder-container {
     width: 100%;
+    padding: 0;
   }
 
   .folder-tabs {
@@ -280,5 +293,11 @@
   }
   .details-button {
     padding: 10px;
+    /* margin-top: 10px; */
+    background-color: #ffffff;
+    color: #484848;
+  }
+  .details-button:hover {
+    background-color: #ebebeb;
   }
 }

@@ -61,4 +61,21 @@
     text-align: center;
     padding-left: 0;
   }
+  .table-container-button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .table-container-button-container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .table-container-button-container-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .table-container-button {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 16px;
+  }
 }

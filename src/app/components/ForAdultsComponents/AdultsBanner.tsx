@@ -3,7 +3,6 @@ import "./styles/AdultsBanner.css";
 import HighlightedTextWithDots from "../HomeComponents/styledComponents/HighlightedTextWithDots";
 import HighlightedText from "../HomeComponents/styledComponents/HighlightedText";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 export default function AdultsBanner() {
   const [isMobile, setIsMobile] = useState(false);
@@ -39,7 +38,7 @@ export default function AdultsBanner() {
           )}
         </div>
         <div className="for-adults-banner-title-underline">
-          General English A0-B2. {isMobile ? <></> : <br />}
+          General English. {isMobile ? <></> : <br />}
           <span>Вивчення Рівнів A1-C1</span>
         </div>
       </div>
