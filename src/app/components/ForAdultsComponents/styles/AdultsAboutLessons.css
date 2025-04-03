@@ -194,7 +194,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   font-family: Steppe;
-  max-height: 220px;
+  height: 220px;
 }
 
 .details-section h3 {

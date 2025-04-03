@@ -14,9 +14,4 @@
   font-family: "SteppeBold";
   src: url("/assets/fonts/Steppe-Black.ttf");
 }
-* > button {
-  transition: all 0.2s ease;
-  scale: 1.02;
-}
-* > button:hover {
-}
+
