@@ -69,6 +69,7 @@ export default function OurClubsInfoBoxContainer({
   time,
   cost,
   count,
+  extraText,
 }: {
   title: string;
   subtitle: ReactNode;
@@ -78,6 +79,7 @@ export default function OurClubsInfoBoxContainer({
   time?: string;
   cost?: string;
   count?: string;
+  extraText?: string;
 }) {
   const [layoutForExams, setLayoutForExams] = useState("desktop");
   const isMobile = layoutForExams === "mobile";
@@ -375,7 +377,9 @@ export default function OurClubsInfoBoxContainer({
       <div className="club-info-box-body-container">
         <div className="club-info-box-body-container-left">
           <div className="club-info-box-body">{body}</div>
-          <div className="club-info-box-body-extra-box"></div>
+          {extraText ? (
+            <div className="club-info-box-body-extra-box">{extraText}</div>
+          ) : null}
         </div>
         <div className="club-info-box-body-container-right">
           <ClubInfoCard

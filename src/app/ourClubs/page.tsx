@@ -40,6 +40,8 @@ export default function OurClubs() {
       time: "90",
       cost: "350",
       count: "10",
+      extraText:
+        "Для власників Standard та Smart пакетів розмовний клуб безкоштовний.",
     },
     {
       title: "“ Англійська майстерня Cut and Talk”",
@@ -58,6 +60,7 @@ export default function OurClubs() {
       time: "90",
       cost: "350",
       count: "10",
+      extraText: "Для власників  Smart пакету розмовний клуб безкоштовний.",
     },
     // {
     //     title:"“Key Grammar”",
@@ -82,6 +85,7 @@ export default function OurClubs() {
               time={club.time}
               cost={club.cost}
               count={club.count}
+              extraText={club.extraText}
             />
           );
         })}
