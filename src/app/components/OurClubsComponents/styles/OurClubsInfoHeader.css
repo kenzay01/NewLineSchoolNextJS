@@ -45,6 +45,10 @@
 .club-online {
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   padding: 8px 0;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -56,6 +60,10 @@
   padding: 10px 0;
   font-size: 14px;
   color: #484848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .club-price {
@@ -63,6 +71,10 @@
   font-weight: 500;
   color: #484848;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .club-button {
@@ -89,6 +101,10 @@
   background-color: #ae88ad;
   color: #ffffff;
   border: none;
+}
+.club-card-icon {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 768px) {

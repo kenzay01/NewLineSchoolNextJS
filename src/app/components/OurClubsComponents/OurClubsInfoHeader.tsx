@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "./styles/OurClubsInfoHeader.css";
+import { RiVidiconLine } from "react-icons/ri";
+import { FaRegClock } from "react-icons/fa";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 
 const OurClubsInfoHeader = () => {
   const clubOptions = [
@@ -54,9 +58,18 @@ const OurClubsInfoHeader = () => {
             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
           >
             <div className="club-title">{club.title}</div>
-            <div className="club-online">{club.isOnline}</div>
-            <div className="club-duration">{club.duration}</div>
-            <div className="club-price">{club.price}</div>
+            <div className="club-online">
+              <RiVidiconLine className="club-card-icon" />
+              {club.isOnline}
+            </div>
+            <div className="club-duration">
+              <FaRegClock className="club-card-icon" />
+              {club.duration}
+            </div>
+            <div className="club-price">
+              <FaMoneyBillWave className="club-card-icon" />
+              {club.price}
+            </div>
             <button
               className="club-button"
               onClick={() => {
