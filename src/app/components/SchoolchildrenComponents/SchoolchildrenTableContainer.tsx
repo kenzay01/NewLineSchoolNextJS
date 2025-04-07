@@ -32,28 +32,28 @@ export default function SchoolchildrenTableContainer({
         <HighlightedText colorBack="#BFA0BEB2">пропозиції</HighlightedText>
       </motion.div>
       <SchoolchildrenTable plans={plans} features={features} />
-      {isAdult || (
-        <div className="table-container-button-container">
-          <p>Запишіться на пробне заняття</p>
-          <MdOutlineKeyboardDoubleArrowRight className="table-container-button-container-icon" />
-          <button
-            className="table-container-button"
-            onClick={() => {
-              const target = document.getElementById("free-lessons");
-              if (target) {
-                setTimeout(() => {
-                  target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }, 100);
-              }
-            }}
-          >
-            Записатися
-          </button>
-        </div>
-      )}
+      {/* {isAdult || ( */}
+      <div className="table-container-button-container">
+        <p>Запишіться на пробне заняття</p>
+        <MdOutlineKeyboardDoubleArrowRight className="table-container-button-container-icon" />
+        <button
+          className="table-container-button"
+          onClick={() => {
+            const target = document.getElementById("free-lessons");
+            if (target) {
+              setTimeout(() => {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 100);
+            }
+          }}
+        >
+          Записатися
+        </button>
+      </div>
+      {/* )} */}
     </div>
   );
 }

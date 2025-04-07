@@ -146,8 +146,9 @@
 .folder-content {
   z-index: 100;
   display: flex;
+  flex-direction: column;
   padding: 20px 30px;
-  gap: 40px;
+  gap: 20px;
   background-color: #fcfcfc;
   border-radius: 12px;
 }
@@ -190,11 +191,11 @@
 .details-section {
   flex: 2;
   background-color: #ae88ad;
-  padding: 25px;
+  padding: 15px 25px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   font-family: Steppe;
-  height: 220px;
+  height: 250px;
 }
 
 .details-section h3 {
@@ -210,7 +211,7 @@
 
 .details-section p {
   font-family: Steppe;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -226,10 +227,10 @@
   padding: 15px;
   /* margin: 0 20px; */
 
-  /* background-color: #ffffff;
-  color: #484848; */
-  background-color: #ae88ad;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #484848;
+  /* background-color: #ae88ad;
+  color: #ffffff; */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -242,8 +243,8 @@
 }
 
 .details-button:hover {
-  /* background-color: #ebebeb; */
-  background-color: #916f90;
+  background-color: #ebebeb;
+  /* background-color: #916f90; */
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

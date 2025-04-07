@@ -6,14 +6,78 @@ import HighlightedTextWithDots from "../HomeComponents/styledComponents/Highligh
 import { useEffect, useState } from "react";
 import HighlightedText from "../HomeComponents/styledComponents/HighlightedText";
 import { motion } from "framer-motion";
+import { RiVidiconLine } from "react-icons/ri";
+import { FaRegClock } from "react-icons/fa";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+
+const ClubInfoCard = ({
+  titleCard,
+  time,
+  cost,
+  count,
+}: {
+  titleCard?: string;
+  time?: string;
+  cost?: string;
+  count?: string;
+}) => {
+  return (
+    <motion.div
+      className="club-info-card"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <div className="club-info-card-item">
+        <RiVidiconLine className="club-info-card-icon online" />
+        <div className="club-info-card-text">{titleCard}</div>
+      </div>
+
+      <div className="club-info-card-item">
+        <FaRegClock className="club-info-card-icon time" />
+        <div className="club-info-card-text">{time} хв</div>
+      </div>
+
+      <div className="club-info-card-item">
+        <FaMoneyBillWave className="club-info-card-icon cost" />
+        <div className="club-info-card-text">{cost} грн</div>
+      </div>
+
+      <div className="club-info-card-item">
+        <FaUsers className="club-info-card-icon people" />
+        <div className="club-info-card-text">До {count} студентів</div>
+      </div>
+
+      <a
+        className="club-info-card-button"
+        href="https://t.me/new_line_school_boryspil_bot"
+      >
+        Запис
+      </a>
+    </motion.div>
+  );
+};
+
 export default function OurClubsInfoBoxContainer({
   title,
   subtitle,
   type,
+  href,
+  titleCard,
+  time,
+  cost,
+  count,
 }: {
   title: string;
   subtitle: ReactNode;
   type: string;
+  href: string;
+  titleCard?: string;
+  time?: string;
+  cost?: string;
+  count?: string;
 }) {
   const [layoutForExams, setLayoutForExams] = useState("desktop");
   const isMobile = layoutForExams === "mobile";
@@ -281,13 +345,14 @@ export default function OurClubsInfoBoxContainer({
           type === "type3"
             ? isMobile
               ? 0
-              : 40
+              : 0
             : type === "type4"
             ? isMobile
               ? 0
               : 275
             : 0,
       }}
+      id={href}
     >
       <motion.div
         className="club-info-box-title"
@@ -307,7 +372,20 @@ export default function OurClubsInfoBoxContainer({
       >
         {subtitle}
       </motion.div>
-      <div className="club-info-box-body">{body}</div>
+      <div className="club-info-box-body-container">
+        <div className="club-info-box-body-container-left">
+          <div className="club-info-box-body">{body}</div>
+          <div className="club-info-box-body-extra-box"></div>
+        </div>
+        <div className="club-info-box-body-container-right">
+          <ClubInfoCard
+            titleCard={titleCard}
+            time={time}
+            cost={cost}
+            count={count}
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -109,12 +109,13 @@
   font-size: 16px;
   /* line-height: 30px; */
   color: #484848;
+  border: #ae88ad solid 3px;
   /* text-transform: uppercase; */
   /* padding-left: 20px; */
   padding: 10px 20px;
-  background-color: rgb(219, 91, 91);
+  /* background-color: rgb(219, 91, 91); */
   margin-top: 20px;
-  color: #ffffff;
+  /* color: #ffffff; */
   border-radius: 18px;
 }
 @media (max-width: 768px) {

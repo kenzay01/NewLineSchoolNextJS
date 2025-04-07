@@ -1,0 +1,197 @@
+.prepare-for-evi-banner {
+  background-color: #ffffff;
+  height: auto;
+  width: 100%;
+  padding: 60px 60px 60px 120px;
+  position: relative;
+}
+.prepare-for-evi-banner-content {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  gap: 50px;
+}
+.prepare-for-evi-banner-title {
+  position: relative;
+  font-family: Unbounded;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 75px;
+  text-transform: uppercase;
+  color: #484848;
+  padding: 0px 10px;
+  z-index: 100;
+}
+.prepare-for-evi-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 650px;
+  font-family: Steppe;
+  font-weight: 600;
+  font-size: 18px;
+  /* line-height: 21px; */
+  color: #484848;
+  padding-left: 20px;
+}
+.prepare-for-evi-banner-combine {
+  display: flex;
+  /* gap: 60px; */
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 200px 0 60px;
+  z-index: 50;
+}
+.prepare-for-evi-banner-right {
+  /* flex: 3; */
+  width: 520px;
+  /* margin-left: 40px; */
+}
+.prepare-for-evi-banner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  /* margin-right: 20px; */
+}
+.prepare-for-evi-banner-right-title {
+  font-family: Unbounded;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ae88ad;
+  text-transform: uppercase;
+}
+.prepare-for-evi-banner-right-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.prepare-for-evi-banner-right-body-item {
+  display: flex;
+  gap: 10px;
+  font-family: Steppe;
+  font-weight: 600;
+  font-size: 16px;
+  color: #484848;
+}
+.prepare-for-evi-banner-right-body-item-img {
+  width: 25px;
+  /* height: 100%; */
+}
+.prepare-for-evi-banner-right-body-item-img img {
+  width: 100%;
+  height: 100%;
+}
+.prepare-for-evi-banner-right-body-item-text {
+  flex: 1;
+}
+.prepare-for-evi-banner-mid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 520px;
+  /* margin-right: 20px; */
+}
+.prepare-for-evi-banner-mid-title {
+  font-family: Unbounded;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ae88ad;
+  text-transform: uppercase;
+}
+.prepare-for-evi-banner-mid-content {
+  font-family: Steppe;
+  font-weight: 600;
+  font-size: 16px;
+  color: #484848;
+}
+.prepare-for-evi-banner-img {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  width: 500px;
+  height: auto;
+  z-index: 0;
+}
+.prepare-for-evi-banner-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+  .prepare-for-evi-banner {
+    height: auto;
+    padding: 40px 20px 0px 20px;
+  }
+  .prepare-for-evi-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .prepare-for-evi-banner-title {
+    font-size: 25px;
+    line-height: 36px;
+    padding: 0;
+    /* padding-left: 5px; */
+    width: 100%;
+    /* order: 1; */
+  }
+  .prepare-for-evi-banner-img {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .prepare-for-evi-banner-left {
+    width: 100%;
+    padding-left: 0px;
+    font-size: 14px;
+  }
+  .prepare-for-evi-banner-combine {
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 20px 0 20px; */
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+  }
+  .prepare-for-evi-banner-mid {
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+  .prepare-for-evi-banner-mid-title {
+    font-size: 16px;
+    /* line-height: 30px; */
+  }
+  .prepare-for-evi-banner-mid-content {
+    font-size: 14px;
+  }
+  .prepare-for-evi-banner-right {
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+  .prepare-for-evi-banner-right-title {
+    font-size: 16px;
+    /* line-height: 30px; */
+  }
+  .prepare-for-evi-banner-right-body {
+    gap: 6px;
+  }
+  .prepare-for-evi-banner-right-body-item-img {
+    width: 15px;
+    height: 10px;
+  }
+  .prepare-for-evi-banner-right-body-item-text {
+    font-size: 14px;
+  }
+}

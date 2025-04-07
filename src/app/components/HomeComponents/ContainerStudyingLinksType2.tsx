@@ -1,7 +1,7 @@
-"use client"; 
+"use client";
 import { useEffect, useState, useRef } from "react";
 import StyledContainerLinkType2 from "./styledComponents/StyledContainerLinkType2";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 // Імпорт стилів
 import "./styles/ContainerStudyingLinksType2.css";
 
@@ -47,14 +47,18 @@ export default function ContainerStudyingLinksType2() {
     ],
     [
       {
-        text: <>Англійська для 10-11 класів. <br /> Підготовка до НМТ</>,
+        text: (
+          <>
+            Англійська для 10-11 класів. <br /> Підготовка до НМТ
+          </>
+        ),
         link: "/forSchoolchildren#folder3",
         description:
           "Цей курс розрахований на два роки для дітей 10-11 класів. Під час цього курсу наші студенти дізнаються про всі стратегії та тонкощі ефективного складання тесту. Також ретельно тренуються над всіма типами завдань з кожної секції.",
       },
       {
         text: <>Підготовка до ЄВІ</>,
-        link: "/prepareForExams#prepare-for-exams",
+        link: "/prepareForEvi",
         description:
           "ЄВІ - Єдиний Вступний Іспит. Це форма випробування до вступу на навчання для здобуття ступеня магістра, яка поєднує тест загальної навчальної компетентності та тест з іноземної мови.",
       },
@@ -81,9 +85,13 @@ export default function ContainerStudyingLinksType2() {
       setIsScrolling(true);
       const scrollAmount = 325;
       const newScrollLeft =
-        containerRef.current.scrollLeft + (direction === "left" ? -scrollAmount : scrollAmount);
+        containerRef.current.scrollLeft +
+        (direction === "left" ? -scrollAmount : scrollAmount);
 
-      containerRef.current.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+      containerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: "smooth",
+      });
 
       setTimeout(() => setIsScrolling(false), 200);
     }
@@ -91,25 +99,33 @@ export default function ContainerStudyingLinksType2() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const updateLayout = () => {
-      setLayoutForLinks(window.innerWidth < 768 ? "mobile" : "desktop");
-    };
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-}
+      const updateLayout = () => {
+        setLayoutForLinks(window.innerWidth < 768 ? "mobile" : "desktop");
+      };
+      window.addEventListener("resize", updateLayout);
+      return () => window.removeEventListener("resize", updateLayout);
+    }
   }, []);
 
   const isMobile = layoutForLinks === "mobile";
 
   return (
     <div className="home-links-to-studying-container2">
-      <div className="home-links-to-studying-container2-layout" ref={containerRef}>
+      <div
+        className="home-links-to-studying-container2-layout"
+        ref={containerRef}
+      >
         {studyingPairLinks.map((pair, index) => (
-          <motion.div key={index} className="home-links-to-studying-container2-pair"
-          initial={{ opacity: !isMobile ? 0 : 1, x: !isMobile ? (index%2 === 0 ? -50: 50): 0 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.75 }}
-          viewport={{ once: true, amount: 0.2 }}
+          <motion.div
+            key={index}
+            className="home-links-to-studying-container2-pair"
+            initial={{
+              opacity: !isMobile ? 0 : 1,
+              x: !isMobile ? (index % 2 === 0 ? -50 : 50) : 0,
+            }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {pair.map((link, index) => (
               <StyledContainerLinkType2

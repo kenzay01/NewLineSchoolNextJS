@@ -16,6 +16,7 @@ export default function Header() {
     { name: "Для школярів", path: "/forSchoolchildren" },
     { name: "Для дорослих", path: "/forAdults" },
     { name: "Підготовка до Cambridge Exams", path: "/prepareForExams" },
+    { name: "Підготовка до ЄВІ", path: "/prepareForEvi" },
     { name: "Розмовні клуби", path: "/ourClubs" },
     { name: "Блог", path: "/blog" },
   ];

@@ -187,14 +187,27 @@ const AdultsAboutLessons = () => {
           <div className="details-section">
             <h3>Формат та Структура</h3>
             {renderDetails(courseData[activeTab].details)}
-            {!isMobile ? null : (
-              <button className="details-button">Деталі та Пропозиції</button>
-            )}
+            <button
+              className="details-button"
+              onClick={() => {
+                const target = document.getElementById("price-table");
+                if (target) {
+                  setTimeout(() => {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }, 100);
+                }
+              }}
+            >
+              Деталі та Пропозиції
+            </button>
           </div>
         </div>
-        {!isMobile ? (
+        {/* {!isMobile ? (
           <button className="details-button">Деталі та Пропозиції</button>
-        ) : null}
+        ) : null} */}
       </div>
     </motion.div>
   );

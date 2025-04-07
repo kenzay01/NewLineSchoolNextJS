@@ -9,6 +9,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import SchoolchildrenTableContainer from "../components/SchoolchildrenComponents/SchoolchildrenTableContainer";
+import FreeLessonContainer from "../components/HomeComponents/FreeLessonContainer";
 export default function ForAdults() {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
@@ -93,6 +94,7 @@ export default function ForAdults() {
       <AdultsBanner />
       <AdultsAboutLessons />
       <SchoolchildrenTableContainer plans={plans} features={features} />
+      <FreeLessonContainer />
       <TestContainer
         backImg="/assets/background/backForTest2.png"
         backIsImg={false}
