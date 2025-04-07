@@ -52,7 +52,7 @@ const ClubInfoCard = ({
 
       <a
         className="club-info-card-button"
-        href="https://t.me/new_line_school_boryspil_bot"
+        href="https://t.me/new_line_school_boryspil_bot?start=clubs"
       >
         Запис
       </a>
