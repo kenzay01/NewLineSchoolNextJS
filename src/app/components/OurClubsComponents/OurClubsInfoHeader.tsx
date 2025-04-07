@@ -5,7 +5,7 @@ import "./styles/OurClubsInfoHeader.css";
 import { RiVidiconLine } from "react-icons/ri";
 import { FaRegClock } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa";
+import HighlightedTextWithDots from "../HomeComponents/styledComponents/HighlightedTextWithDots";
 
 const OurClubsInfoHeader = () => {
   const clubOptions = [
@@ -20,7 +20,7 @@ const OurClubsInfoHeader = () => {
       title: "Для 1-4 класів",
       isOnline: "Онлайн",
       duration: "60 хв",
-      price: "150 грн",
+      price: "450 грн",
       href: "/ourClubs#schoolchildrenClub",
     },
     {
@@ -40,7 +40,16 @@ const OurClubsInfoHeader = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Розмовні клуби для різних напрямків
+        <HighlightedTextWithDots
+          colorText="#ffffff"
+          colorBackground="#BFA0BEB2"
+          colorDots="#AE88AD"
+          widthDots={8}
+          widthBorder={4}
+        >
+          Розмовні клуби
+        </HighlightedTextWithDots>{" "}
+        для різних напрямків
       </motion.h2>
 
       <motion.div

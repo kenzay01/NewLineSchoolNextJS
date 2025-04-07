@@ -357,21 +357,22 @@
 .club-info-card-button {
   margin-top: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #ae88ad;
+  color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   font-family: Steppe;
   font-size: 16px;
-  color: #484848;
+  /* color: #484848; */
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
   text-decoration: none;
 }
 
-.club-info-card-button:hover {
+/* .club-info-card-button:hover {
   background-color: #f8f8f8;
-}
+} */
 .club-info-box-body-extra-box {
   padding: 20px;
   background-color: #fce696;
@@ -546,5 +547,8 @@
     font-size: 14px;
     line-height: normal;
     margin-left: 0;
+  }
+  .club-info-card {
+    width: 100%;
   }
 }

@@ -8,7 +8,7 @@
 }
 
 .conversation-clubs-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   text-align: center;
   color: #484848;
@@ -38,7 +38,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #484848;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   text-align: center;
 }
 
@@ -49,9 +49,9 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 8px 0;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 0 0 0;
+  border-top: 2px solid #484848;
+  /* border-bottom: 1px solid #e5e5e5; */
   font-size: 14px;
   color: #484848;
 }
@@ -92,15 +92,12 @@
   align-items: center;
   gap: 10px;
   transition: all 0.2s ease;
+  background-color: #ae88ad;
+  color: #ffffff;
 }
 .club-button-arrow {
   width: 20px;
   height: 20px;
-}
-.club-button:hover {
-  background-color: #ae88ad;
-  color: #ffffff;
-  border: none;
 }
 .club-card-icon {
   width: 20px;
@@ -109,11 +106,12 @@
 
 @media (max-width: 768px) {
   .conversation-clubs-container {
-    padding: 40px 15px;
+    /* width: 100%; */
+    padding: 40px 20px;
   }
 
   .club-card {
     width: 100%;
-    max-width: 280px;
+    /* max-width: 280px; */
   }
 }
