@@ -43,7 +43,7 @@ export default function PrepareForExamsBanner() {
       <div className="prepare-for-exams-banner-content">
         <div className="prepare-for-exams-banner-left">
           <div className="pepare-for-exams-banner-left-upper">
-            У 2021 році New Line School стала офіційним  підготовчим центром 
+            У 2021 році New Study Line стала офіційним  підготовчим центром 
             {""}
             <br />
             <span>Cambridge Assessment English</span> <br />І тепер ми

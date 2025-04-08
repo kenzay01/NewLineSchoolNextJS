@@ -41,17 +41,17 @@ const ColumnLevel = ({
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    const updateLayout = () => {
-      if (window.innerWidth < 768) {
-        setLayoutForMainBanner("mobile");
-      } else {
-        setLayoutForMainBanner("desktop");
-      }
-    };
+      const updateLayout = () => {
+        if (window.innerWidth < 768) {
+          setLayoutForMainBanner("mobile");
+        } else {
+          setLayoutForMainBanner("desktop");
+        }
+      };
 
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-}
+      window.addEventListener("resize", updateLayout);
+      return () => window.removeEventListener("resize", updateLayout);
+    }
   }, []);
 
   return (
@@ -63,7 +63,7 @@ const ColumnLevel = ({
       style={{ height }}
       onClick={onClick}
     >
-      {index !== 5 && (
+      {index !== 4 && (
         <div
           className="column-level-arrow"
           style={{
@@ -75,8 +75,8 @@ const ColumnLevel = ({
             loading="lazy"
             src="/assets/elements/arrow_up_down.png"
             alt="Arrow"
-            width={20} 
-            height={20} 
+            width={20}
+            height={20}
           />
         </div>
       )}

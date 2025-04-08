@@ -55,7 +55,7 @@ export default function Footer({ background }: { background: boolean }) {
           <div className="footer-info-contacts">
             <h1>КОНТАКТИ</h1>
             <h2>+38 (067) 71 49 862</h2>
-            <h2>newlineschool2018@gmail.com</h2>
+            <h2>nnewstudyline@gmai.com</h2>
           </div>
           <div className="footer-info-socials">
             <a href="https://www.instagram.com/new_line_school_boryspil/">

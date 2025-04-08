@@ -42,7 +42,7 @@ export default function ContainerStudyingLinksType2() {
         text: <>Підготовка до міжнародних іспитів Cambridge Exams</>,
         link: "/prepareForExams#prepare-for-exams",
         description:
-          "У 2021 році New Line School стала офіційним підготовчим центром Cambridge Assessment English І тепер ми професійно готуємо до таких іспитів: </br> A1 KEY (KET)+ for schools </br> B1 Preliminary (PET)+for schools </br> B2 First (FCE)+ for schools </br> C1 Advanced (CAE) </br> C2 Proficiency",
+          "У 2021 році New Study Line стала офіційним підготовчим центром Cambridge Assessment English І тепер ми професійно готуємо до таких іспитів: </br> A1 KEY (KET)+ for schools </br> B1 Preliminary (PET)+for schools </br> B2 First (FCE)+ for schools </br> C1 Advanced (CAE) </br> C2 Proficiency",
       },
     ],
     [

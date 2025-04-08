@@ -102,7 +102,8 @@ export default function FreeLessonContainer({
           transition={{ duration: 0.75 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          NEW LINE SCH{isMobile ? <br /> : ""}OOL
+          NEW STU{isMobile ? <br /> : ""}DY LINE
+          {/* {isMobile ? <br /> : ""} */}
         </motion.div>
         <div className="home-free-lessons-content">
           <div className="spin-arrow">

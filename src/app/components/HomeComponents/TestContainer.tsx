@@ -153,34 +153,38 @@ export default function TestContainer({
       level: "C1",
       text: (
         <>
-          <div className="column-level-container-active-box-text-title"></div>
+          <div className="column-level-container-active-box-text-title">
+            Рівень C1 (Advanced English) — це просунуте володіння мовою, яке
+            дозволяє вільно спілкуватись у будь-яких ситуаціях: на роботі,
+            навчанні, під час подорожей чи в міжкультурному середовищі.
+          </div>
           <div className="column-level-container-active-box-text-p">
-            Додати текст
+            Словниковий запас студента становить приблизно 8 000 – 12 000 слів,
+            включно з ідіомами, сталими виразами та синонімами.
           </div>
           <div className="column-level-container-active-box-text-footer">
-            <div className="column-level-container-active-box-text-footer-elem p1"></div>
-            <div className="column-level-container-active-box-text-footer-elem"></div>
-            {/* <div className="column-level-container-active-box-text-footer-elem"></div> */}
+            Щоб досягти рівня C1 з нуля, потрібно в середньому 700–800 годин
+            навчання, або близько 200–250 годин, якщо студент уже на рівні B2.
           </div>
         </>
       ),
     },
-    {
-      level: "C2",
-      text: (
-        <>
-          <div className="column-level-container-active-box-text-title"></div>
-          <div className="column-level-container-active-box-text-p">
-            Додати текст
-          </div>
-          <div className="column-level-container-active-box-text-footer">
-            <div className="column-level-container-active-box-text-footer-elem p1"></div>
-            <div className="column-level-container-active-box-text-footer-elem"></div>
-            {/* <div className="column-level-container-active-box-text-footer-elem"></div> */}
-          </div>
-        </>
-      ),
-    },
+    // {
+    //   level: "C2",
+    //   text: (
+    //     <>
+    //       <div className="column-level-container-active-box-text-title"></div>
+    //       <div className="column-level-container-active-box-text-p">
+    //         Додати текст
+    //       </div>
+    //       <div className="column-level-container-active-box-text-footer">
+    //         <div className="column-level-container-active-box-text-footer-elem p1"></div>
+    //         <div className="column-level-container-active-box-text-footer-elem"></div>
+    //         {/* <div className="column-level-container-active-box-text-footer-elem"></div> */}
+    //       </div>
+    //     </>
+    //   ),
+    // },
   ];
 
   const [windowWidth, setWindowWidth] = useState<number>(
