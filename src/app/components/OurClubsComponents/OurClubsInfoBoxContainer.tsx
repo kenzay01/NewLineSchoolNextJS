@@ -10,6 +10,7 @@ import { RiVidiconLine } from "react-icons/ri";
 import { FaRegClock } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
+import { div } from "framer-motion/m";
 
 const ClubInfoCard = ({
   titleCard,
@@ -377,18 +378,21 @@ export default function OurClubsInfoBoxContainer({
       <div className="club-info-box-body-container">
         <div className="club-info-box-body-container-left">
           <div className="club-info-box-body">{body}</div>
-          {extraText ? (
+          <div className="club-info-box-body-card">
+            <ClubInfoCard
+              titleCard={titleCard}
+              time={time}
+              cost={cost}
+              count={count}
+            />
+          </div>
+        </div>
+        {extraText ? (
+          <div className="club-info-box-body-extra-box-container">
             <div className="club-info-box-body-extra-box">{extraText}</div>
-          ) : null}
-        </div>
-        <div className="club-info-box-body-container-right">
-          <ClubInfoCard
-            titleCard={titleCard}
-            time={time}
-            cost={cost}
-            count={count}
-          />
-        </div>
+          </div>
+        ) : null}
+        {/* <div className="club-info-box-body-container-right"></div> */}
       </div>
     </div>
   );

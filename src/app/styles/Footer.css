@@ -116,6 +116,7 @@
 @media (max-width: 768px) {
   .footer-container {
     padding: 0;
+    padding-bottom: 20px;
   }
   .footer-info {
     flex-direction: column;

@@ -12,7 +12,7 @@
   gap: 20px;
   margin-right: 60px;
 }
-.schoolchildren-banner-right-text {
+.schoolchildren-banner-right-text-bottom {
   font-family: Unbounded;
   font-weight: 600;
   font-size: 14px;
@@ -38,11 +38,13 @@
 }
 .schoolchildren-banner-content-text-links {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   /* width: 70%; */
   width: 100%;
   gap: 15px;
+  padding-left: 40px;
 }
 .schoolchildren-banner-content-text-link {
   cursor: pointer;
@@ -50,7 +52,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 30px;
-  width: 270px;
   text-decoration: none;
   padding: 5px 8px 1px;
   background-color: #ae88ad;
@@ -69,6 +70,37 @@
   width: 100%;
   object-fit: cover;
   border-radius: 13.6px;
+}
+.schoolchildren-banner-right-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 170px 0 40px;
+}
+.schoolchildren-banner-right-text-btn {
+  border-radius: 14px;
+  padding: 4px 6px;
+  border: none;
+  font-family: Unbounded;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  background-color: #fce696;
+  color: #484848cf;
+  cursor: pointer;
+}
+.schoolchildren-banner-right-text {
+  display: flex;
+  flex-direction: column;
+  font-family: Steppe;
+  font-weight: 800;
+  color: #484848;
+  text-transform: none;
+  font-size: 18px;
+}
+.schoolchildren-banner-right-text span {
+  font-family: SteppeBold;
 }
 @media (max-width: 768px) {
   .schoolchildren-banner-container {

@@ -162,7 +162,7 @@ export default function FreeLessonContainer({
                 <div className="home-free-lessons-form-btn-text-telegram-container">
                   <p>Написати нам у</p>
                   <a
-                    href="https://t.me/new_line_school_boryspil"
+                    href="https://t.me/new_line_school_boryspil_bot?start=free_lesson"
                     className="home-free-lessons-form-btn-text-telegram"
                   >
                     <FaTelegram className="telegram-icon" />

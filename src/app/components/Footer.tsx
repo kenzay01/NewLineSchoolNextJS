@@ -77,9 +77,9 @@ export default function Footer({ background }: { background: boolean }) {
           </div>
         </div> */}
       </div>
-      <div className="footer-logo">
-        <img src="/assets/logo.png" alt="Logo" />
-      </div>
+      <a className="footer-logo" href="/">
+        <img src="/assets/logo_white_back.png" alt="Logo" />
+      </a>
     </div>
   );
 }

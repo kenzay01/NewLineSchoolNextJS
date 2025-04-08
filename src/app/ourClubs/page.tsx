@@ -51,6 +51,8 @@ export default function OurClubs() {
       time: "60",
       cost: "450",
       count: "10",
+      extraText:
+        "Для власників Standard та Smart пакетів розмовний клуб безкоштовний.",
     },
     {
       title: "“Inspiration Time”",

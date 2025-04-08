@@ -19,7 +19,7 @@ export default function SchoolchildrenBanner() {
     },
     {
       text: "Англійська для 10-11 класів",
-      textMobile: "10-11 клас",
+      textMobile: "10-11 класи",
       href: "#folder3",
     },
   ];
@@ -46,13 +46,13 @@ export default function SchoolchildrenBanner() {
               target?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
           >
-            {isMobile ? link.textMobile : link.text}
+            {link.textMobile}
           </div>
         );
       })}
     </div>
   );
-  const bannerRightText = isMobile ? (
+  const bannerRightText = (
     <div className="schoolchildren-banner-right-text-container">
       <div className="schoolchildren-banner-right-text">
         <div className="schoolchildren-banner-right-text-item">
@@ -82,11 +82,14 @@ export default function SchoolchildrenBanner() {
         Дізнатися більше
       </button>
     </div>
-  ) : (
-    <div className="schoolchildren-banner-right-text">
+  );
+
+  const bannerBottomText = (
+    <div className="schoolchildren-banner-right-text-bottom">
       school · exams · speaking club
     </div>
   );
+
   return (
     <div className="schoolchildren-banner-container">
       <div className="schoolchildren-banner-content">
@@ -103,6 +106,7 @@ export default function SchoolchildrenBanner() {
           </HighlightedTextWithDots>
         </div>
         {isMobile ? null : linksContainer}
+        {isMobile ? null : bannerRightText}
       </div>
       <div className="schoolchildren-banner-right">
         <div className="schoolchildren-banner-right-img">
@@ -113,7 +117,8 @@ export default function SchoolchildrenBanner() {
           />
         </div>
         {!isMobile ? null : linksContainer}
-        {bannerRightText}
+        {isMobile ? bannerRightText : null}
+        {!isMobile ? bannerBottomText : null}
       </div>
     </div>
   );
