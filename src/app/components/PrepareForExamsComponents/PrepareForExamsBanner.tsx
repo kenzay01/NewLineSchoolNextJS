@@ -52,7 +52,7 @@ export default function PrepareForExamsBanner() {
           <div className="pepare-for-exams-banner-left-lower">
             A1 KEY (KET)+ for schools <br /> B1 Preliminary (PET)+for schools{" "}
             <br /> B2 First (FCE)+ for schools <br /> C1 Advanced (CAE) <br />{" "}
-            C2 Proficiency
+            IELTS
           </div>
         </div>
         {isMobile ? (
