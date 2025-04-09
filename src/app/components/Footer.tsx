@@ -58,7 +58,7 @@ export default function Footer({ background }: { background: boolean }) {
             <h2>nnewstudyline@gmai.com</h2>
           </div>
           <div className="footer-info-socials">
-            <a href="https://www.instagram.com/new_line_school_boryspil/">
+            <a href="https://www.instagram.com/new_study_line?igsh=MXJ1aW5xemt5OHdtcg%3D%3D&utm_source=qr">
               <FaInstagram className="footer-info-socials-icon" />
             </a>
             <a href="https://www.tiktok.com/@new_line_school">
