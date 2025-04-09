@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import RootLayout from "./RootLayout"; 
 export const metadata: Metadata = {
-  title: "NewLineSchool",
+  title: "New Study Line",
   description: "Сайт на Next.js",
 };
 
