@@ -80,6 +80,11 @@ export default function Footer({ background }: { background: boolean }) {
       <a className="footer-logo" href="/">
         <img src="/assets/logo_white_back.png" alt="Logo" />
       </a>
+      <div className="footer-copyright">
+        <a href="https://telebots.site/" target="_blank" rel="noopener noreferrer">
+          Created by Telebots
+        </a>
+      </div>
     </div>
   );
 }

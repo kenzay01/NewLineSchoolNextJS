@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://newstudyline.com/sitemap.xml
+
+# Забороняємо індексацію адміністративних сторінок
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Дозволяємо індексацію всіх інших сторінок
+Allow: /blog/
+Allow: /forAdults/
+Allow: /forSchoolchildren/
+Allow: /ourClubs/
+Allow: /testPage/ 

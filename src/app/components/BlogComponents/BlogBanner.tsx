@@ -19,7 +19,7 @@ export default function BlogBanner() {
             <h1>Наші <HighlightedTextWithDots
                           colorText="#ffffff"
                           colorBackground="#BFA0BEB2"
-                          colorDots="#AE88AD"
+                          colorDots="#BFA0BE"
                           widthDots={isMobile ? 8 : 10}
                           widthBorder={isMobile ? 3 : 4}
                         >
