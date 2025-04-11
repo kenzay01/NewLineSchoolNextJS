@@ -21,36 +21,52 @@ export default function TestItem({
   options: string[] | null;
   answer: string | number;
   number: number;
-  setAnswer: (testId: string, questionId: number, answer: string | number) => void;
-  testId: string; 
+  setAnswer: (
+    testId: string,
+    questionId: number,
+    answer: string | number
+  ) => void;
+  testId: string;
   pickedAnswer: string | number | null;
   isCorrect?: boolean;
 }) {
-    const { testCompleted } = useTest();
-  const [selectedOption, setSelectedOption] = useState<number | null>(typeof pickedAnswer === "number" ? pickedAnswer : null);
-  const [writingAnswer, setWritingAnswer] = useState<string>(typeof pickedAnswer === "string" && pickedAnswer !== "noAnswer" ? pickedAnswer : "");
+  const { testCompleted } = useTest();
+  const [selectedOption, setSelectedOption] = useState<number | null>(
+    typeof pickedAnswer === "number" ? pickedAnswer : null
+  );
+  const [writingAnswer, setWritingAnswer] = useState<string>(
+    typeof pickedAnswer === "string" && pickedAnswer !== "noAnswer"
+      ? pickedAnswer
+      : ""
+  );
 
-  const isNoAnswer = pickedAnswer === 'noAnswer';
+  const isNoAnswer = pickedAnswer === "noAnswer";
   const isCheckingAnswer = testCompleted(testId);
   const handleOptionSelect = (index: number) => {
     setSelectedOption(index);
-    setAnswer(testId, id, index); 
+    setAnswer(testId, id, index);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setWritingAnswer(e.target.value);
-    setAnswer(testId, id, (e.target.value).trim().toLowerCase()); 
+    setAnswer(testId, id, e.target.value.trim().toLowerCase());
   };
 
   return (
-    <div className={`test-item-container ${isNoAnswer ? 'no-answer' : ''} ${testCompleted(testId) ? (isCorrect ? "correct" : "incorrect") : ""}` }>
+    <div
+      className={`test-item-container ${isNoAnswer ? "no-answer" : ""} ${
+        testCompleted(testId) ? (isCorrect ? "correct" : "incorrect") : ""
+      }`}
+    >
       <div className="test-item-score">1 бал</div>
       <div className="test-item-question-container">
         <div>{number}.</div>
-        <div
-          dangerouslySetInnerHTML={{ __html: question }}
-          className="test-item-question"
-        ></div>
+        {!image && (
+          <div
+            dangerouslySetInnerHTML={{ __html: question }}
+            className="test-item-question"
+          ></div>
+        )}
       </div>
 
       {image && (
@@ -60,7 +76,12 @@ export default function TestItem({
           </div>
         </div>
       )}
-
+      {image && (
+        <div
+          dangerouslySetInnerHTML={{ __html: question }}
+          className="test-item-question-under-image"
+        ></div>
+      )}
       <div className="test-item-options">
         {typeof answer === "number" && options ? (
           options.map((option, index) => (
@@ -85,9 +106,14 @@ export default function TestItem({
           />
         )}
       </div>
-        {isCheckingAnswer && !isCorrect ?<div className="correct-answer">
-          Правильна відповідь: <span>{typeof answer === "number" ? options && options[answer] : answer}</span>
-        </div> : null}
+      {isCheckingAnswer && !isCorrect ? (
+        <div className="correct-answer">
+          Правильна відповідь:{" "}
+          <span>
+            {typeof answer === "number" ? options && options[answer] : answer}
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 }

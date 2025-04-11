@@ -104,7 +104,22 @@ export default function Header() {
         ))}
       </div>
 
-      <div className="header-btn">ЗАПИСАТИСЯ</div>
+      <div
+        className="header-btn"
+        onClick={() => {
+          const target = document.getElementById("free-lessons");
+          if (target) {
+            setTimeout(() => {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }, 100);
+          }
+        }}
+      >
+        ЗАПИСАТИСЯ
+      </div>
     </div>
   );
 }

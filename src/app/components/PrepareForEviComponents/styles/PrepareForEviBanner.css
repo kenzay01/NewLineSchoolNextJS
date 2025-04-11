@@ -24,8 +24,8 @@
   z-index: 100;
 }
 .prepare-for-evi-banner-left {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   gap: 10px;
   width: 650px;
   font-family: Steppe;
@@ -35,6 +35,10 @@
   color: #484848;
   padding-left: 20px;
 }
+.prepare-for-evi-banner-left span {
+  font-family: SteppeBold;
+}
+
 .prepare-for-evi-banner-combine {
   display: flex;
   /* gap: 60px; */

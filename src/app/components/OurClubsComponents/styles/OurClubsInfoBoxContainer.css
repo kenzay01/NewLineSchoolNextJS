@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   /* justify-content: flex-start; */
-  align-items: flex-start;
+  align-items: center;
 }
 .club-info-box-title {
   font-family: Unbounded;
@@ -19,6 +19,9 @@
   background-color: #ae88ad;
   text-transform: uppercase;
   color: #ffffff;
+  margin-top: 10px;
+  /* text-align: center; */
+  /* align-content: center; */
 }
 .club-info-box-subtitle {
   font-family: Unbounded;
@@ -28,6 +31,8 @@
   color: #484848;
   padding: 10px 25px;
   text-transform: uppercase;
+  /* text-align: center; */
+  margin-bottom: 20px;
 }
 .club-info-box-body {
   flex: 3;
@@ -408,6 +413,7 @@
     height: auto;
     width: 100%;
     padding: 40px 20px;
+    align-items: flex-start;
   }
   .club-info-box-title {
     width: 100%;

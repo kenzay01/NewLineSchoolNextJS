@@ -25,7 +25,7 @@ export const test_descriptions: Record<string, string> = {
   test_3:
     "🎓 Серйозний тест для старшокласників, що містить запитання з основних навчальних дисциплін.<br/><b>Тривалість:</b> 40-50 хв<br/><b>Загальна кількість питань:</b> 40<br/><b>Загальна кількість балів:</b> 40",
   test_4:
-    "🌍 Визначте свій рівень англійської за міжнародною шкалою CEFR (A0-C1).<br/><b>Тривалість:</b> 50-60 хв<br/><b>Загальна кількість питань:</b> 50<br/><b>Загальна кількість балів:</b> 50",
+    "🌍 Визначте свій рівень англійської за міжнародною шкалою CEFR (A1-C1).<br/><b>Тривалість:</b> 50-60 хв<br/><b>Загальна кількість питань:</b> 50<br/><b>Загальна кількість балів:</b> 50",
 };
 
 export type TestKeys = "test_1" | "test_2" | "test_3" | "test_4";
@@ -112,7 +112,7 @@ export const TESTS: Record<
     {
       id: 8,
       question:
-        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. \n\n <b>What color is Tommy's ball? (please input the answer ⬇️)</b> ",
+        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. <br/><br/>  <b>What color is Tommy's ball? (please input the answer ⬇️)</b> ",
       image: null,
       options: null,
       answer: "red",
@@ -120,7 +120,7 @@ export const TESTS: Record<
     {
       id: 9,
       question:
-        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. \n\n <b>What does Lucy have? (please input the answer ⬇️)</b> ",
+        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. <br/><br/> <b>What does Lucy have? (please input the answer ⬇️)</b> ",
       image: null,
       options: null,
       answer: "kite",
@@ -128,7 +128,7 @@ export const TESTS: Record<
     {
       id: 10,
       question:
-        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. \n\n <b>How often do Tommy and Lucy play together? (please input the answer ⬇️)</b> ",
+        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. <br/><br/> <b>How often do Tommy and Lucy play together? (please input the answer ⬇️)</b> ",
       image: null,
       options: null,
       answer: "every saturday",
@@ -136,7 +136,7 @@ export const TESTS: Record<
     {
       id: 11,
       question:
-        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. \n\n <b>What do they do together every Saturday?</b> ",
+        "Tommy has a big red ball. He likes to play with it in the park. His friend Lucy has a blue kite. Tommy and Lucy play together every Saturday. They run, laugh, and have a lot of fun. <br/><br/> <b>What do they do together every Saturday?</b> ",
       image: null,
       options: [
         "sing, run and have a lot of fun",
@@ -268,7 +268,7 @@ export const TESTS: Record<
     {
       id: 1,
       question:
-        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. \n\n<b>Why did Emma start painting?</b>",
+        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. <br/><br/><b>Why did Emma start painting?</b>",
       image: null,
       options: [
         "She was always interested in painting.",
@@ -280,7 +280,7 @@ export const TESTS: Record<
     {
       id: 2,
       question:
-        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. \n\n<b>What was Emma's biggest problem at the beginning?</b>",
+        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. <br/><br/><b>What was Emma's biggest problem at the beginning?</b>",
       image: null,
       options: [
         "She didn't have any art supplies.",
@@ -292,7 +292,7 @@ export const TESTS: Record<
     {
       id: 3,
       question:
-        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. \n\n<b>What happened after a few months?</b>",
+        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. <br/><br/><b>What happened after a few months?</b>",
       image: null,
       options: [
         "Emma stopped painting.",
@@ -304,7 +304,7 @@ export const TESTS: Record<
     {
       id: 4,
       question:
-        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. \n\n<b>Where was Emma's painting displayed?</b>",
+        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. <br/><br/><b>Where was Emma's painting displayed?</b>",
       image: null,
       options: ["At a museum.", "In her school.", "At an art exhibition."],
       answer: 2,
@@ -312,7 +312,7 @@ export const TESTS: Record<
     {
       id: 5,
       question:
-        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. \n\n<b>What lesson did Emma learn?</b>",
+        "<i>Emma's New Hobby</i>\nEmma loved spending time indoors, but one day, her mother encouraged her to try a new hobby. Emma decided to learn painting. At first, it was difficult, and she made a lot of mistakes. However, she kept practicing. After a few months, her paintings improved, and her teacher even displayed one of them at an art exhibition. Emma was proud of herself and realized that trying new things could be exciting. <br/><br/><b>What lesson did Emma learn?</b>",
       image: null,
       options: [
         "New things can be fun.",
@@ -324,7 +324,7 @@ export const TESTS: Record<
     {
       id: 6,
       question:
-        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. \n\n<b>The Amazon Rainforest is the ______ rainforest in the world (please input the missing word ⬇️).</b>',
+        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. <br/><br/><b>The Amazon Rainforest is the ______ rainforest in the world (please input the missing word ⬇️).</b>',
       image: null,
       options: [],
       answer: "largest",
@@ -332,7 +332,7 @@ export const TESTS: Record<
     {
       id: 7,
       question:
-        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. \n\n<b>The Amazon River flows through the forest and provides ______ to the wildlife (please input the missing word ⬇️).</b>',
+        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. <br/><br/><b>The Amazon River flows through the forest and provides ______ to the wildlife (please input the missing word ⬇️).</b>',
       image: null,
       options: [],
       answer: "water",
@@ -340,7 +340,7 @@ export const TESTS: Record<
     {
       id: 8,
       question:
-        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. \n\n<b>People call the Amazon the "______ of the Earth (please input the missing word ⬇️).".</b>',
+        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. <br/><br/><b>People call the Amazon the "______ of the Earth (please input the missing word ⬇️).".</b>',
       image: null,
       options: [],
       answer: "lungs",
@@ -348,7 +348,7 @@ export const TESTS: Record<
     {
       id: 9,
       question:
-        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. \n\n<b>Many animals live in the Amazon, such as jaguars, ______, and monkeys (please input the missing word ⬇️).</b>',
+        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. <br/><br/><b>Many animals live in the Amazon, such as jaguars, ______, and monkeys (please input the missing word ⬇️).</b>',
       image: null,
       options: [],
       answer: "parrots",
@@ -356,7 +356,7 @@ export const TESTS: Record<
     {
       id: 10,
       question:
-        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. \n\n<b>Deforestation is a big problem because many ______ are cut down every year (please input the missing word ⬇️).</b>',
+        '<i>The Amazon Rainforest</i>\nThe Amazon Rainforest is the largest rainforest in the world. It is home to many plants and animals, including jaguars, parrots, and monkeys. The Amazon River flows through the forest, providing water to the wildlife. People call the Amazon the "lungs of the Earth" because it produces a lot of oxygen. However, deforestation is a big problem, and many trees are cut down every year. <br/><br/><b>Deforestation is a big problem because many ______ are cut down every year (please input the missing word ⬇️).</b>',
       image: null,
       options: [],
       answer: "trees",
@@ -576,7 +576,7 @@ export const TESTS: Record<
     {
       id: 1,
       question:
-        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. \n\n<b>In which industries is AI making an impact?</b>",
+        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. <br/><br/><b>In which industries is AI making an impact?</b>",
       image: null,
       options: [
         "Only healthcare",
@@ -588,7 +588,7 @@ export const TESTS: Record<
     {
       id: 2,
       question:
-        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. \n\n<b>What is one advantage of AI?</b>",
+        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. <br/><br/><b>What is one advantage of AI?</b>",
       image: null,
       options: [
         "It makes slow decisions",
@@ -600,7 +600,7 @@ export const TESTS: Record<
     {
       id: 3,
       question:
-        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. \n\n<b>What is one concern about AI?</b>",
+        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. <br/><br/><b>What is one concern about AI?</b>",
       image: null,
       options: [
         "It increases privacy",
@@ -612,7 +612,7 @@ export const TESTS: Record<
     {
       id: 4,
       question:
-        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. \n\n<b>What are governments and organizations doing about AI?</b>",
+        "<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. <br/><br/><b>What are governments and organizations doing about AI?</b>",
       image: null,
       options: [
         "Ignoring its development",
@@ -624,7 +624,7 @@ export const TESTS: Record<
     {
       id: 5,
       question:
-        '<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. \n\n<b>The word "implications" in the text means:</b>',
+        '<i>The Future of Artificial Intelligence</i>\nArtificial Intelligence (AI) is transforming many industries, including healthcare, finance, and education. AI can analyse large amounts of data quickly and make decisions more efficiently than humans. However, some experts worry about the ethical implications of AI, such as job loss and privacy concerns. While AI continues to develop, governments and organizations are working on regulations to ensure its responsible use. <br/><br/><b>The word "implications" in the text means:</b>',
       image: null,
       options: ["Results or consequences", "Improvements", "Instructions"],
       answer: 0,
@@ -922,7 +922,7 @@ export const TESTS: Record<
     {
       id: 1,
       question:
-        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.\n\n<b>What does Emma do on Saturday morning?</b>",
+        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.<br/><br/><b>What does Emma do on Saturday morning?</b>",
       image: null,
       options: [
         "She goes to work.",
@@ -934,7 +934,7 @@ export const TESTS: Record<
     {
       id: 2,
       question:
-        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.\n\n<b>What does she do in the afternoon?</b>",
+        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.<br/><br/><b>What does she do in the afternoon?</b>",
       image: null,
       options: [
         "She studies.",
@@ -946,7 +946,7 @@ export const TESTS: Record<
     {
       id: 3,
       question:
-        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.\n\n<b>Who does Emma visit on Sundays?</b>",
+        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.<br/><br/><b>Who does Emma visit on Sundays?</b>",
       image: null,
       options: ["Her best friend", "Her grandparents", "Her teacher"],
       answer: 1,
@@ -954,7 +954,7 @@ export const TESTS: Record<
     {
       id: 4,
       question:
-        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.\n\n<b>What does she like to do at home?</b>",
+        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.<br/><br/><b>What does she like to do at home?</b>",
       image: null,
       options: ["Read a book", "Play football", "Cook dinner"],
       answer: 0,
@@ -962,7 +962,7 @@ export const TESTS: Record<
     {
       id: 5,
       question:
-        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.\n\n<b>Why does she relax on Sundays?</b>",
+        "<i>Emma's Weekend</i>\nEmma enjoys her weekends. On Saturday, she wakes up late and has a big breakfast. In the afternoon, she goes shopping or meets her friends. On Sunday, she visits her grandparents or stays at home to read a book. She loves relaxing before starting a new week.<br/><br/><b>Why does she relax on Sundays?</b>",
       image: null,
       options: [
         "She is tired.",
@@ -974,7 +974,7 @@ export const TESTS: Record<
     {
       id: 6,
       question:
-        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.\n\n<b>The Eiffel Tower was built in ______.</b> (please input the answer ⬇️)",
+        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.<br/><br/><b>The Eiffel Tower was built in ______.</b> (please input the answer ⬇️)",
       image: null,
       options: null,
       answer: "1889",
@@ -982,7 +982,7 @@ export const TESTS: Record<
     {
       id: 7,
       question:
-        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.\n\n<b>It is located in ______, France.</b> (please input the answer ⬇️)",
+        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.<br/><br/><b>It is located in ______, France.</b> (please input the answer ⬇️)",
       image: null,
       options: null,
       answer: "paris",
@@ -990,7 +990,7 @@ export const TESTS: Record<
     {
       id: 8,
       question:
-        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.\n\n<b>The Eiffel Tower is ______ meters tall.</b> (please input the answer ⬇️)",
+        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.<br/><br/><b>The Eiffel Tower is ______ meters tall.</b> (please input the answer ⬇️)",
       image: null,
       options: null,
       answer: "330",
@@ -998,7 +998,7 @@ export const TESTS: Record<
     {
       id: 9,
       question:
-        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.\n\n<b>It attracts ______ of tourists every year.</b> (please input the answer ⬇️)",
+        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.<br/><br/><b>It attracts ______ of tourists every year.</b> (please input the answer ⬇️)",
       image: null,
       options: null,
       answer: "millions",
@@ -1006,7 +1006,7 @@ export const TESTS: Record<
     {
       id: 10,
       question:
-        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.\n\n<b>At night, the tower ______ beautifully.</b> (please input the answer ⬇️)",
+        "<i>The Eiffel Tower</i>\nThe Eiffel Tower is one of the most famous landmarks in the world. It was built in 1889 in Paris, France. The tower is 330 meters tall and attracts millions of tourists every year. At night, it lights up beautifully, making it a favorite spot for visitors.<br/><br/><b>At night, the tower ______ beautifully.</b> (please input the answer ⬇️)",
       image: null,
       options: null,
       answer: "lights up",

@@ -41,9 +41,9 @@ export default function PrepareForEviBanner() {
       </div>
       <div className="prepare-for-evi-banner-content">
         <div className="prepare-for-evi-banner-left">
-          ЄВІ - Єдиний Вступний Іспит. Це форма випробування до вступу на
-          навчання для здобуття ступеня магістра, яка поєднує тест загальної
-          навчальної компетентності та тест з іноземної мови.
+          <span>ЄВІ - Єдиний Вступний Іспит.</span> Це форма випробування до
+          вступу на навчання для здобуття ступеня магістра, яка поєднує тест
+          загальної навчальної компетентності та тест з іноземної мови.
         </div>
         <div className="prepare-for-evi-banner-combine">
           <div className="prepare-for-evi-banner-mid">

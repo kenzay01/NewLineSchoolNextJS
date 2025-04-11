@@ -55,7 +55,7 @@ export default function Footer({ background }: { background: boolean }) {
           <div className="footer-info-contacts">
             <h1>КОНТАКТИ</h1>
             <h2>+38 (067) 71 49 862</h2>
-            <h2>nnewstudyline@gmai.com</h2>
+            <h2>nnewstudyline@gmail.com</h2>
           </div>
           <div className="footer-info-socials">
             <a href="https://www.instagram.com/new_study_line?igsh=MXJ1aW5xemt5OHdtcg%3D%3D&utm_source=qr">
@@ -81,7 +81,11 @@ export default function Footer({ background }: { background: boolean }) {
         <img src="/assets/logo_white_back.png" alt="Logo" />
       </a>
       <div className="footer-copyright">
-        <a href="https://telebots.site/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://telebots.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Created by Telebots
         </a>
       </div>
