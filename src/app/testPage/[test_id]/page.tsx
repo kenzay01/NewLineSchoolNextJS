@@ -217,34 +217,34 @@ export default function TestStartingPage() {
     `;
     console.log(resultMessage);
 
-    // const adminTemplateParams = {
-    //   user_name: inputValueName,
-    //   user_phone: inputValuePhoneNumber,
-    //   user_email: inputValueEmail,
-    //   test_result: resultMessage,
-    // };
+    const adminTemplateParams = {
+      user_name: inputValueName,
+      user_phone: inputValuePhoneNumber,
+      user_email: inputValueEmail,
+      test_result: resultMessage,
+    };
 
-    // const isAdminMailSent = await emailSendFunc(
-    //   adminTemplateParams,
-    //   serviceDerysId,
-    //   templateDerysId,
-    //   publicKeyDerys
-    // );
+    const isAdminMailSent = await emailSendFunc(
+      adminTemplateParams,
+      serviceDerysId,
+      templateDerysId,
+      publicKeyDerys
+    );
 
-    // if (isAdminMailSent) {
-    //   const userTemplateParams = {
-    //     user_name: inputValueName,
-    //     user_email: inputValueEmail,
-    //     test_result: resultMessage,
-    //   };
+    if (isAdminMailSent) {
+      const userTemplateParams = {
+        user_name: inputValueName,
+        user_email: inputValueEmail,
+        test_result: resultMessage,
+      };
 
-    //   await emailSendFunc(
-    //     userTemplateParams,
-    //     serviceFletId,
-    //     templateFletId,
-    //     publicKeyFlet
-    //   );
-    // }
+      await emailSendFunc(
+        userTemplateParams,
+        serviceFletId,
+        templateFletId,
+        publicKeyFlet
+      );
+    }
   };
 
   useEffect(() => {
