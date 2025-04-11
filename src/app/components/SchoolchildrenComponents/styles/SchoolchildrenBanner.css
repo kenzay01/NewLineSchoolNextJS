@@ -152,6 +152,7 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    padding: 0;
   }
   .schoolchildren-banner-right-text-btn {
     border-radius: 14px;
@@ -171,6 +172,7 @@
     font-weight: 800;
     color: #484848;
     text-transform: none;
+    font-size: 14px;
   }
   .schoolchildren-banner-right-text span {
     font-family: SteppeBold;

@@ -217,7 +217,7 @@ export default function ForSchoolchildren() {
         </>,
         <>
           <h1>48 занять</h1>
-          <h2>5 місяців</h2>
+          <h2>6 місяців</h2>
         </>,
         <>
           <h1>72 заняття</h1>
