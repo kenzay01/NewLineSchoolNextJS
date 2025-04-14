@@ -142,11 +142,12 @@
   }
   .home-free-lessons-title {
     left: 10px;
-    font-size: 90px;
+    font-size: 75px;
     text-align: flex-start;
     color: #ece1d580;
     line-height: 100px;
     position: absolute;
+    /* top: 60px; */
   }
   .home-free-lessons-text {
     width: 100%;
